@@ -26,7 +26,7 @@ author:
   name             : "Shreyas Urgunde"
   pronouns         : # example: "she/her"  
   bio              : "MSc Finance Candidate at Warwick Business School"
-  location         : "United Kingdom"
+  location         : 
   employer         : "Warwick Business School"
   uri              : # URL
   email            : "shreyas.urgunde@warwick.ac.uk" 
@@ -39,7 +39,6 @@ author:
   github           : "shreyasxi"  
 
   # Social media
-  instagram        : "the.economics.hub"
   linkedin         : "shreyasurgunde"
 
 # Publication Category - The following the list of publication categories and their headings
