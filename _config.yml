@@ -13,9 +13,9 @@ title                    : "Personal Website"
 title_separator          : "-"
 name                     : &name "Shreyas Urgunde"
 description              : &description ""
-url                      : https://academicpages.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+url                      : "https://shreyasxi.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "shreyasxi/shreyasxi.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -33,7 +33,7 @@ author:
 
   # Academic websites
   academia         : 
-  substack         : "economicshub.substack.com"
+  substack         : "https://economicshub.substack.com"
 
   # Repositories and software development
   github           : "shreyasxi"  
