@@ -5,43 +5,99 @@ permalink: /books/
 author_profile: true
 ---
 
-Here are some books I’ve found insightful, thought-provoking, or just beautifully written — across finance, economics, psychology, and beyond.
+<style>
+  .tabs {
+    display: flex;
+    margin-bottom: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
 
-<div style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: flex-start; align-items: flex-start;">
+  .tabs label {
+    background: #f0f0f0;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
 
-<!-- Book 1 -->
-<div style="width: 180px; text-align: center;">
-  <img src="https://images-na.ssl-images-amazon.com/images/I/71UypkUjStL.jpg" alt="The Big Short" style="width: 100%; border-radius: 6px;">
-  <p><strong>The Big Short</strong><br>by Michael Lewis</p>
-  <p style="font-size: 0.9em; color: #555;">💸 Finance</p>
+  .tabs input[type="radio"] {
+    display: none;
+  }
+
+  .tab-content {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  input[type="radio"]:checked + label {
+    background: #333;
+    color: white;
+  }
+
+  #finance:checked ~ .content #finance-tab,
+  #economics:checked ~ .content #economics-tab,
+  #blockchain:checked ~ .content #blockchain-tab,
+  #others:checked ~ .content #others-tab {
+    display: block;
+  }
+</style>
+
+<div class="tabs">
+  <input type="radio" id="finance" name="tabs" checked>
+  <label for="finance">💸 Finance</label>
+
+  <input type="radio" id="economics" name="tabs">
+  <label for="economics">📘 Economics</label>
+
+  <input type="radio" id="blockchain" name="tabs">
+  <label for="blockchain">🔗 Blockchain</label>
+
+  <input type="radio" id="others" name="tabs">
+  <label for="others">📚 Others</label>
 </div>
 
-<!-- Book 2 -->
-<div style="width: 180px; text-align: center;">
-  <img src="https://images-na.ssl-images-amazon.com/images/I/81n1xwS0JUL.jpg" alt="Capital in the Twenty-First Century" style="width: 100%; border-radius: 6px;">
-  <p><strong>Capital in the Twenty-First Century</strong><br>by Thomas Piketty</p>
-  <p style="font-size: 0.9em; color: #555;">📘 Economics</p>
-</div>
+<div class="content">
 
-<!-- Book 3 -->
-<div style="width: 180px; text-align: center;">
-  <img src="https://images-na.ssl-images-amazon.com/images/I/71JZ7Myg1yL.jpg" alt="Thinking, Fast and Slow" style="width: 100%; border-radius: 6px;">
-  <p><strong>Thinking, Fast and Slow</strong><br>by Daniel Kahneman</p>
-  <p style="font-size: 0.9em; color: #555;">🧠 Psychology</p>
-</div>
+  <!-- Finance Tab -->
+  <div class="tab-content" id="finance-tab">
+    <ul>
+      <li><strong>The Big Short</strong> by Michael Lewis</li>
+      <li><strong>Liar’s Poker</strong> by Michael Lewis</li>
+      <li><strong>Security Analysis</strong> by Graham & Dodd</li>
+    </ul>
+  </div>
 
-<!-- Book 4 -->
-<div style="width: 180px; text-align: center;">
-  <img src="https://images-na.ssl-images-amazon.com/images/I/81WcnNQ-TBL.jpg" alt="Sapiens" style="width: 100%; border-radius: 6px;">
-  <p><strong>Sapiens</strong><br>by Yuval Noah Harari</p>
-  <p style="font-size: 0.9em; color: #555;">🌍 History / Systems Thinking</p>
-</div>
+  <!-- Economics Tab -->
+  <div class="tab-content" id="economics-tab">
+    <ul>
+      <li><strong>Capital in the Twenty-First Century</strong> by Thomas Piketty</li>
+      <li><strong>Freakonomics</strong> by Steven Levitt & Stephen Dubner</li>
+      <li><strong>The Undercover Economist</strong> by Tim Harford</li>
+    </ul>
+  </div>
 
-<!-- Book 5 -->
-<div style="width: 180px; text-align: center;">
-  <img src="https://images-na.ssl-images-amazon.com/images/I/91ocU8970hL.jpg" alt="Antifragile" style="width: 100%; border-radius: 6px;">
-  <p><strong>Antifragile</strong><br>by Nassim Nicholas Taleb</p>
-  <p style="font-size: 0.9em; color: #555;">🔍 Risk / Decision-Making</p>
-</div>
+  <!-- Blockchain Tab -->
+  <div class="tab-content" id="blockchain-tab">
+    <ul>
+      <li><strong>The Bitcoin Standard</strong> by Saifedean Ammous</li>
+      <li><strong>Layered Money</strong> by Nik Bhatia</li>
+      <li><strong>Mastering Blockchain</strong> by Imran Bashir</li>
+    </ul>
+  </div>
+
+  <!-- Others Tab -->
+  <div class="tab-content" id="others-tab">
+    <ul>
+      <li><strong>Thinking, Fast and Slow</strong> by Daniel Kahneman</li>
+      <li><strong>Sapiens</strong> by Yuval Noah Harari</li>
+      <li><strong>The Psychology of Money</strong> by Morgan Housel</li>
+    </ul>
+  </div>
 
 </div>
