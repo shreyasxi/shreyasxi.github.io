@@ -22,7 +22,7 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/Professional Picture.jpg"
+  avatar           : "images/Professional-Picture.jpg"
   name             : "Shreyas Urgunde"
   pronouns         : # example: "she/her"  
   bio              : "MSc Finance Candidate at Warwick Business School"
@@ -33,14 +33,14 @@ author:
 
   # Academic websites
   academia         : 
-  substack         : "https://economicshub.substack.com/"
+  substack         : "economicshub.substack.com"
 
   # Repositories and software development
-  github           : "https://github.com/shreyasxi"  
+  github           : "shreyasxi"  
 
   # Social media
-  instagram        : "https://www.instagram.com/the.economics.hub/"
-  linkedin         : "https://www.linkedin.com/in/shreyasurgunde/"
+  instagram        : "the.economics.hub"
+  linkedin         : "shreyasurgunde"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
