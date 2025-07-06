@@ -5,8 +5,6 @@ permalink: /books/
 author_profile: true
 ---
 
-## Recommended Books
-
 Here are some books I’ve found insightful, thought-provoking, or just beautifully written — across finance, economics, blockchain, and beyond.
 
 ---
