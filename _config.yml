@@ -22,7 +22,7 @@ repository               : "shreyasxi/shreyasxi.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "images/Professional-Picture.jpg"
+  avatar           : "images/Profile.jpg"
   name             : "Shreyas Urgunde"
   pronouns         : # example: "she/her"  
   bio              : "MSc Finance Candidate at Warwick Business School"
