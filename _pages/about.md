@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello, I’m **Shreyas Urgunde**, currently pursuing an MSc in Finance at Warwick Business School. I spend my days making sense of markets, financial structures, and the stories we tell to convince the world — and often ourselves — that risk is manageable, value is objective, and efficiency is real (spoiler: it rarely is).
+Hello, I’m **Shreyas Urgunde**, currently pursuing an MSc in Finance at Warwick Business School. I spend my days making sense of markets, financial structures, and the stories we tell to convince the world (and often ourselves) that risk is manageable, value is objective, and efficiency is real (spoiler: it rarely is).
 
 My **research interests** sit at the intersection of financial markets, macroeconomics, and digital currencies. I’m particularly fascinated by how central bank communication, market narratives, and emerging technologies influence asset pricing and systemic risks. My current dissertation, supervised by Professor Philippe Muller, examines how the tone of ECB communications differentially impacts various financial markets. 
 
@@ -27,7 +27,7 @@ When I’m not working on the usual finance stuff. I like to:
 - ⚽ Watch football and Tennis  
 - 🏃 Go for a run to clear my mind and reset
 
-If you're interested in talking research, sharing ideas, or just debating the credibility of CAPM in modern markets, feel free to reach out!
+If you're interested in talking research, sharing ideas, or just debating the credibility of classical economics in modern markets, feel free to reach out!
 
 
 
