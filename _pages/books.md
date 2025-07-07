@@ -195,7 +195,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
       <div class="book-author">Carl Sagan and Ann Druyan</div>
     </div>
     <div class="book-card">
-      <img src="[https://m.media-amazon.com/images/I/61fs2tSZejL._SL1500_.jpg](https://m.media-amazon.com/images/I/81DFDGzHZqL._SL1500_.jpg)" alt="Meditations">
+      <img src="https://m.media-amazon.com/images/I/81DFDGzHZqL._SL1500_.jpg" alt="Meditations">
       <div class="book-title">Meditations</div>
       <div class="book-author">Marcus Aurelius</div>
     </div>
