@@ -90,7 +90,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     <div class="book-author">Pulak Prasad</div>
   </div>
   <div class="book-card">
-    <img src="https://m.media-amazon.com/images/I/71ZpKjSMDXL._SL1500_.jpg" alt="A Short History of Financial Euphoria">
+    <img src="https://m.media-amazon.com/images/I/71poHBzgD2L._SL1500_.jpg" alt="A Short History of Financial Euphoria">
     <div class="book-title">A Short History of Financial Euphoria</div>
     <div class="book-author">John Galbraith</div>
   </div>
@@ -105,7 +105,8 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     <div class="book-author">Gregory Zuckerman</div>
   </div>
 </div>
-  
+
+
  <div class="book-tab-content tab2">
   <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/81aAoRfip+L._SL1500_.jpg" alt="Why Nations Fail: The Origins of Power, Prosperity and Poverty">
@@ -126,6 +127,16 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     <img src="https://m.media-amazon.com/images/I/41KffVGba4L.jpg" alt="Debt: The First 5000 Years">
     <div class="book-title">Debt: The First 5000 Years</div>
     <div class="book-author">David Graeber</div>
+  </div>
+   <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/51QAzSdKS4L._SL1500_.jpg" alt="Naked Economics – Undressing the Dismal Science">
+    <div class="book-title">Naked Economics – Undressing the Dismal Science</div>
+    <div class="book-author">Charles Wheelan</div>
+  </div>
+   <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/81JZ3qzwrUL._SL1500_.jpg" alt="The Economics Book">
+    <div class="book-title">The Economics Book</div>
+    <div class="book-author">DKr</div>
   </div>
 </div>
 
