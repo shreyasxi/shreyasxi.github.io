@@ -75,7 +75,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
 
   <div class="book-tab-content tab1">
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/610UurWugeL._SL1000_.jpg" alt="The Big Short">
+      <img src="https://m.media-amazon.com/images/I/610UurWugeL._SL1000_.jpg" alt="The Most Important Thing">
       <div class="book-title">The Most Important Thing</div>
       <div class="book-author">Howard Marks</div>
     </div>
@@ -83,9 +83,25 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
 
   <div class="book-tab-content tab1">
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/710ji5I+EiL._SL1360_.jpg" alt="The Big Short">
+      <img src="https://m.media-amazon.com/images/I/710ji5I+EiL._SL1360_.jpg" alt="Broken Money">
       <div class="book-title">Broken Money</div>
       <div class="book-author">Lyn Alden</div>
+    </div>
+  </div>
+
+  <div class="book-tab-content tab1">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71ZpKjSMDXL._SL1500_.jpg" alt="What I learned about Investing from Darwin">
+      <div class="book-title">What I learned about Investing from Darwin</div>
+      <div class="book-author">Pulak Prasad</div>
+    </div>
+  </div>
+
+  <div class="book-tab-content tab1">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71poHBzgD2L._SL1500_.jpg" alt="A Short History of Financial Euphoria">
+      <div class="book-title">A Short History of Financial Euphoria</div>
+      <div class="book-author">John Galbraith</div>
     </div>
   </div>
 
@@ -94,6 +110,30 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
       <img src="https://m.media-amazon.com/images/I/61NXK6ZNasL._SL1200_.jpg" alt="How China Escaped the Poverty Trap">
       <div class="book-title">How China Escaped the Poverty Trap</div>
       <div class="book-author">Yuen Yuen Ang</div>
+    </div>
+  </div>
+
+  <div class="book-tab-content tab2">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/81aAoRfip+L._SL1500_.jpg" alt="Why Nations Fail: The Origins of Power, Prosperity and Poverty">
+      <div class="book-title">Why Nations Fail: The Origins of Power, Prosperity and Poverty</div>
+      <div class="book-author">Daron Acemoglu and James Robinson</div>
+    </div>
+  </div>
+
+  <div class="book-tab-content tab2">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/61JfOTtfzgL._SL1400_.jpg" alt="Poor Economics">
+      <div class="book-title">Poor Economics</div>
+      <div class="book-author">Abhijit Banerjee and Esther Duflo</div>
+    </div>
+  </div>
+
+  <div class="book-tab-content tab2">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/41KffVGba4L.jpg" alt="Debt: The First 5000 Years">
+      <div class="book-title">Debt: The First 5000 Years</div>
+      <div class="book-author">David Graeber</div>
     </div>
   </div>
 
