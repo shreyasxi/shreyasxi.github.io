@@ -86,10 +86,18 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   </div>
   <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/71ZpKjSMDXL._SL1500_.jpg" alt="Investing from Darwin">
-    <div class="book-title">Investing from Darwin</div>
+    <div class="book-title">What I Learned about Investing from Darwin</div>
     <div class="book-author">Pulak Prasad</div>
   </div>
 </div>
+
+ <div class="book-tab-content tab1">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71poHBzgD2L._SL1500_.jpg" alt="A Short History of Financial Euphoria">
+      <div class="book-title">A Short History of Financial Euphoria</div>
+      <div class="book-author">John Galbraith</div>
+    </div>
+  </div>
   
   <div class="book-tab-content tab2">
     <div class="book-card">
