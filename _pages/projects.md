@@ -25,7 +25,6 @@ Compared CAPM and multifactor models to assess excess returns and pricing accura
 
 **4. Ethics in Finance: Incentives, Misconduct & Culture**  
 Reviewed landmark papers on ethical dilemmas in finance and presented our case on the JPMorgan Shareholder Proposal on the indigenous rights case.
-
 📄 <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 📊 <a href="/files/Group 11_Ethics.pptx" target="_blank">Presentation</a>
 
 ---
