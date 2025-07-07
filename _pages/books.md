@@ -75,17 +75,25 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
 
   <div class="book-tab-content tab1">
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/81-QB7nDh4L.jpg" alt="The Big Short">
-      <div class="book-title">The Big Short</div>
-      <div class="book-author">Michael Lewis</div>
+      <img src="https://m.media-amazon.com/images/I/610UurWugeL._SL1000_.jpg" alt="The Big Short">
+      <div class="book-title">The Most Important Thing</div>
+      <div class="book-author">Howard Marks</div>
+    </div>
+  </div>
+
+  <div class="book-tab-content tab1">
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/710ji5I+EiL._SL1360_.jpg" alt="The Big Short">
+      <div class="book-title">Broken Money</div>
+      <div class="book-author">Lyn Alden</div>
     </div>
   </div>
 
   <div class="book-tab-content tab2">
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/81bBhI6pFhL.jpg" alt="Capital in the 21st Century">
-      <div class="book-title">Capital in the 21st Century</div>
-      <div class="book-author">Thomas Piketty</div>
+      <img src="https://m.media-amazon.com/images/I/61NXK6ZNasL._SL1200_.jpg" alt="How China Escaped the Poverty Trap">
+      <div class="book-title">How China Escaped the Poverty Trap</div>
+      <div class="book-author">Yuen Yuen Ang</div>
     </div>
   </div>
 
