@@ -135,16 +135,36 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   </div>
    <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/81JZ3qzwrUL._SL1500_.jpg" alt="The Economics Book">
-    <div class="book-title">The Economics Book</div>
+    <div class="book-title">The Economics Book: Big Ideas Explained Simply</div>
     <div class="book-author">DKr</div>
   </div>
 </div>
 
   <div class="book-tab-content tab3">
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/71nFmqQ0f7L.jpg" alt="Bitcoin Standard">
-      <div class="book-title">Bitcoin Standard</div>
-      <div class="book-author">Saifedean Ammous</div>
+      <img src="https://m.media-amazon.com/images/I/61f+SZeOloL._SL1500_.jpg" alt="Check Your Financial Privilege">
+      <div class="book-title">Check Your Financial Privilege</div>
+      <div class="book-author">Alex Gladstein</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71jDLpPMdFS._SL1500_.jpg" alt="The Bitcoin Standard: The Decentralized Alternative to Central Banking">
+      <div class="book-title">The Bitcoin Standard: The Decentralized Alternative to Central Banking</div>
+      <div class="book-author">Alex Gladstein</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/513ySs59yaL._SL1360_.jpg" alt="The Internet of Money: A collection of talks">
+      <div class="book-title">The Internet of Money: A collection of talks</div>
+      <div class="book-author">Andreas M. Antonopoulos</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/819bH1CNx5L._SL1500_.jpg" alt="The Basics of Bitcoins and Blockchains">
+      <div class="book-title">The Basics of Bitcoins and Blockchains</div>
+      <div class="book-author">Antony Lewis</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71I7yUptG6L._SL1500_.jpg" alt="The Book Of Satoshi">
+      <div class="book-title">The Book Of Satoshi: The Collected Writings of Bitcoin Creator Satoshi Nakamoto</div>
+      <div class="book-author">Phil Champagne</div>
     </div>
   </div>
 
