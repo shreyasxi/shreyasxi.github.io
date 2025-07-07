@@ -7,58 +7,47 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+## 🎓 Education
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+**MSc Finance**, Warwick Business School 
+*2024–2025 (Expected)*  
+- Expected to Graduate with Distinction
+- Core modules include: Corporate Finance, Quant Finance, Investment Management, Asset Pricing, Ethical Finance and Research Methodology.
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+**B.A. Economics**, St. Xavier’s College, University of Mumbai  
+*2018–2021*  
+- Graduated with First Class with Distinction
+- Core modules included: Econometrics, Statistics, Development Economics, Microeconomics, Macroeconomics and Political Economy.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+---
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+## 💼 Work & Leadership Experience
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+**Vice President**, Consulting & Case Interview Club, Warwick Business School  
+*2024 – Present*  
+- Organized events on case-solving, mental math, and consulting interviews  
+- Led strategic planning for peer mentorship and alumni engagement
+
+**Research Mentor**, Eklavya Global Scholars Program  
+*2023 – Present*  
+- Mentored first-gen Bahujan students on academic writing and economics research  
+- Guided mentees on paper presentations and summer school applications
+
+**Founder & Content Creator**, The Economics Hub & Empowered Humans of Earth  
+*2020 – Present*  
+- Built educational platforms with 7,000+ followers  
+- Created content simplifying economics, finance, and social policy
+
+**Middle Office Intern**, Edelweiss Financial Services  
+*June – July 2022*  
+- Supported the commodities trading desk with daily reconciliation  
+- Developed Excel automation scripts to reduce reporting time
+
+---
+
+## 🛠 Skills
+
+- **Programming**: R, Python, LaTeX, Excel, and Stata  
+- **Analysis**: Financial modelling, data wrangling, scenario planning, econometrics  
+- **Databases**: WRDS, Compustat, Bloomberg Terminal, Capital IQ and CRSP  
+- **Tools**: Git, Markdown, Overleaf, Canva, Adobe InDesign
