@@ -7,7 +7,7 @@ author_profile: true
 
 **1. Volatility Forecasting and Risk Modelling**  
 Built ARCH-GARCH models and used implied vs. realized volatility for forecasting tail risk in asset returns.  
-📄 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank">Report</a>
+💻 <a href="https://github.com/shreyasxi/Return-Predictability-and-Fund-Evaluation/blob/main/Group_2_All_Parts_Codes.ipynb" target="_blank">Code</a> &nbsp;||&nbsp; 📄 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank">Report</a>
 
 ---
 
@@ -25,6 +25,7 @@ Compared CAPM and multifactor models to assess excess returns and pricing accura
 
 **4. Ethics in Finance: Incentives, Misconduct & Culture**  
 Reviewed landmark papers on ethical dilemmas in finance and presented our case on the JPMorgan Shareholder Proposal on the indigenous rights case.
+
 📄 <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 📊 <a href="/files/Group 11_Ethics.pptx" target="_blank">Presentation</a>
 
 ---
