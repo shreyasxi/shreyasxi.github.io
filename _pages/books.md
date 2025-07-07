@@ -136,7 +136,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
    <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/81JZ3qzwrUL._SL1500_.jpg" alt="The Economics Book">
     <div class="book-title">The Economics Book: Big Ideas Explained Simply</div>
-    <div class="book-author">DKr</div>
+    <div class="book-author">DK</div>
   </div>
 </div>
 
@@ -148,8 +148,8 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     </div>
     <div class="book-card">
       <img src="https://m.media-amazon.com/images/I/71jDLpPMdFS._SL1500_.jpg" alt="The Bitcoin Standard: The Decentralized Alternative to Central Banking">
-      <div class="book-title">The Bitcoin Standard: The Decentralized Alternative to Central Banking</div>
-      <div class="book-author">Alex Gladstein</div>
+      <div class="book-title">The Bitcoin Standard</div>
+      <div class="book-author">Saifedean Ammous</div>
     </div>
     <div class="book-card">
       <img src="https://m.media-amazon.com/images/I/513ySs59yaL._SL1360_.jpg" alt="The Internet of Money: A collection of talks">
@@ -170,9 +170,34 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
 
   <div class="book-tab-content tab4">
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/71oH3mnyVZL.jpg" alt="Thinking Fast and Slow">
-      <div class="book-title">Thinking, Fast and Slow</div>
-      <div class="book-author">Daniel Kahneman</div>
+      <img src="https://m.media-amazon.com/images/I/61fs2tSZejL._SL1500_.jpg" alt="Logicomix: An epic search for truth">
+      <div class="book-title">Logicomix: An epic search for truth</div>
+      <div class="book-author">Apostolos Doxiadis and Christos Papadimitriou</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/91XIjkxgVyL._SL1500_.jpg" alt="Dopamine Nation">
+      <div class="book-title">Dopamine Nation: Finding Balance in the Age of Indulgenceh</div>
+      <div class="book-author">Anna Lembke</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/81kecluqedL._SL1500_.jpg" alt="I, Robot">
+      <div class="book-title">I, Robot</div>
+      <div class="book-author">Issac Asimov</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/41M0dbnl3XL.jpg" alt="Logicomix: An epic search for truth">
+      <div class="book-title">Persepolis</div>
+      <div class="book-author">Marjane Satrapi</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71Eck-ud8AL._SL1500_.jpg" alt="The Demon-Haunted World: Science as a Candle in the Dark">
+      <div class="book-title">The Demon-Haunted World: Science as a Candle in the Dark</div>
+      <div class="book-author">Carl Sagan and Ann Druyan</div>
+    </div>
+    <div class="book-card">
+      <img src="[https://m.media-amazon.com/images/I/61fs2tSZejL._SL1500_.jpg](https://m.media-amazon.com/images/I/81DFDGzHZqL._SL1500_.jpg)" alt="Meditations">
+      <div class="book-title">Meditations</div>
+      <div class="book-author">Marcus Aurelius</div>
     </div>
   </div>
 </div>
