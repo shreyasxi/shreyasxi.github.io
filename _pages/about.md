@@ -13,9 +13,9 @@ My **research interests** sit at the intersection of financial markets, macroeco
 
 Outside the academic space, I’ve created a number of **educational platforms** to make topics like economics, finance, geopolitics, and social justice more accessible to wider audiences. These platforms have a combined following of over 7,000 people and include:
 
-1. [**Empowered Humans of Earth**](https://www.instagram.com/empowered.humans.of.earth/) – exploring economics, social issues, privacy and current affairs  
-2. [**The Economics Hub**](https://www.instagram.com/the.economics.hub/) – curating macro trends and financial explainers  
-3. [**The Economics Hub on Substack**](https://economicshub.substack.com/) – deep dives on various topics. Please follow my weekly newsletter!
+1. <a href="https://www.instagram.com/empowered.humans.of.earth/" target="_blank"><strong>Empowered Humans of Earth</strong></a> – exploring economics, social issues, privacy and current affairs  
+2. <a href="https://www.instagram.com/the.economics.hub/" target="_blank"><strong>The Economics Hub</strong></a> – curating macro trends and financial explainers  
+3. <a href="https://economicshub.substack.com/" target="_blank"><strong>The Economics Hub on Substack</strong></a> – deep dives on various topics. Please follow my weekly newsletter!
 
 I’m proficient in R, Python, LaTeX, and Excel, with working knowledge of Stata for tasks like panel regressions and applied econometrics. I enjoy building financial models and making complex data easier to interpret and explain.
 
