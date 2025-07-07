@@ -73,38 +73,24 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   <input type="radio" name="tabs" id="tab3"><label for="tab3">🔗 Blockchain</label>
   <input type="radio" name="tabs" id="tab4"><label for="tab4">📚 Others</label>
 
-  <div class="book-tab-content tab1">
-    <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/610UurWugeL._SL1000_.jpg" alt="The Most Important Thing">
-      <div class="book-title">The Most Important Thing</div>
-      <div class="book-author">Howard Marks</div>
-    </div>
+<div class="book-tab-content tab1">
+  <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/610UurWugeL._SL1000_.jpg" alt="The Most Important Thing">
+    <div class="book-title">The Most Important Thing</div>
+    <div class="book-author">Howard Marks</div>
   </div>
-
-  <div class="book-tab-content tab1">
-    <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/710ji5I+EiL._SL1360_.jpg" alt="Broken Money">
-      <div class="book-title">Broken Money</div>
-      <div class="book-author">Lyn Alden</div>
-    </div>
+  <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/710ji5I+EiL._SL1360_.jpg" alt="Broken Money">
+    <div class="book-title">Broken Money</div>
+    <div class="book-author">Lyn Alden</div>
   </div>
-
-  <div class="book-tab-content tab1">
-    <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/71ZpKjSMDXL._SL1500_.jpg" alt="What I learned about Investing from Darwin">
-      <div class="book-title">What I learned about Investing from Darwin</div>
-      <div class="book-author">Pulak Prasad</div>
-    </div>
+  <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/71ZpKjSMDXL._SL1500_.jpg" alt="Investing from Darwin">
+    <div class="book-title">Investing from Darwin</div>
+    <div class="book-author">Pulak Prasad</div>
   </div>
-
-  <div class="book-tab-content tab1">
-    <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/71poHBzgD2L._SL1500_.jpg" alt="A Short History of Financial Euphoria">
-      <div class="book-title">A Short History of Financial Euphoria</div>
-      <div class="book-author">John Galbraith</div>
-    </div>
-  </div>
-
+</div>
+  
   <div class="book-tab-content tab2">
     <div class="book-card">
       <img src="https://m.media-amazon.com/images/I/61NXK6ZNasL._SL1200_.jpg" alt="How China Escaped the Poverty Trap">
