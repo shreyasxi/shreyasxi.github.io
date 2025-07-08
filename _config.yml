@@ -31,14 +31,9 @@ author:
   uri              : # URL
 
   # Academic websites
-  academia         : 
-  substack         : "https://economicshub.substack.com"
-
-  # Repositories and software development
-  github           : "shreyasxi"  
-
-  # Social media
   linkedin         : "shreyasurgunde"
+  github           : "shreyasxi"  
+  substack         : "https://economicshub.substack.com"
 
 # Publication Category - The following the list of publication categories and their headings
 publication_category:
