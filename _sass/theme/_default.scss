@@ -53,3 +53,9 @@ $sidebar-screen-min-width   : 1024px;
 .book-author {
   color: var(--global-text-color-light); // matches lighter text style
 }
+
+hr {
+  border: none;
+  border-top: 1px solid #dcdcdc; // light gray for visibility
+  margin: 1.5rem 0;
+}
