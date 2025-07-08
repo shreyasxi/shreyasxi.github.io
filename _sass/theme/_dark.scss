@@ -60,3 +60,9 @@ html[data-theme="dark"] {
 .book-author {
   color: #cccccc !important; // slightly dimmer to indicate secondary info
 }
+
+hr {
+  border: none;
+  border-top: 1px solid var(--global-hr-color);
+  margin: 1.5rem 0;
+}
