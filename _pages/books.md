@@ -68,8 +68,8 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
 
   .book-author {
   font-size: 0.85rem;
-  color: var(--global-text-color);
-  opacity: 0.75;
+  color: #555555;
+  opacity: 1;
 }
 </style>
 
