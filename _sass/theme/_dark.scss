@@ -52,3 +52,11 @@ html[data-theme="dark"] {
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$background-lighter};
 }
+
+.book-tab-label {
+  color: #f2f2f2 !important; // bright text for dark backgrounds
+}
+
+.book-author {
+  color: #cccccc !important; // slightly dimmer to indicate secondary info
+}
