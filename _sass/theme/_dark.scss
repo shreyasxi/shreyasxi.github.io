@@ -63,6 +63,6 @@ html[data-theme="dark"] {
 
 hr {
   border: none;
-  border-top: 1px solid var(--global-hr-color);
+  border-top: 1px solid #444c56; // Dark grey line on dark background
   margin: 1.5rem 0;
 }
