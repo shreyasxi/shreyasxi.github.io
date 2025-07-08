@@ -45,3 +45,11 @@ $sidebar-screen-min-width   : 1024px;
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$lighter-gray};
 }
+
+.book-tab-label {
+  color: var(--global-text-color); // or use a custom variable if needed
+}
+
+.book-author {
+  color: var(--global-text-color-light); // matches lighter text style
+}
