@@ -68,10 +68,10 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
 </style>
 
 <div class="book-tabs">
-  <input type="radio" name="tabs" id="tab1" checked><label for="tab1">💸 Finance</label>
-  <input type="radio" name="tabs" id="tab2"><label for="tab2">📘 Economics</label>
-  <input type="radio" name="tabs" id="tab3"><label for="tab3">🔗 Blockchain</label>
-  <input type="radio" name="tabs" id="tab4"><label for="tab4">📚 Others</label>
+  <input type="radio" name="tabs" id="tab1" checked><label for="tab1" class="book-tab-label">💸 Finance</label>
+  <input type="radio" name="tabs" id="tab2"><label for="tab2" class="book-tab-label">📘 Economics</label>
+  <input type="radio" name="tabs" id="tab3"><label for="tab3" class="book-tab-label">🔗 Blockchain</label>
+  <input type="radio" name="tabs" id="tab4"><label for="tab4" class="book-tab-label">📚 Others</label>
 
 <div class="book-tab-content tab1">
   <div class="book-card">
