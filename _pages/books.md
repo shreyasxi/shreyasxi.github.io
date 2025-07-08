@@ -21,13 +21,15 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: var(--global-bg-color);
+    color: var(--global-text-color);
+    border: 1px solid var(--global-border-color);
     transition: all 0.2s ease-in-out;
   }
 
   .book-tabs input[type="radio"]:checked + label {
-    background-color: #333;
-    color: white;
+    background-color: var(--global-link-color-hover);
+    color: #fff;
   }
 
   .book-tab-content {
@@ -59,19 +61,20 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   .book-title {
     font-weight: bold;
     font-size: 0.92rem;
+    color: var(--global-text-color);
   }
 
   .book-author {
     font-size: 0.85rem;
-    color: #666;
+    color: var(--global-text-color-light);
   }
 </style>
 
 <div class="book-tabs">
-  <input type="radio" name="tabs" id="tab1" checked><label for="tab1" class="book-tab-label">💸 Finance</label>
-  <input type="radio" name="tabs" id="tab2"><label for="tab2" class="book-tab-label">📘 Economics</label>
-  <input type="radio" name="tabs" id="tab3"><label for="tab3" class="book-tab-label">🔗 Blockchain</label>
-  <input type="radio" name="tabs" id="tab4"><label for="tab4" class="book-tab-label">📚 Others</label>
+  <input type="radio" name="tabs" id="tab1" checked><label for="tab1">💸 Finance</label>
+  <input type="radio" name="tabs" id="tab2"><label for="tab2">📘 Economics</label>
+  <input type="radio" name="tabs" id="tab3"><label for="tab3">🔗 Blockchain</label>
+  <input type="radio" name="tabs" id="tab4"><label for="tab4">📚 Others</label>
 
 <div class="book-tab-content tab1">
   <div class="book-card">
