@@ -34,25 +34,23 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       
-     {% if author.email %}
-  <li>
-    <span id="email-text" style="cursor: text;">
-      <i class="fas fa-envelope icon-pad-right" aria-hidden="true"></i> {{ author.email }}
-    </span>
-    <i class="fas fa-copy icon-pad-right" style="margin-left: 8px; cursor: pointer;" onclick="copyEmail()" title="Copy to clipboard"></i>
-  </li>
+     <li>
+  <span id="email-text" style="cursor: text;">
+    <i class="fas fa-envelope icon-pad-right" aria-hidden="true"></i> shreyas.urgunde@warwick.ac.uk
+  </span>
+  <i class="fas fa-copy icon-pad-right" style="margin-left: 8px; cursor: pointer;" onclick="copyEmail()" title="Copy to clipboard"></i>
+</li>
 
-  <script>
-    function copyEmail() {
-      const email = document.getElementById("email-text").innerText.trim();
-      navigator.clipboard.writeText(email).then(function () {
-        alert("Copied!");
-      }, function (err) {
-        console.error("Could not copy email: ", err);
-      });
-    }
-  </script>
-{% endif %}
+<script>
+  function copyEmail() {
+    const email = document.getElementById("email-text").innerText.trim();
+    navigator.clipboard.writeText(email).then(function () {
+      alert("Copied!");
+    }, function (err) {
+      console.error("Could not copy email: ", err);
+    });
+  }
+</script>
 
 
 
