@@ -37,22 +37,23 @@
       {% if author.email %}
   <li>
     <span id="email-text" style="cursor: text;">
-      <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ author.email }}
+      <i class="fas fa-envelope icon-pad-right" aria-hidden="true"></i> {{ author.email }}
     </span>
-    <button onclick="copyEmail()" title="Copy Email" style="margin-left: 8px; padding: 2px 6px; font-size: 0.8rem; border-radius: 4px; cursor: pointer;">📋</button>
+    <i class="fas fa-copy icon-pad-right" style="margin-left: 8px; cursor: pointer;" onclick="copyEmail()" title="Copy to clipboard"></i>
   </li>
 
   <script>
     function copyEmail() {
-      const email = document.getElementById("email-text").innerText.trim();
-      navigator.clipboard.writeText(email).then(function() {
-        alert("Email copied to clipboard!");
-      }, function(err) {
-        alert("Failed to copy email: " + err);
+      const email = "{{ author.email }}".trim();
+      navigator.clipboard.writeText(email).then(function () {
+        alert("Copied!");
+      }, function (err) {
+        console.error("Could not copy email: ", err);
       });
     }
   </script>
 {% endif %}
+
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}
