@@ -34,7 +34,7 @@
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
       
-      {% if author.email %}
+     {% if author.email %}
   <li>
     <span id="email-text" style="cursor: text;">
       <i class="fas fa-envelope icon-pad-right" aria-hidden="true"></i> {{ author.email }}
@@ -44,7 +44,7 @@
 
   <script>
     function copyEmail() {
-      const email = "{{ author.email }}".trim();
+      const email = document.getElementById("email-text").innerText.trim();
       navigator.clipboard.writeText(email).then(function () {
         alert("Copied!");
       }, function (err) {
@@ -53,6 +53,7 @@
     }
   </script>
 {% endif %}
+
 
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
