@@ -33,9 +33,26 @@
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
+      
       {% if author.email %}
-        <li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>
-      {% endif %}
+  <li>
+    <span id="email-text" style="cursor: text;">
+      <i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>{{ author.email }}
+    </span>
+    <button onclick="copyEmail()" title="Copy Email" style="margin-left: 8px; padding: 2px 6px; font-size: 0.8rem; border-radius: 4px; cursor: pointer;">📋</button>
+  </li>
+
+  <script>
+    function copyEmail() {
+      const email = document.getElementById("email-text").innerText.trim();
+      navigator.clipboard.writeText(email).then(function() {
+        alert("Email copied to clipboard!");
+      }, function(err) {
+        alert("Failed to copy email: " + err);
+      });
+    }
+  </script>
+{% endif %}
 
       <!-- Font Awesome and Academicons icons / Academic websites -->
       {% if author.academia %}
