@@ -14,24 +14,25 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     display: none;
   }
 
-  .book-tabs label {
+.book-tabs label {
   display: inline-block;
   margin: 0.5rem 0.8rem 0.5rem 0;
   padding: 0.5rem 1.1rem;
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  background-color: var(--global-bg-color);
-  color: var(--global-text-color);
-  border: 1px solid var(--global-border-color);
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #d0d0d0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   transition: all 0.2s ease-in-out;
 }
 
-  .book-tabs input[type="radio"]:checked + label {
-    background-color: var(--global-link-color-hover);
-    color: #fff;
-  }
+.book-tabs input[type="radio"]:checked + label {
+  background-color: #2f7f93;
+  color: white;
+}
+
 
   .book-tab-content {
     display: none;
