@@ -15,17 +15,18 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   }
 
   .book-tabs label {
-    display: inline-block;
-    margin: 0.5rem 0.8rem 0.5rem 0;
-    padding: 0.5rem 1.1rem;
-    font-weight: bold;
-    border-radius: 8px;
-    cursor: pointer;
-    background-color: var(--global-bg-color);
-    color: var(--global-text-color);
-    border: 1px solid var(--global-border-color);
-    transition: all 0.2s ease-in-out;
-  }
+  display: inline-block;
+  margin: 0.5rem 0.8rem 0.5rem 0;
+  padding: 0.5rem 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--global-bg-color);
+  color: var(--global-text-color);
+  border: 1px solid var(--global-border-color);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: all 0.2s ease-in-out;
+}
 
   .book-tabs input[type="radio"]:checked + label {
     background-color: var(--global-link-color-hover);
@@ -65,9 +66,10 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   }
 
   .book-author {
-    font-size: 0.85rem;
-    color: var(--global-text-color-light);
-  }
+  font-size: 0.85rem;
+  color: var(--global-text-color);
+  opacity: 0.75;
+}
 </style>
 
 <div class="book-tabs">
