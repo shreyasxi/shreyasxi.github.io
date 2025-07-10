@@ -18,14 +18,16 @@ This project explores return predictability using volatility measures and evalua
 ---
 
 **3. Asset Pricing Models in the Corporate Bond Market**  
-Building on the extensive body of research exploring risk factors in equity markets, this project evaluates multiple factor models to identify the determinants of corporate bond risk premia. While the traditional CAPM is relevant, multi-factor models that include duration-adjusted market risk (MKTDB) and momentum offer a superior fit. The analysis concludes that the model balancing market and credit factors (MKTB+MKTDB) is most effective, highlighting the limitations of a standalone momentum factor and confirming the need for bond-specific risks for accurate pricing. 
+Building on the extensive body of research exploring risk factors in equity markets, this project evaluates multiple factor models to identify the determinants of corporate bond risk premia. While the traditional CAPM is relevant, multi-factor models that include duration-adjusted market risk (MKTDB) and momentum offer a superior fit. The analysis concludes that the model balancing market and credit factors (MKTB+MKTDB) is most effective, highlighting the limitations of a standalone momentum factor and confirming the need for bond-specific risks for accurate pricing.  
 💻 <a href="https://github.com/shreyasxi/Asset-Pricing-in-the-Bond-Market/blob/main/Code%20Script%20and%20Workspace%20Object/R%20Script%20(Group%2026).R" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Asset Pricing Report.pdf" target="_blank">Report</a>
 
 ---
 
-**4. Ethics in Finance: Incentives, Misconduct & Culture**  
-Reviewed landmark papers on ethical dilemmas in finance and presented our case on the JPMorgan Shareholder Proposal on the indigenous rights case.  
-📕 <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 📊 <a href="/files/Group 11_Ethics.pptx" target="_blank">Presentation</a>
+**4. Ethics in Finance: Incentives, Misconduct & Culture**
+
+Reviewed landmark papers on ethical dilemmas in finance, culminating in two key projects:
+* [cite_start]**Green Bonds:** Mapped the ethical risks within the wholesale green bond market, identifying key challenges such as greenwashing, the absence of a universal “green” standard, and insufficient financial incentives for issuers[cite: 64, 77, 85]. &nbsp;||&nbsp; 📕 <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a>
+* [cite_start]**Indigenous Rights & Finance:** Analyzed a shareholder proposal against JPMorgan for financing projects linked to Indigenous rights violations, advocating for measurable indicators, transparent due diligence, and formal grievance mechanisms to mitigate material risks[cite: 812, 1039, 1048]. &nbsp;||&nbsp; 📊 <a href="/files/Group%2011_Ethics.pptx" target="_blank">Presentation</a>
 
 ---
 
