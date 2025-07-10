@@ -30,9 +30,9 @@ Building on the extensive body of research exploring risk factors in equity mark
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
-**5. Blockchain-Based Cross-Border Payment Protocol (OpenBridge)**  
-Proposed a hybrid protocol for fast and cost-efficient FX settlement inspired by mBridge and IMF platforms.  
-📕 <a href="/files/Fintech_Assignment.pdf" target="_blank">Report</a>
+**5. Blockchain-Based Cross-Border Payment Protocol (OpenBridge)**   
+In this project, I propose OpenBridge - a hybrid blockchain protocol designed to address the high costs, slow settlement times, and lack of transparency in traditional cross-border payments. The proposed prototype uses a permissioned architecture, Layer-2 rollups, and zero-knowledge proofs to enable fast, secure, and compliant foreign exchange settlement.   
+&nbsp;📕 <a href="/files/Fintech_Assignment.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 📊 <a href="/files/Final-PPT-Fintech.pdf" target="_blank">Presentation</a>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
@@ -42,6 +42,6 @@ As part of the Alternative Investments course, my group delivered a presentation
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
-**7. Financial Statement Analysis: Marks & Spencer Equity Valuation**
+**7. Financial Statement Analysis: Marks & Spencer Equity Valuation**   
 This equity research report analyzes Marks & Spencer's successful operational turnaround, driven by improved profitability and asset turnover, but concludes that a valuation based on core fundamentals suggests this recovery is already fully priced into the current stock.   
 &nbsp;📕 <a href="/files/FRSA.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 💡 <a href="/files/Final_Shrey.xlsx" target="_blank">Excel</a>
