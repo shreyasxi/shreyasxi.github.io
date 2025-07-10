@@ -32,7 +32,7 @@ Building on the extensive body of research exploring risk factors in equity mark
 
 **5. Blockchain-Based Cross-Border Payment Protocol (OpenBridge)**   
 In this project, I propose OpenBridge - a hybrid blockchain protocol designed to address the high costs, slow settlement times, and lack of transparency in traditional cross-border payments. The proposed prototype uses a permissioned architecture, Layer-2 rollups, and zero-knowledge proofs to enable fast, secure, and compliant foreign exchange settlement.   
-&nbsp;📕 <a href="/files/Fintech_Assignment.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 📊 <a href="/files/FinalFintech.pdf" target="_blank">Presentation</a>
+&nbsp;📕 <a href="/files/Fintech_Assignment.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 📊 <a href="/files/PPTFinal.pdf" target="_blank">Presentation</a>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
