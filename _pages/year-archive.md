@@ -5,7 +5,7 @@ permalink: /year-archive/
 author_profile: true
 ---
 
-Here’s a glimpse into my writing on finance, macro, digital currencies, and other ideas I’m excited about. Enjoy reading — and don’t forget to subscribe at [economicshub.substack.com](https://economicshub.substack.com/)!
+Here’s a glimpse into my writing on finance, macro, digital currencies, and other ideas I’m excited about. Enjoy reading — and don’t forget to subscribe at <a href="https://economicshub.substack.com/" target="_blank">economicshub.substack.com</a>!
 
 1. <a href="https://www.instagram.com/p/C09ADUXPO-9/?img_index=1" target="_blank"><strong>Beyond LLM-Driven Chatbots: The Case for Privacy-Focused Miniature AI Models</strong></a>  
    Miniaturised AI may not match the robustness and convenience of large language models (LLMs), but they may address  the critical concerns surrounding data privacy, resource efficiency, and architectural complexity.
