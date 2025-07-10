@@ -9,7 +9,7 @@ author_profile: true
 This project evaluates volatility and Value-at-Risk (VaR) models to forecast risk in two portfolios: one with nine developed market currencies and another including the Argentine peso. The results show that standard models often underestimate extreme risks in emerging markets. Backtesting confirms the importance of using flexible, adaptive models to better capture unexpected market movements.  
 💻 <a href="https://github.com/shreyasxi/Forecasting-and-Backtesting-Risk-Models-for-FX-Portfolios/blob/master/RM%20Code%20Script.R" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank">Report</a>
 
-<div style="height: 1px; background-color: #cccccc; margin: 3em 0;"></div>
+<div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
 **2. Empirical Finance: Mutual Fund Performance & Predictability**  
 This project explores return predictability using volatility measures and evaluates mutual fund performance through Fama-French factor models. It also includes a custom portfolio analysis of the “Magnificent Seven” tech stocks, comparing their performance with selected funds across key financial metrics.  
@@ -44,4 +44,4 @@ As part of the Alternative Investments course, my group delivered a presentation
 
 **7. Financial Statement Analysis: Marks & Spencer Equity Valuation**
 This equity research report analyzes Marks & Spencer's successful operational turnaround, driven by improved profitability and asset turnover, but concludes that a valuation based on core fundamentals suggests this recovery is already fully priced into the current stock.   
-&nbsp;📕 <a href="/files/FRSA.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 💡 <a href="/files/YOUR_EXCEL_FILE.xlsx" target="_blank">Excel</a>
+&nbsp;📕 <a href="/files/FRSA.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 💡 <a href="/files/Final_Shrey.xlsx" target="_blank">Excel</a>
