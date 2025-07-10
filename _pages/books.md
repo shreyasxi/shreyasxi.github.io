@@ -65,12 +65,13 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     font-size: 0.92rem;
     color: var(--global-text-color);
   }
-
+  
   .book-author {
-    font-size: 0.85rem;
-    color: #555555 !important;
-    opacity: 1 !important;
+  font-size: 0.85rem;
+  color: var(--global-text-color-light) !important;
+  opacity: 1 !important;
 }
+
 </style>
 
 <div class="book-tabs">
