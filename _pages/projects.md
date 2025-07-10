@@ -6,8 +6,8 @@ author_profile: true
 ---
 
 **1. Volatility Forecasting and Risk Modelling**  
-Built ARCH-GARCH models and used implied vs. realized volatility for forecasting tail risk in asset returns.  
-💻 <a href="https://github.com/shreyasxi/Return-Predictability-and-Fund-Evaluation/blob/main/Group_2_All_Parts_Codes.ipynb" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank">Report</a>
+This project evaluates volatility and Value-at-Risk (VaR) models to forecast risk in two portfolios: one with nine developed market currencies and another including the Argentine peso. The results show that standard models often underestimate extreme risks in emerging markets. Backtesting confirms the importance of using flexible, adaptive models to better capture unexpected market movements.  
+💻 <a href="[https://github.com/shreyasxi/Return-Predictability-and-Fund-Evaluation/blob/main/Group_2_All_Parts_Codes.ipynb](https://github.com/shreyasxi/Forecasting-and-Backtesting-Risk-Models-for-FX-Portfolios/blob/master/RM%20Code%20Script.R)" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank">Report</a>
 
 ---
 
