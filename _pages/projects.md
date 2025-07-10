@@ -24,8 +24,9 @@ Building on the extensive body of research exploring risk factors in equity mark
 ---
 
 **4. Ethics in Finance: Incentives, Misconduct & Culture**
-* This project maps the ethical risks within the wholesale green bond market, identifying key challenges such as greenwashing, the absence of a universal “green” standard, and insufficient financial incentives for issuers. <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a>
-* This group presentation analyzes a shareholder proposal against JPMorgan for financing projects linked to Indigenous rights violations, advocating for measurable indicators, transparent due diligence, and formal grievance mechanisms to mitigate material risks. <a href="/files/Group%2011_Ethics.pptx" target="_blank">Presentation</a>
+* This project maps the ethical risks within the wholesale green bond market, identifying key challenges such as greenwashing, the absence of a universal “green” standard, and insufficient financial incentives for issuers.
+📕 <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a>
+* This group presentation analyzes a shareholder proposal against JPMorgan for financing projects linked to Indigenous rights violations, advocating for measurable indicators, transparent due diligence, and formal grievance mechanisms to mitigate material risks. 📊 <a href="/files/Group%2011_Ethics.pptx" target="_blank">Presentation</a>
 
 ---
 
