@@ -26,7 +26,7 @@ Building on the extensive body of research exploring risk factors in equity mark
 **4. Ethics in Finance: Incentives, Misconduct & Culture**
 * This project maps the ethical risks within the wholesale green bond market, identifying key challenges such as greenwashing, the absence of a universal “green” standard, and insufficient financial incentives for issuers.
 📕 <a href="/files/5582804_Ethics.pdf" target="_blank">Report</a>
-* This group presentation analyzes a shareholder proposal against JPMorgan for financing projects linked to Indigenous rights violations, advocating for measurable indicators, transparent due diligence, and formal grievance mechanisms to mitigate material risks. 📊 <a href="/files/Group%2011_Ethics.pptx" target="_blank">Presentation</a>
+* During a Summer School in Lisbon, my group critically assessed a shareholder motion at JPMorgan regarding its financing of projects linked to Indigenous rights violations. Our improved, evidence-based resolution reframed the issue as a material financial risk rather than a purely ethical concern, advocating for measurable performance indicators to enhance accountability. 📊 <a href="/files/Group%2011_Ethics.pptx" target="_blank">Presentation</a>
 
 ---
 
@@ -37,7 +37,7 @@ Proposed a hybrid protocol for fast and cost-efficient FX settlement inspired by
 ---
 
 **6. Equity Market Neutral Strategies**  
-Gave a presentation on Equity Market Neutral Strategies and why investors should consider allocating capital to EMN funds.
+As part of the Alternative Investments course, my group delivered a presentation on Equity Market Neutral (EMN) strategies. The presentation made the case for allocating capital to EMN funds, highlighting their potential to generate consistent, low-volatility returns with minimal correlation to broader equity markets.   
 📕 <a href="/files/Group 10 -Equity Market Neutral.pdf" target="_blank">Report</a>
 
 ---
