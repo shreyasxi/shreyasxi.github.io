@@ -38,10 +38,9 @@ Proposed a hybrid protocol for fast and cost-efficient FX settlement inspired by
 
 **6. Equity Market Neutral Strategies**  
 As part of the Alternative Investments course, my group delivered a presentation on Equity Market Neutral (EMN) strategies. The presentation made the case for allocating capital to EMN funds, highlighting their potential to generate consistent, low-volatility returns with minimal correlation to broader equity markets.   
-📕 <a href="/files/Group 10 -Equity Market Neutral.pdf" target="_blank">Report</a>
+💡 <a href="/files/Group 10 -Equity Market Neutral.pdf" target="_blank">Presentation</a>
 
 ---
 
-**7. Financial Statement Analysis: Marks & Spencer Equity Valuation**  
-Performed full equity valuation using abnormal operating profit and free cash flow models with scenario analysis.  
-📕 <a href="/files/FRSA.pdf" target="_blank">Report</a>
+**7. Financial Statement Analysis: Marks & Spencer Equity Valuation**
+This equity research report analyzes Marks & Spencer's successful operational turnaround, driven by improved profitability and asset turnover, but concludes that a valuation based on core fundamentals suggests this recovery is already fully priced into the current stock. &nbsp;📕 <a href="/files/FRSA.pdf" target="_blank">Report</a> &nbsp;||&nbsp; 💡 <a href="/files/YOUR_EXCEL_FILE.xlsx" target="_blank">Excel</a>
