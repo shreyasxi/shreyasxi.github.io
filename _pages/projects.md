@@ -13,7 +13,7 @@ This project evaluates volatility and Value-at-Risk (VaR) models to forecast ris
 
 **2. Empirical Finance: Mutual Fund Performance & Predictability**  
 This project explores return predictability using volatility measures and evaluates mutual fund performance through Fama-French factor models. It also includes a custom portfolio analysis of the “Magnificent Seven” tech stocks, comparing their performance with selected funds across key financial metrics.  
-💻 <a href="https://github.com/shreyasxi/Return-Predictability-and-Fund-Evaluation" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Empirical Finance Report.pdf" target="_blank">Report</a>
+💻 <a href="https://github.com/shreyasxi/Return-Predictability-and-Fund-Evaluation/blob/main/Group_2_All_Parts_Codes.ipynb">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Empirical Finance Report.pdf" target="_blank">Report</a>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
