@@ -52,7 +52,13 @@ $sidebar-screen-min-width   : 1024px;
 }
 
 .book-author {
-  color: var(--global-text-color-light); // matches lighter text style
+  font-size: 0.85rem;
+  color: #555555 !important; /* darker gray for light mode */
+  opacity: 1 !important;
+}
+
+html[data-theme="dark"] .book-author {
+  color: var(--global-text-color-light) !important; /* use lighter text in dark mode */
 }
 
 hr {
