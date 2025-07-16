@@ -18,8 +18,8 @@ This project explores return predictability using volatility measures and evalua
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
 **3. Asset Pricing Models in the Corporate Bond Market**  
-Building on the extensive body of research exploring risk factors in equity markets, this project evaluates multiple factor models to identify the determinants of corporate bond risk premia. While the traditional CAPM is relevant, multi-factor models that include duration-adjusted market risk (MKTDB) and momentum offer a superior fit for accurate bond market specific pricing. 
-💻 <a href="https://github.com/shreyasxi/Asset-Pricing-in-the-Bond-Market/blob/main/Code%20Script%20and%20Workspace%20Object/R%20Script%20(Group%2026).R" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Asset Pricing Report.pdf" target="_blank">Report</a>
+Building on the extensive body of research exploring risk factors in equity markets, this project evaluates multiple factor models to identify the determinants of corporate bond risk premia. While the traditional CAPM is relevant, multi-factor models that include duration-adjusted market risk (MKTDB) and momentum offer a superior fit for accurate bond market specific pricing.   
+💻 <a href="https://github.com/shreyasxi/Asset-Pricing-in-the-Bond-Market/blob/main/Code%20Script%20and%20Workspace%20Object/R%20Script%20(Group%2026).R" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Asset Pricing Latest Report.pdf" target="_blank">Report</a>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
