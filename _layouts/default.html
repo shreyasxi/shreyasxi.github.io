@@ -27,6 +27,83 @@ layout: compress
       </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.4.0/tsparticles.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', (event) => {
+        tsParticles.load({
+          id: "tsparticles", // This must match the id of your div
+          options: {
+            background: {
+              color: {
+                value: "#f5f5f5" // IMPORTANT: Change this to your website's background color
+              }
+            },
+            fpsLimit: 60,
+            particles: {
+              number: {
+                value: 50,
+                density: {
+                  enable: true,
+                  value_area: 800
+                }
+              },
+              color: {
+                value: "#555555" // The color of the symbols
+              },
+              shape: {
+                type: "char",
+                options: {
+                  character: {
+                    value: ["$", "€", "Σ", "∫", "μ", "σ", "β", "%", "★", "√", "π"],
+                    font: "Verdana",
+                    style: "",
+                    weight: "500",
+                    fill: true
+                  }
+                }
+              },
+              opacity: {
+                value: 0.4,
+                random: true
+              },
+              size: {
+                value: 16,
+                random: { enable: true, minimumValue: 10 }
+              },
+              move: {
+                enable: true,
+                speed: 1.5,
+                direction: "none",
+                random: true,
+                straight: false,
+                out_mode: "out"
+              }
+            },
+            interactivity: {
+              events: {
+                onhover: {
+                  enable: true,
+                  mode: "repulse"
+                },
+                onclick: {
+                  enable: true,
+                  mode: "push"
+                }
+              },
+              modes: {
+                repulse: {
+                  distance: 100
+                },
+                push: {
+                  quantity: 4
+                }
+              }
+            },
+            detectRetina: true
+          }
+        });
+      });
+    </script>
     {% include scripts.html %}
 
   </body>
