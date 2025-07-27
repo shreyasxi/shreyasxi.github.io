@@ -5,9 +5,11 @@ permalink: /projects/
 author_profile: true
 ---
 
-**1. Post-Earnings Announcement Drift in the 21st Century**
+**1. Post-Earnings Announcement Drift in the 21st Century**  
 This project investigates whether earnings surprises still lead to predictable stock returns in US equity markets from 2000 to 2023. Using an event study framework, it shows that the PEAD anomaly has significantly weakened and is largely explained by standard risk factors like size, value, and momentum. Statistical tests and cross-sectional regressions also confirm that earnings surprises lose their predictive power once key firm-level factors are accounted for.  
-💻 <a href="https://github.com/shreyasxi/PEAD-Anomaly-in-US-Equities/blob/main/Jupyter%20Notebook/5582804.ipynb" target="_blank">Code</a> &nbsp;||&nbsp; 📕 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank">Report</a>
+💻 <a href="https://github.com/shreyasxi/PEAD-Anomaly-in-US-Equities/blob/main/Jupyter%20Notebook/5582804.ipynb" target="_blank"><strong>Code</strong></a> &nbsp;||&nbsp; 📕 <a href="/files/PEAD_Project.pdf" target="_blank"><strong>Report</strong></a>
+
+<div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
 **2. Volatility and Risk Modelling in Currency Markets**  
 This project evaluates volatility and Value-at-Risk (VaR) models to forecast risk in two portfolios: one with nine developed market currencies and another including the Argentine peso. The results show that standard models often underestimate extreme risks in emerging markets. Backtesting confirms the importance of using flexible, adaptive models to better capture unexpected market movements.  
