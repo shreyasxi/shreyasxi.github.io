@@ -7,7 +7,8 @@ author_profile: true
 
 <h3>1. Master’s Thesis: ECB Narrative Tone and Market Impact</h3>
 <p>My master’s thesis examines how the tone of European Central Bank communications influences euro-area markets across policy statements, press conferences, Monetary Policy Accounts, and Executive Board speeches. I build a hawk and dove tone index from and test its impact at intraday and daily horizons while controlling for the policy news released at the same time. The results indicate that intraday moves are driven by substantive announcements, with tone adds a small, short-lived lift to equities during the press conference Q&A. By the daily close, tone effects mostly fade, with limited persistence in speeches and the Accounts, and even there tone matters mainly when systemic stress is around average and weakens as stress rises. Overall, tone can move prices in specific contexts, but it plays a supporting role relative to clear policy signals.</p>
-<p>💻 <a href="https://github.com/shreyasxi/shreyasxi.github.io/blob/master/files/5582804_Proposal.pdf" target="_blank"><strong>Proposal</strong></a> &nbsp;||&nbsp; 📕 <strong>Full Thesis (coming soon)</strong></p>
+<p>💻 <a href="https://github.com/shreyasxi/shreyasxi.github.io/blob/master/files/5582804_Proposal.pdf" target="_blank"><strong>Proposal</strong></a> &nbsp;||&nbsp; 📕 <a href="https://github.com/shreyasxi/shreyasxi.github.io/blob/master/files/5582804_Dissertation.pdf" target="_blank"><strong>Full Thesis</strong></a>
+</p>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
