@@ -183,7 +183,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     </div>
     <div class="book-card">
       <img src="https://m.media-amazon.com/images/I/91XIjkxgVyL._SL1500_.jpg" alt="Dopamine Nation">
-      <div class="book-title">Dopamine Nation: Finding Balance in the Age of Indulgenceh</div>
+      <div class="book-title">Dopamine Nation: Finding Balance in the Age of Indulgence</div>
       <div class="book-author">Anna Lembke</div>
     </div>
     <div class="book-card">
@@ -205,6 +205,11 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
       <img src="https://m.media-amazon.com/images/I/81DFDGzHZqL._SL1500_.jpg" alt="Meditations">
       <div class="book-title">Meditations</div>
       <div class="book-author">Marcus Aurelius</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/71zsCca79nL._SL1500_.jpg" alt="If I Must Die: Poetry and Prose">
+      <div class="book-title">If I Must Die: Poetry and Prose</div>
+      <div class="book-author">Refaat Alareer</div>
     </div>
   </div>
 </div>
