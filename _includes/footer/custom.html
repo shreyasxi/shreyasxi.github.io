@@ -16,39 +16,45 @@
   await mermaid.run({ querySelector: 'code.language-mermaid' });
 </script>
 
-<!-- Toggle avatar on click/tap (robust path handling) -->
+<!-- Toggle avatar on click/tap (works with config or filename fallback) -->
 <script>
 (function () {
   const img = document.querySelector(".author__avatar img, img.u-photo");
-  if (!img) return;
+  if (!img) {
+    console.warn("[avatar-toggle] Avatar <img> not found.");
+    return;
+  }
 
-  // Values from _config.yml (Liquid injects these)
-  const conf1 = "{{ site.author.avatar   | strip }}";   // e.g., "graphics.png" or "/images/graphics.png"
-  const conf2 = "{{ site.author.avatar_2 | strip }}";   // e.g., "graphics2.jpg" or "/images/graphics2.jpg"
+  // Values from _config.yml (if present)
+  const conf1 = "{{ site.author.avatar   | default: '' | strip }}";   // e.g., "graphics.png" or "/images/graphics.png"
+  const conf2 = "{{ site.author.avatar_2 | default: '' | strip }}";   // e.g., "graphics2.jpg" or "/images/graphics2.jpg"
 
-  // Helper to join dir + filename safely
+  // Fallback filenames if config isn't set or Liquid didn't resolve
+  const FALLBACK_1 = "graphics.png";
+  const FALLBACK_2 = "graphics2.jpg";
+
   function joinPath(dir, file) {
     if (!dir.endsWith("/")) dir += "/";
     return dir + file.replace(/^\/+/, "");
   }
 
-  // Determine the directory actually used by the current <img src>
-  // Example: if src is "https://site.io/repo/images/graphics.png" → dirOnPage = "/repo/images/"
+  // Directory of the currently rendered avatar (from the <img src> on the page)
   const url = new URL(img.src, window.location.origin);
   const parts = url.pathname.split("/");
-  const filenameOnPage = parts.pop();
-  const dirOnPage = parts.join("/") + "/";
+  const currentFilename = parts.pop();     // e.g., "graphics.png"
+  const dirOnPage = parts.join("/") + "/"; // e.g., "/images/"
 
-  // If config value contains '/', treat as full (site-relative) path; if just a filename, put it in the same dir as the current image
+  // Resolve a config value: if it contains '/', treat as path; if just a filename, put in same dir as current avatar
   function resolvePath(confValue, fallbackFile) {
-    if (!confValue) return joinPath(dirOnPage, fallbackFile);
-    if (confValue.includes("/")) return confValue;      // already a path like "/images/graphics2.jpg"
-    return joinPath(dirOnPage, confValue);              // filename → same folder as current avatar
+    if (confValue && confValue.includes("/")) return confValue;
+    if (confValue) return joinPath(dirOnPage, confValue);
+    return joinPath(dirOnPage, fallbackFile);
   }
 
-  const src1 = resolvePath(conf1, filenameOnPage);
-  const src2NoCache = resolvePath(conf2, filenameOnPage);
-  const src2 = src2NoCache + "?v={{ site.time | date: '%s' }}"; // simple cache-buster
+  // Build src1/src2
+  const src1 = resolvePath(conf1, currentFilename || FALLBACK_1);
+  const src2Base = resolvePath(conf2, FALLBACK_2);
+  const src2 = src2Base + "?v={{ site.time | date: '%s' }}"; // cache-buster
 
   const KEY = "avatarVersion";
 
@@ -83,6 +89,11 @@
   img.addEventListener("keypress", (e) => {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
   });
+
+  // Quick log so you know the two targets detected
+  console.log("[avatar-toggle] dirOnPage:", dirOnPage);
+  console.log("[avatar-toggle] src1:", src1);
+  console.log("[avatar-toggle] src2:", src2Base);
 })();
 </script>
 
