@@ -7,13 +7,54 @@
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 
 <!-- Support for Plotly -->
-<script defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js'></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js"></script>
 
 <!-- Support for Mermaid -->
 <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({startOnLoad:true, theme:'default'});
-    await mermaid.run({querySelector:'code.language-mermaid'});
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  await mermaid.run({ querySelector: 'code.language-mermaid' });
+</script>
+
+<!-- Toggle avatar on click/tap -->
+<script>
+(function () {
+  // Find the avatar image used by academicpages/minimal-mistakes
+  const img = document.querySelector(".author__avatar img, img.u-photo");
+  if (!img) return;
+
+  // Paths from _config.yml (you set these in the author: block)
+  const src1 = "{{ site.author.avatar   | relative_url }}";
+  const src2 = "{{ site.author.avatar_2 | default: site.author.avatar | relative_url }}?v={{ site.time | date: '%s' }}";
+
+  const KEY = "avatarVersion";
+
+  function set(ver) {
+    img.src = ver === "2" ? src2 : src1;
+    localStorage.setItem(KEY, ver);
+    img.setAttribute("aria-label", ver === "2" ? "Professional photo" : "Casual photo");
+  }
+
+  // Restore previous choice (or default to #1)
+  let current = localStorage.getItem(KEY) || "1";
+  set(current);
+
+  function toggle() {
+    current = current === "1" ? "2" : "1";
+    set(current);
+  }
+
+  // Make it operable & accessible
+  img.style.cursor = "pointer";
+  img.setAttribute("role", "button");
+  img.setAttribute("tabindex", "0");
+  img.setAttribute("title", "Click to switch photo");
+
+  img.addEventListener("click", toggle);
+  img.addEventListener("keypress", (e) => {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
+  });
+})();
 </script>
 
 <!-- end custom footer snippets -->
