@@ -2,98 +2,100 @@
 
 <a href="/sitemap/">Sitemap</a>
 
-<!-- Support for MathJax -->
+<!-- MathJax -->
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 
-<!-- Support for Plotly -->
+<!-- Plotly -->
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/3.0.1/plotly.min.js"></script>
 
-<!-- Support for Mermaid -->
+<!-- Mermaid (no top-level await to avoid syntax issues) -->
 <script type="module">
   import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true, theme: 'default' });
-  await mermaid.run({ querySelector: 'code.language-mermaid' });
+  // run returns a promise; we don’t need await
+  mermaid.run({ querySelector: 'code.language-mermaid' }).catch(() => {});
 </script>
 
-<!-- Toggle avatar on click/tap (works with config or filename fallback) -->
+<!-- Toggle avatar on click/tap (robust path handling, all braces balanced) -->
 <script>
 (function () {
-  const img = document.querySelector(".author__avatar img, img.u-photo");
-  if (!img) {
-    console.warn("[avatar-toggle] Avatar <img> not found.");
-    return;
+  try {
+    var img = document.querySelector(".author__avatar img, img.u-photo");
+    if (!img) {
+      console.warn("[avatar-toggle] Avatar <img> not found.");
+      return;
+    }
+
+    // Values from _config.yml (Liquid injects these)
+    var conf1 = "{{ site.author.avatar   | default: '' | strip }}";   // e.g., "graphics.png" or "/images/graphics.png"
+    var conf2 = "{{ site.author.avatar_2 | default: '' | strip }}";   // e.g., "graphics2.jpg" or "/images/graphics2.jpg"
+
+    var FALLBACK_1 = "graphics.png";
+    var FALLBACK_2 = "graphics2.jpg";
+
+    function joinPath(dir, file) {
+      if (!dir.endsWith("/")) dir += "/";
+      return dir + file.replace(/^\/+/, "");
+    }
+
+    // Determine directory of current avatar shown on page
+    var url = new URL(img.src, window.location.origin);
+    var parts = url.pathname.split("/");
+    var currentFilename = parts.pop() || FALLBACK_1;
+    var dirOnPage = parts.join("/") + "/";
+
+    function resolvePath(confValue, fallbackFile) {
+      if (confValue && confValue.indexOf("/") !== -1) return confValue; // already a path
+      if (confValue) return joinPath(dirOnPage, confValue);             // filename → same dir
+      return joinPath(dirOnPage, fallbackFile);
+    }
+
+    var src1 = resolvePath(conf1, currentFilename);
+    var src2Base = resolvePath(conf2, FALLBACK_2);
+    var src2 = src2Base + "?v={{ site.time | date: '%s' }}"; // cache-buster
+
+    var KEY = "avatarVersion";
+
+    function setVer(ver) {
+      img.src = ver === "2" ? src2 : src1;
+      localStorage.setItem(KEY, ver);
+      img.setAttribute("aria-label", ver === "2" ? "Professional photo" : "Casual photo");
+      // console logs for debugging
+      console.log("[avatar-toggle] set", ver, "→", img.src);
+    }
+
+    img.addEventListener("error", function () {
+      console.warn("[avatar-toggle] failed to load:", img.src);
+    });
+
+    var current = localStorage.getItem(KEY) || "1";
+    setVer(current);
+
+    function toggle() {
+      current = current === "1" ? "2" : "1";
+      setVer(current);
+    }
+
+    img.style.cursor = "pointer";
+    img.setAttribute("role", "button");
+    img.setAttribute("tabindex", "0");
+    img.setAttribute("title", "Click to switch photo");
+
+    img.addEventListener("click", toggle);
+    img.addEventListener("keypress", function (e) {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        toggle();
+      }
+    });
+
+    console.log("[avatar-toggle] dirOnPage:", dirOnPage);
+    console.log("[avatar-toggle] src1:", src1);
+    console.log("[avatar-toggle] src2:", src2Base);
+  } catch (err) {
+    console.error("[avatar-toggle] init error:", err);
   }
-
-  // Values from _config.yml (if present)
-  const conf1 = "{{ site.author.avatar   | default: '' | strip }}";   // e.g., "graphics.png" or "/images/graphics.png"
-  const conf2 = "{{ site.author.avatar_2 | default: '' | strip }}";   // e.g., "graphics2.jpg" or "/images/graphics2.jpg"
-
-  // Fallback filenames if config isn't set or Liquid didn't resolve
-  const FALLBACK_1 = "graphics.png";
-  const FALLBACK_2 = "graphics2.jpg";
-
-  function joinPath(dir, file) {
-    if (!dir.endsWith("/")) dir += "/";
-    return dir + file.replace(/^\/+/, "");
-  }
-
-  // Directory of the currently rendered avatar (from the <img src> on the page)
-  const url = new URL(img.src, window.location.origin);
-  const parts = url.pathname.split("/");
-  const currentFilename = parts.pop();     // e.g., "graphics.png"
-  const dirOnPage = parts.join("/") + "/"; // e.g., "/images/"
-
-  // Resolve a config value: if it contains '/', treat as path; if just a filename, put in same dir as current avatar
-  function resolvePath(confValue, fallbackFile) {
-    if (confValue && confValue.includes("/")) return confValue;
-    if (confValue) return joinPath(dirOnPage, confValue);
-    return joinPath(dirOnPage, fallbackFile);
-  }
-
-  // Build src1/src2
-  const src1 = resolvePath(conf1, currentFilename || FALLBACK_1);
-  const src2Base = resolvePath(conf2, FALLBACK_2);
-  const src2 = src2Base + "?v={{ site.time | date: '%s' }}"; // cache-buster
-
-  const KEY = "avatarVersion";
-
-  function set(ver) {
-    img.src = ver === "2" ? src2 : src1;
-    localStorage.setItem(KEY, ver);
-    img.setAttribute("aria-label", ver === "2" ? "Professional photo" : "Casual photo");
-    console.log("[avatar-toggle] set", ver, "→", img.src);
-  }
-
-  // Debug load failures
-  img.addEventListener("error", function () {
-    console.warn("[avatar-toggle] failed to load:", img.src);
-  });
-
-  // Initialize from previous choice (default to #1)
-  let current = localStorage.getItem(KEY) || "1";
-  set(current);
-
-  function toggle() {
-    current = current === "1" ? "2" : "1";
-    set(current);
-  }
-
-  // Make it operable & accessible
-  img.style.cursor = "pointer";
-  img.setAttribute("role", "button");
-  img.setAttribute("tabindex", "0");
-  img.setAttribute("title", "Click to switch photo");
-
-  img.addEventListener("click", toggle);
-  img.addEventListener("keypress", (e) => {
-    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); }
-  });
-
-  // Quick log so you know the two targets detected
-  console.log("[avatar-toggle] dirOnPage:", dirOnPage);
-  console.log("[avatar-toggle] src1:", src1);
-  console.log("[avatar-toggle] src2:", src2Base);
 })();
 </script>
 
