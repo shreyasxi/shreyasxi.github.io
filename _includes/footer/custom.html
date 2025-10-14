@@ -2,7 +2,7 @@
 
 <a href="/sitemap/">Sitemap</a>
 
-<!-- Support for MatJax -->
+<!-- Support for MathJax -->
 <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" id="MathJax-script"></script>
 
@@ -16,16 +16,39 @@
   await mermaid.run({ querySelector: 'code.language-mermaid' });
 </script>
 
-<!-- Toggle avatar on click/tap -->
+<!-- Toggle avatar on click/tap (robust path handling) -->
 <script>
 (function () {
-  // Find the avatar image used by academicpages/minimal-mistakes
   const img = document.querySelector(".author__avatar img, img.u-photo");
   if (!img) return;
 
-  // Paths from _config.yml (you set these in the author: block)
-  const src1 = "{{ site.author.avatar   | relative_url }}";
-  const src2 = "{{ site.author.avatar_2 | default: site.author.avatar | relative_url }}?v={{ site.time | date: '%s' }}";
+  // Values from _config.yml (Liquid injects these)
+  const conf1 = "{{ site.author.avatar   | strip }}";   // e.g., "graphics.png" or "/images/graphics.png"
+  const conf2 = "{{ site.author.avatar_2 | strip }}";   // e.g., "graphics2.jpg" or "/images/graphics2.jpg"
+
+  // Helper to join dir + filename safely
+  function joinPath(dir, file) {
+    if (!dir.endsWith("/")) dir += "/";
+    return dir + file.replace(/^\/+/, "");
+  }
+
+  // Determine the directory actually used by the current <img src>
+  // Example: if src is "https://site.io/repo/images/graphics.png" → dirOnPage = "/repo/images/"
+  const url = new URL(img.src, window.location.origin);
+  const parts = url.pathname.split("/");
+  const filenameOnPage = parts.pop();
+  const dirOnPage = parts.join("/") + "/";
+
+  // If config value contains '/', treat as full (site-relative) path; if just a filename, put it in the same dir as the current image
+  function resolvePath(confValue, fallbackFile) {
+    if (!confValue) return joinPath(dirOnPage, fallbackFile);
+    if (confValue.includes("/")) return confValue;      // already a path like "/images/graphics2.jpg"
+    return joinPath(dirOnPage, confValue);              // filename → same folder as current avatar
+  }
+
+  const src1 = resolvePath(conf1, filenameOnPage);
+  const src2NoCache = resolvePath(conf2, filenameOnPage);
+  const src2 = src2NoCache + "?v={{ site.time | date: '%s' }}"; // simple cache-buster
 
   const KEY = "avatarVersion";
 
@@ -33,9 +56,15 @@
     img.src = ver === "2" ? src2 : src1;
     localStorage.setItem(KEY, ver);
     img.setAttribute("aria-label", ver === "2" ? "Professional photo" : "Casual photo");
+    console.log("[avatar-toggle] set", ver, "→", img.src);
   }
 
-  // Restore previous choice (or default to #1)
+  // Debug load failures
+  img.addEventListener("error", function () {
+    console.warn("[avatar-toggle] failed to load:", img.src);
+  });
+
+  // Initialize from previous choice (default to #1)
   let current = localStorage.getItem(KEY) || "1";
   set(current);
 
