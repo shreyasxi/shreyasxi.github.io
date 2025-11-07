@@ -97,6 +97,16 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     <div class="book-author">Pulak Prasad</div>
   </div>
   <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/71Mi49JF4DS._SL1500_.jpg">
+    <div class="book-title">The World for Sale: Money, Power and the Traders Who Barter the Earth’s Resources</div>
+    <div class="book-author">Javier Blas and Jack Farchy</div>
+  </div>
+  <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/7133t2a1ClL._SL1500_.jpg">
+    <div class="book-title">How to Listen When Markets Speak</div>
+    <div class="book-author">Lawrence McDonald</div>
+  </div>
+  <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/71poHBzgD2L._SL1500_.jpg" alt="A Short History of Financial Euphoria">
     <div class="book-title">A Short History of Financial Euphoria</div>
     <div class="book-author">John Galbraith</div>
@@ -134,6 +144,11 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     <img src="https://m.media-amazon.com/images/I/41KffVGba4L.jpg" alt="Debt: The First 5000 Years">
     <div class="book-title">Debt: The First 5000 Years</div>
     <div class="book-author">David Graeber</div>
+  </div>
+   <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/81VLPyAcwyL._SL1500_.jpg">
+    <div class="book-title">How Asia Works</div>
+    <div class="book-author">Joe Studwell</div>
   </div>
    <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/51QAzSdKS4L._SL1500_.jpg" alt="Naked Economics – Undressing the Dismal Science">
