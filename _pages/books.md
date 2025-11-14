@@ -118,7 +118,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
   </div>
   <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/81ZmhjQI2LL._SL1500_.jpg" alt="The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution">
-    <div class="book-title">The Man Who Solved the Market: How Jim Simons Launched the Quant Revolution</div>
+    <div class="book-title">The Man Who Solved the Market</div>
     <div class="book-author">Gregory Zuckerman</div>
   </div>
 </div>
@@ -127,7 +127,7 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
  <div class="book-tab-content tab2">
   <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/81aAoRfip+L._SL1500_.jpg" alt="Why Nations Fail: The Origins of Power, Prosperity and Poverty">
-    <div class="book-title">Why Nations Fail: The Origins of Power, Prosperity and Poverty</div>
+    <div class="book-title">Why Nations Fail</div>
     <div class="book-author">Daron Acemoglu and James Robinson</div>
   </div>
   <div class="book-card">
