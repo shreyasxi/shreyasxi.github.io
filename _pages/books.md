@@ -140,6 +140,11 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
     <div class="book-title">Poor Economics</div>
     <div class="book-author">Abhijit Banerjee and Esther Duflo</div>
   </div>
+   <div class="book-card">
+    <img src="https://m.media-amazon.com/images/I/81J4ERy7kDL._SL1500_.jpg">
+    <div class="book-title">Chokepoints: American Power in the Age of Economic Warfare</div>
+    <div class="book-author">Edward Fishman</div>
+  </div>
   <div class="book-card">
     <img src="https://m.media-amazon.com/images/I/41KffVGba4L.jpg" alt="Debt: The First 5000 Years">
     <div class="book-title">Debt: The First 5000 Years</div>
