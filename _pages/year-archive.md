@@ -12,9 +12,9 @@ Here’s a glimpse into my writing on finance, macro, digital currencies, and ot
 
 2. <a href="https://theboar.org/2025/08/is-war-good-for-the-economy/" target="_blank"><strong>Is War Good for the Economy?</strong></a>
    Explains how inflation, deficit finance, and military outlays can inflate GDP during war while hiding declines in living standards and productive capacity.
-   <br><br>
-   <a href="https://github.com/shreyasxi/shreyasxi.github.io/blob/master/files/PDF%20Report.pdf" target="_blank" style="background-color: #f4f4f4; padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.85em; color: #333;">
-      ⬇️ Download Equity Research Style Report (PDF)
+   <br>
+   <a href="https://shreyasxi.github.io/files/PDF%20Report.pdf" target="_blank" style="background-color: #f4f4f4; padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.85em; color: #333;">
+      ⬇️ Also available as a PDF Report (Download)
    </a>
 
 4. <a href="https://www.instagram.com/p/C117XVat_5N/?img_index=1" target="_blank"><strong>2023 in Finance: Top Stories, Major Shifts and Evolving Trends</strong></a>  
