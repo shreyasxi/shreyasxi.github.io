@@ -16,7 +16,6 @@ Outside the academic space, I’ve created a number of **educational platforms**
 1. <a href="https://www.instagram.com/empowered.humans.of.earth/" target="_blank"><strong>Empowered Humans of Earth</strong></a> – exploring economics, social issues, privacy and current affairs  
 2. <a href="https://www.instagram.com/the.economics.hub/" target="_blank"><strong>The Economics Hub</strong></a> – curating macro trends and financial explainers  
 3. <a href="https://economicshub.substack.com/" target="_blank"><strong>The Economics Hub on Substack</strong></a> – deep dives on various topics. Please follow my weekly newsletter!
-
 ## My Technical Toolkit
 
 ![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
