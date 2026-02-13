@@ -16,18 +16,22 @@ Outside the academic space, I’ve created a number of **educational platforms**
 1. <a href="https://www.instagram.com/empowered.humans.of.earth/" target="_blank"><strong>Empowered Humans of Earth</strong></a> – exploring economics, social issues, privacy and current affairs  
 2. <a href="https://www.instagram.com/the.economics.hub/" target="_blank"><strong>The Economics Hub</strong></a> – curating macro trends and financial explainers  
 3. <a href="https://economicshub.substack.com/" target="_blank"><strong>The Economics Hub on Substack</strong></a> – deep dives on various topics. Please follow my weekly newsletter!
+   
 ## My Technical Toolkit
 
-![R](https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![LaTeX](https://img.shields.io/badge/LaTeX-47A141?style=flat&logo=latex&logoColor=white)
-![Stata](https://img.shields.io/badge/Stata-1A5F91?style=flat&logoColor=white)
-![Excel](https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white)
-![Obsidian](https://img.shields.io/badge/Obsidian-483699?style=flat&logo=obsidian&logoColor=white)
-![Claude Code](https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=anthropic&logoColor=white)
+<div align="center">
+  <img src="https://img.shields.io/badge/R-276DC3?style=flat&logo=r&logoColor=white" alt="R" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/LaTeX-47A141?style=flat&logo=latex&logoColor=white" alt="LaTeX" />
+  <img src="https://img.shields.io/badge/Stata-1A5F91?style=flat&logoColor=white" alt="Stata" />
+  <img src="https://img.shields.io/badge/Excel-217346?style=flat&logo=microsoft-excel&logoColor=white" alt="Excel" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
+  <img src="https://img.shields.io/badge/VS_Code-007ACC?style=flat&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/Obsidian-483699?style=flat&logo=obsidian&logoColor=white" alt="Obsidian" />
+  <img src="https://img.shields.io/badge/Claude_Code-D97757?style=flat&logo=anthropic&logoColor=white" alt="Claude Code" />
+</div>
 
+<br>
 I’m proficient in R, Python, LaTeX, and Excel, with working knowledge of Stata for tasks like panel regressions and applied econometrics. I enjoy building financial models and making complex data easier to interpret and explain.
 
 When I’m not working on the usual finance stuff. I like to: 
