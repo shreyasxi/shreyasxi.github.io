@@ -14,7 +14,7 @@ author_profile: true
 
 **2. The Economics Hub: Automated Macroeconomic Dashboard**  
 This project is a fully automated data pipeline that powers my weekly macroeconomic and financial markets newsletter. Every week, this Python script automatically pulls live data from the FRED and Yahoo Finance APIs, processes it with Pandas, and outputs the exact charts I use in my publication such as yield curves, sector rotation, and inflation trends. It is essentially a custom ETL setup that takes raw API data and turns it into publication-ready visualizations.  
-💻 <a href="https://github.com/shreyasxi/the-economics-hub" target="_blank"><strong>Source Code</strong></a> &nbsp;||&nbsp; 🧧 <a href="https://economicshub.substack.com/" target="_blank"><strong>Live Newsletter</strong></a>
+💻 <a href="https://github.com/shreyasxi/the-economics-hub" target="_blank"><strong>Source Code</strong></a> &nbsp;||&nbsp; 🧧 <a href="https://economicshub.substack.com/" target="_blank"><strong>Substack Newsletter</strong></a>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
