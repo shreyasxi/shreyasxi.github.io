@@ -12,6 +12,12 @@ author_profile: true
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
+**2. The Economics Hub: Automated Macroeconomic Dashboard**  
+This project is a fully automated data pipeline that powers my weekly macroeconomic and financial markets newsletter. Every week, this Python script automatically pulls live data from the FRED and Yahoo Finance APIs, processes it with Pandas, and outputs the exact charts I use in my publication such as yield curves, sector rotation, and inflation trends. It is essentially a custom ETL setup that takes raw API data and turns it into publication-ready visualizations.  
+💻 <a href="https://github.com/shreyasxi/the-economics-hub" target="_blank"><strong>Source Code</strong></a> &nbsp;||&nbsp; 🌐 <a href="https://economicshub.substack.com/" target="_blank"><strong>Live Newsletter</strong></a>
+
+<div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
+
 **2. Post-Earnings Announcement Drift in the 21st Century**  
 This project investigates whether earnings surprises still lead to predictable stock returns in US equity markets from 2000 to 2023. Using an event study framework, it shows that the PEAD anomaly has significantly weakened and is largely explained by standard risk factors like size, value, and momentum. Statistical tests and cross-sectional regressions also confirm that earnings surprises lose their predictive power once key firm-level factors are accounted for.  
 💻 <a href="https://github.com/shreyasxi/PEAD-Anomaly-in-US-Equities/blob/main/Jupyter%20Notebook/5582804.ipynb" target="_blank"><strong>Code</strong></a> &nbsp;||&nbsp; 📕 <a href="/files/PEAD_Project.pdf" target="_blank"><strong>Report</strong></a>
