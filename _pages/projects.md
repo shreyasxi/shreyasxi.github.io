@@ -62,6 +62,6 @@ As part of the Alternative Investments course, my group delivered a presentation
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
-**9. Financial Statement Analysis: Marks & Spencer Equity Valuation**   
+**10. Financial Statement Analysis: Marks & Spencer Equity Valuation**   
 This equity research report analyzes Marks & Spencer's successful operational turnaround, driven by improved profitability and asset turnover, but concludes that a valuation based on core fundamentals suggests this recovery is already fully priced into the current stock.   
 &nbsp;📕 <a href="/files/FRSA.pdf" target="_blank"><strong>Report</strong></a> &nbsp;||&nbsp; 💡 <a href="/files/Final_Shrey.xlsx" target="_blank"><strong>Excel</strong></a>
