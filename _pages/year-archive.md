@@ -7,13 +7,16 @@ author_profile: true
 
 Here’s a glimpse into my writing on finance, macro, digital currencies, and other ideas I’m excited about. Enjoy reading — and don’t forget to subscribe at <a href="https://economicshub.substack.com/" target="_blank">economicshub.substack.com</a>!
 
-1. <a href="https://economicshub.substack.com/p/will-the-ai-boom-actually-hollow" target="_blank"><strong>Will the AI Boom Actually Hollow Out Its Own Customers?</strong></a>  
+1. <a href="https://economicshub.substack.com/p/iran-war-is-more-than-just-oil" target="_blank"><strong>Iran War is More Than Just Oil</strong></a>  
+   This analysis investigates the systemic second and third-order effects of the escalating Iran conflict on the global economy. It breaks down how the conflict is tightening bottlenecks in non-oil sectors people often overlook such as agriculture, shipping, semiconductors, energy and more. 
+  
+2. <a href="https://economicshub.substack.com/p/will-the-ai-boom-actually-hollow" target="_blank"><strong>Will the AI Boom Actually Hollow Out Its Own Customers?</strong></a>  
    In this article, I explore and challenge the usual AI doomsday narratives with necessary counter-arguments to provide a more nuanced view of the AI transition and enterprise technology adoption.
 
-2. <a href="https://www.instagram.com/p/C09ADUXPO-9/?img_index=1" target="_blank"><strong>Beyond LLM-Driven Chatbots: The Case for Privacy-Focused Miniature AI Models</strong></a>  
+3. <a href="https://www.instagram.com/p/C09ADUXPO-9/?img_index=1" target="_blank"><strong>Beyond LLM-Driven Chatbots: The Case for Privacy-Focused Miniature AI Models</strong></a>  
    Miniaturised AI may not match the robustness and convenience of large language models (LLMs), but they may address  the critical concerns surrounding data privacy, resource efficiency, and architectural complexity.
 
-3. <a href="https://theboar.org/2025/08/is-war-good-for-the-economy/" target="_blank"><strong>Is War Good for the Economy?</strong></a>
+4. <a href="https://theboar.org/2025/08/is-war-good-for-the-economy/" target="_blank"><strong>Is War Good for the Economy?</strong></a>
    Explains how inflation, deficit finance, and military outlays can inflate GDP during war while hiding declines in living standards and productive capacity.
    <br>
    <a href="https://shreyasxi.github.io/files/PDF%20Report.pdf" target="_blank" style="background-color: #f4f4f4; padding: 4px 8px; border-radius: 4px; text-decoration: none; font-size: 0.85em; color: #333;">
