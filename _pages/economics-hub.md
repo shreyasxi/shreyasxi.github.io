@@ -35,6 +35,8 @@ Both streams are immediately standardized into Pandas DataFrames and processed t
 
  The complete end-to-end execution is mapped below: 
 
+<div align="center">
+
 ```mermaid
 flowchart TD
     A1[Macro Data\nFRED API] --> B
@@ -48,7 +50,7 @@ flowchart TD
     
     D[Streamlit UI\nInteractive Macro Dashboard]
 ```
-
+</div>
 
 ## System Architecture II: The NLP Sentinel
 The RBI Sentinel is a specialized NLP pipeline that autonomously scrapes, cleans, and scores Reserve Bank of India policy documents. To eliminate network latency, documents are pulled via a custom ASP.NET paginator, cached locally, and parsed through a resilient CSS-selector waterfall to extract clean prose.
