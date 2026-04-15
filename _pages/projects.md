@@ -27,7 +27,7 @@ author_profile: true
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
 
 <h3>4. Volatility and Risk Modelling in Currency Markets</h3>   
-This project evaluates volatility and Value-at-Risk (VaR) models to forecast risk in two portfolios: one with nine developed market currencies and another including the Argentine peso. The results show that standard models often underestimate extreme risks in emerging markets. Backtesting confirms the importance of using flexible, adaptive models to better capture unexpected market movements.  
+This project evaluates volatility and Value-at-Risk (VaR) models to forecast risk in two portfolios: one with nine developed market currencies and another including the Argentine peso. The results show that standard models often underestimate extreme risks in emerging markets. Backtesting confirms the importance of using flexible, adaptive models to better capture unexpected market movements.   
 💻 <a href="https://github.com/shreyasxi/Forecasting-and-Backtesting-Risk-Models-for-FX-Portfolios/blob/master/RM%20Code%20Script.R" target="_blank"><strong>Code</strong></a> &nbsp;||&nbsp; 📕 <a href="/files/Volatility Forecasting and Risk Modelling Report.pdf" target="_blank"><strong>Report</strong></a>
 
 <div style="height: 1px; background-color: #cccccc; margin: 1em 0;"></div>
