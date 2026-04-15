@@ -50,6 +50,7 @@ flowchart TD
     
     D[Streamlit UI\nInteractive Macro Dashboard]
 ```
+
 </div>
 
 ## System Architecture II: The NLP Sentinel
