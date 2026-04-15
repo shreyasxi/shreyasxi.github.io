@@ -5,6 +5,8 @@ layout: single
 author_profile: true
 ---
 
+This project is an institutional-grade financial platform that autonomously tracks global cross-asset markets and quantifies Reserve Bank of India policy shifts using natural language processing.
+
 <br>
 <div style="text-align: center; margin: 2rem 0 3rem 0;">
   <a href="https://weekly-macro-dashboard.streamlit.app/" target="_blank" 
@@ -15,52 +17,65 @@ author_profile: true
   </a>
 </div>
 
-## 1. The Investment Rationale
-Central bank language is one of the most systematically mispriced signals in emerging market fixed income. The Reserve Bank of India publishes three document types per MPC meeting — Policy Resolution, MPC Minutes, and Governor's Statement — each calibrated to a different audience and carrying distinct informational content. A pure read of the policy rate misses the forward guidance encoded in this language. A drift toward phrases like "withdrawal of accommodation remains warranted" months before an actual rate hold is a tradeable signal in INR rates, Nifty Bank sector ETFs, and the broader USD/INR forward curve. By quantifying that tone shift into a continuous score on a -1.0 (Extremely Dovish) to +1.0 (Extremely Hawkish) scale and tracking it across 30+ MPC meetings since the committee's inception in October 2016, this dashboard converts qualitative central bank rhetoric into a time series that can be backtested, correlated, and positioned against.
+## Overview
+The foundation of this platform is the Global Macro Engine, an automated ETL pipeline designed to provide a comprehensive, lag-free read on global cross-asset risk. Because financial assets do not trade in isolation, this system autonomously processes live API data into over 25+ institutional-grade charts weekly — tracking US Treasury yield curves, bond markets, commodities, sector rotation, emerging markets and more. By systematically aggregating these signals, the engine establishes the quantitative baseline required to identify shifting market regimes. 
 
-The global macro overlay provides the cross-asset context that makes the India signal actionable. INR assets do not trade in isolation — a synchronized global tightening cycle overwhelms domestic dovishness, while a Fed pivot materially widens the space for RBI accommodation. By co-locating weekly readings on US Treasury yields, IG/HY credit spreads, VIX, VXEEM, commodity curves, and OECD Composite Leading Indicators in a single dashboard, the system enables a regime-aware interpretation of the RBI's tone. The edge is not in any single data point, but in the structured, lag-free combination of high-frequency global risk signals with a machine-readable history of the RBI's own words.
+Layered onto this macro foundation is the RBI Sentinel. It is designed to capture one of the most consistently mispriced signals in emerging market fixed income: central bank forward guidance. A simple read of the policy rate often misses the nuance in language — the subtle shift toward phrases like “withdrawal of accommodation” that tends to precede actual rate moves across the RBI’s MPC statements, minutes, and governor’s remarks. The system addresses this by using a hybrid NLP framework to translate these semantic shifts into a continuous score, ranging from -1.0 (extremely dovish) to +1.0 (extremely hawkish), across more than 30 MPC meetings. In doing so, it converts qualitative rhetoric into a structured, backtestable time series.
 
+## System Architecture I: Global Macro Engine
+The Global Macro Engine is a fully autonomous ETL pipeline that ingests live data on a scheduled cadence and transforms it into institutional-grade visualizations. To handle the complexity of the inputs, the data ingestion layer is split into two specialized streams:
 
-## 2. System Architecture I: Global Macro Engine
-The Global Macro Engine is a fully autonomous ETL pipeline that ingests live data from two authoritative sources on a scheduled cadence. Market data — equity indices, sector ETFs, FX pairs, commodity futures, and volatility measures including VIX and VXEEM — is fetched via the `yfinance` library through a `YFinanceFetcher` class exposing clean `weekly_change()` and `get_close_series()` methods. Macro fundamentals — US Treasury yields across the full curve, credit spreads, inflation breakevens, unemployment, and Fed balance sheet data — are pulled via `fredapi` from the FRED API through a parallel `FredFetcher` class. Both fetchers return standardized Pandas `DataFrame` objects, passed through `EconStyle`-governed Matplotlib chart templates (`WeeklyBarChart`, `TrendLineChart`, `YieldCurveChart`, `SummaryTable`) to produce institutional-grade PNGs at consistent DPI and color standards.
+* **Market Data:** A custom `YFinanceFetcher` pulls equity indices, FX pairs, commodities, and volatility metrics (VIX/VXEEM) using the `yfinance` library.
+* **Macro Fundamentals:** A parallel `FredFetcher` extracts structural economic data, such as full-curve US Treasury yields, credit spreads, and inflation breakevens, directly from the FRED API.
 
-The pipeline runs on two GitHub Actions cron schedules: `generate_weekly.py` fires every Saturday at 06:00 UTC producing approximately 27 charts covering markets and cross-asset risk, while `generate_macro.py` fires on the second Saturday of each month to produce 9–11 structural macro charts. Generated PNGs are committed to the `assets/` directory, which Streamlit Cloud serves on the live dashboard. A `utils/chart_loader.py` module handles chart discovery via filename-agnostic glob and natural sort, making the pipeline extensible without any hard-coded file lists.
+Both streams are immediately standardized into Pandas DataFrames and processed through custom `EconStyle` Matplotlib templates to ensure consistent formatting standards. The execution and deployment layer is entirely serverless:
+
+* **Automated CI/CD:** GitHub Actions triggers `generate_weekly.py` every Saturday (rendering 25+ cross-asset charts) and `generate_macro.py` second Saturday of each month (rendering structural macro charts), committing the PNGs directly to the repository.
+* **Dynamic Streamlit Delivery:** Streamlit Cloud serves the live dashboard directly from the `assets/` directory. A custom `chart_loader.py` module handles discovery via filename-agnostic globbing and natural sort, keeping the architecture extensible without hard-coded file lists.
+
+ The complete end-to-end execution is mapped below: 
 
 ```mermaid
 flowchart TD
-    A[yfinance API\nEquities · FX · Commodities · VIX · Sector ETFs] --> C[YFinanceFetcher\nweekly_change · get_close_series]
-    B[FRED API\nYields · Spreads · Inflation · Labour · Fed Balance Sheet] --> D[FredFetcher\nfetch_series · fetch_yield_curve]
-    C --> E[Pandas DataFrames\nTime-Series Processing]
-    D --> E
-    E --> F[EconStyle Chart Templates\nWeeklyBarChart · TrendLineChart\nYieldCurveChart · SummaryTable]
-    F --> G[PNG Outputs\noutput/weekly/ · output/macro/]
-    G --> H{GitHub Actions CI\nSaturday 06:00 UTC\n2nd Saturday 08:00 UTC}
-    H --> I[assets/ directory\ngit-committed PNGs]
-    I --> J[utils/chart_loader.py\nGlob · Natural Sort]
-    J --> K[Streamlit Dashboard\nWeekly Markets · Macro Pulse tabs]
+    A1[Macro Data\nFRED API] --> B
+    A2[Market Data\nYahoo Finance] --> B
+    
+    B[ETL & Charting Engine\nPandas Processing & EconStyle Generation] --> C1
+    B --> C2
+    
+    C1[Automated Deployment\nGitHub Actions Cron Jobs] --> D
+    C2[Local Execution\nOn-Demand Manual Generation] --> D
+    
+    D[Streamlit UI\nInteractive Macro Dashboard]
 ```
 
 
-## 3. System Architecture II: The NLP Sentinel
-The RBI Sentinel ingests its corpus directly from `rbi.org.in` via a `MasterFetcher` that paginates the site's ASP.NET `SearchResults.aspx` endpoint using stateful POST requests to the `ProcessPaging()` handler. Each result is routed into one of three document type buckets — Policy Resolution, MPC Minutes, or Governor's Statement — and raw HTML is cached locally under `data/rbi_sentinel_cache/` to minimize redundant network calls. A versioned CSS selector waterfall in `html_extractor.py`, with a smart `<td>` fallback for legacy markup, extracts clean prose from the HTML. All scored documents, sub-dimension scores, and LLM narratives are persisted in a five-table local SQLite database (`rbi_sentinel.db`), spanning `mpc_meetings`, `rbi_documents`, `sentiment_scores`, `meeting_composites`, and a `fetch_log` — making every historical score auditable and reproducible without re-calling any API.
+## System Architecture II: The NLP Sentinel
+The RBI Sentinel is a specialized NLP pipeline that autonomously scrapes, cleans, and scores Reserve Bank of India policy documents. To eliminate network latency, documents are pulled via a custom ASP.NET paginator, cached locally, and parsed through a resilient CSS-selector waterfall to extract clean prose.
 
-The scoring engine is a two-tier hybrid model. Stage 1 is a deterministic lexicon scorer that scans each document for 30+ hawkish and 30+ dovish domain-specific phrases, applies a five-word negation window that flips term signs, and normalizes the raw hit count via `tanh(hits / √word_count)` to produce a density-adjusted score in `[-1, +1]`. Stage 2 passes the full document to Claude Haiku (`claude-haiku-4-5`) via the Anthropic API, returning a structured JSON object with seven sub-dimension scores (inflation stance, growth stance, liquidity stance, rate guidance, FX/external stance), a key-phrase list, and a two-paragraph narrative. If the absolute divergence between lexicon and LLM scores exceeds 0.4, a conflict flag is raised and confidence is capped at 0.45, triggering a fallback re-score with Claude Sonnet. The final composite is the weighted fusion `0.25 × lexicon + 0.75 × LLM` — the lexicon acts as a deterministic audit layer, while the LLM holds the dominant weight for contextual interpretation. This composite, plus all sub-dimensions and narratives, is written to SQLite and read by six chart modules to produce the visualizations in the RBI Sentinel tab.
+The extracted text is then evaluated by a two-tier hybrid scoring engine designed to balance contextual nuance with deterministic auditing:
 
+* **Stage 1: Deterministic Lexicon:** Scans for 60+ domain-specific hawkish and dovish phrases using a five-word negation window. Raw hits are density-adjusted via `tanh(hits / √word_count)` to produce a normalized score from -1.0 to +1.0.
+
+* **Stage 2: LLM Contextualization:** Anthropic’s Claude Haiku processes the full document to return a structured JSON object containing seven sub-dimension scores (e.g., inflation stance, liquidity, rate guidance) and a synthesized macro narrative.
+
+* **Score Fusion & Fallback:** The final composite is a weighted fusion ($0.25 \times \text{Lexicon} + 0.75 \times \text{LLM}$). If the absolute divergence between the two stages exceeds 0.4, the system caps confidence at 0.45 and triggers an automatic fallback re-score using Claude Sonnet.
+
+All historical documents, composite scores, and generated narratives are persisted in a five-table local SQLite database (`rbi_sentinel.db`), ensuring complete auditability and reproducibility for the Streamlit dashboard visualizations. The complete end-to-end execution is mapped below: 
+  
 ```mermaid
-flowchart LR
-    A[rbi.org.in\nSearchResults.aspx] --> B[MasterFetcher\nASP.NET pagination\n2.5s rate limit]
-    B --> C[HTML Cache\ndata/rbi_sentinel_cache/\nResolution · Minutes · Statement]
-    C --> D[html_extractor.py\nCSS selector waterfall\nTD fallback]
-    D --> E[text_normalizer.py\nDedup · Whitespace · Sentence split]
-    E --> F1[Stage 1: Lexicon Scorer\n30+ hawkish · 30+ dovish phrases\nNegation handler · tanh normalization]
-    E --> F2[Stage 2: LLM Scorer\nClaude Haiku primary\nClaude Sonnet fallback\nStructured JSON output]
-    F1 --> G[Conflict Check\nlexicon - llm > 0.4\n→ confidence capped at 0.45]
-    F2 --> G
-    G --> H[Fusion\n0.25 × lexicon + 0.75 × LLM\nFinal composite score]
-    H --> I[(SQLite — rbi_sentinel.db\nmpc_meetings · rbi_documents\nsentiment_scores · meeting_composites\nfetch_log)]
-    I --> J[6 Chart Modules\nStance Meter · Trajectory · Comparison\nSub-dimensions · Narrative]
-    J --> K[assets/rbi_sentinel/YYYY-MM/\ngit-committed PNGs]
-    K --> L[Streamlit\nRBI Sentinel tab]
+flowchart TD
+    A[Data Ingestion\nWeb Scraper & Cache] --> B[Extraction Pipeline\nHTML Parsing & Text Normalization]
+    
+    B --> C1[Stage 1: Lexicon Scorer\nDomain-Specific Dictionary]
+    B --> C2[Stage 2: LLM Scorer\nAnthropic Claude API]
+    
+    C1 --> D[Conflict Check & Score Fusion\n0.25 Lexicon + 0.75 LLM]
+    C2 --> D
+    
+    D --> E[(SQLite Database\nrbi_sentinel.db)]
+    E --> F[Chart Generators\nPNG Rendering]
+    F --> G[Streamlit UI\nLive Dashboard]
 ```
 
 <br>
