@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Hello, I’m **Shreyas Urgunde**. I currently work as a Predoctoral Researcher at the University of Oxford, having previously completed my MSc Finance at Warwick Business School. I spend my days making sense of markets, financial structures, and the stories we tell to convince the world (and often ourselves) that risk is manageable, value is objective, and efficiency is real (spoiler: it rarely is).
+Hello, I’m **Shreyas Urgunde**, an economics and finance researcher with an MSc Finance from Warwick Business School. My work focuses on empirical finance, econometrics, coding, and applied economic analysis, including research experience with a research lab based at the University of Oxford. I spend my days making sense of markets, financial structures, and the stories we tell to convince the world (and often ourselves) that risk is manageable, value is objective, and efficiency is real (spoiler: it rarely is).
 
 My **research interests** sit at the intersection of financial markets, macroeconomics, and digital currencies. I’m particularly fascinated by how central bank communication, market narratives, and emerging technologies influence asset pricing and systemic risks. My master's dissertation, supervised by Professor Philippe Muller, examines how the tone of ECB communications differentially impacts various financial markets. You can read the full thesis <a href="https://shreyasxi.github.io/ecb-narrative-tone-market-impact-thesis/" target="_blank" rel="noopener noreferrer">here</a>.
 
