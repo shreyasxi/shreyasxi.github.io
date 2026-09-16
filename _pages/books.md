@@ -202,12 +202,17 @@ Here are some books I’ve found insightful, thought-provoking, or just beautifu
       <div class="book-author">Apostolos Doxiadis and Christos Papadimitriou</div>
     </div>
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/91XIjkxgVyL._SL1500_.jpg" alt="Dopamine Nation">
+      <img src="https://m.media-amazon.com/images/I/71uH6j2BRFL._SL1500_.jpg" alt="A Brief History of Intelligence">
+      <div class="book-title">A Brief History of Intelligence</div>
+      <div class="book-author"> Max Bennett</div>
+    </div>
+    <div class="book-card">
+      <img src="https://m.media-amazon.com/images/I/81Jy2PU82kL._SL1500_.jpg" alt="Dopamine Nation">
       <div class="book-title">Dopamine Nation: Finding Balance in the Age of Indulgence</div>
       <div class="book-author">Anna Lembke</div>
     </div>
     <div class="book-card">
-      <img src="https://m.media-amazon.com/images/I/81kecluqedL._SL1500_.jpg" alt="I, Robot">
+      <img src="https://m.media-amazon.com/images/I/81tS7Ms0OeL._SL1500_.jpg" alt="I, Robot">
       <div class="book-title">I, Robot</div>
       <div class="book-author">Issac Asimov</div>
     </div>
