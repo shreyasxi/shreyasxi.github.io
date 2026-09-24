@@ -23,7 +23,7 @@ redirect_from:
 
 <section class="home-section container" aria-labelledby="research-interests">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="research-interests">Research interests</h2>
+    <h2 class="home-section__title" id="research-interests">Research Interests</h2>
   </div>
   <div class="home-section__body">
     <p>My <strong>research interests</strong> sit at the intersection of financial markets, macroeconomics, and digital currencies. I’m particularly fascinated by how central bank communication, market narratives, and emerging technologies influence asset pricing and systemic risks. My master’s dissertation, supervised by Professor Philippe Muller, examines how the tone of ECB communications differentially impacts various financial markets. You can read the full thesis <a href="https://shreyasxi.github.io/ecb-narrative-tone-market-impact-thesis/" target="_blank" rel="noopener noreferrer">here</a>.</p>
@@ -44,7 +44,7 @@ redirect_from:
 
 <section class="home-section container" aria-labelledby="selected-writing">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="selected-writing">Selected writing</h2>
+    <h2 class="home-section__title" id="selected-writing">Selected Writing</h2>
     <a class="home-section__link" href="/year-archive/"><span>All writing</span>{% include site/icon.html name="arrow-right" %}</a>
   </div>
   <div class="home-section__body">
@@ -54,7 +54,7 @@ redirect_from:
 
 <section class="home-section container" aria-labelledby="educational-platforms">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="educational-platforms">Educational platforms</h2>
+    <h2 class="home-section__title" id="educational-platforms">Educational Platforms</h2>
   </div>
   <div class="home-section__body">
     <div class="platforms-intro">
@@ -95,37 +95,95 @@ redirect_from:
     <h2 class="home-section__title" id="technical-toolkit">My Technical Toolkit</h2>
   </div>
   <div class="home-section__body">
-    <ul class="toolkit" aria-label="Tools">
-      <li>R</li>
-      <li>Python</li>
-      <li>LaTeX</li>
-      <li>Stata</li>
-      <li>GitHub</li>
-      <li>Excel</li>
-      <li>Docker</li>
-      <li>VS Code</li>
-      <li>Obsidian</li>
-      <li>Claude Code</li>
-    </ul>
     <p>I’m proficient in R, Python, LaTeX, and Excel, with working knowledge of Stata for tasks like panel regressions and applied econometrics. I enjoy building financial models and making complex data easier to interpret and explain. Beyond just writing code or frantically “vibe coding”, I take careful measure to build robust, fully reproducible data pipelines that hold up to the most rigorous peer-reviewed academic standards.</p>
-    <aside class="callout">
-      <p class="callout__label">Pro tip</p>
-      <p>If you want to avoid the usual headaches of code hand-offs, the <a href="https://aeadataeditor.github.io/" target="_blank" rel="noopener noreferrer">AEA Data Editor’s reproducibility guidelines</a> are the perfect baseline to adopt.</p>
+    <div class="toolkit">
+      <div class="toolkit__group toolkit__group--navy">
+        <span class="toolkit__icon" aria-hidden="true">{% include site/icon.html name="chart" %}</span>
+        <h3 class="toolkit__title">Analysis &amp; modelling</h3>
+        <p class="toolkit__desc">Econometrics, financial models and data analysis</p>
+        <ul class="tools">
+          <li class="tool tool--r">R</li>
+          <li class="tool tool--python">Python</li>
+          <li class="tool tool--stata">Stata</li>
+          <li class="tool tool--excel">Excel</li>
+        </ul>
+      </div>
+      <div class="toolkit__group toolkit__group--oxblood">
+        <span class="toolkit__icon" aria-hidden="true">{% include site/icon.html name="file-text" %}</span>
+        <h3 class="toolkit__title">Writing &amp; editing</h3>
+        <p class="toolkit__desc">Papers, research notes and everyday editing</p>
+        <ul class="tools">
+          <li class="tool tool--latex">LaTeX</li>
+          <li class="tool tool--obsidian">Obsidian</li>
+          <li class="tool tool--vscode">VS Code</li>
+        </ul>
+      </div>
+      <div class="toolkit__group toolkit__group--forest">
+        <span class="toolkit__icon" aria-hidden="true">{% include site/icon.html name="code" %}</span>
+        <h3 class="toolkit__title">Code &amp; reproducibility</h3>
+        <p class="toolkit__desc">Version control, containers and agentic coding</p>
+        <ul class="tools">
+          <li class="tool tool--github">GitHub</li>
+          <li class="tool tool--docker">Docker</li>
+          <li class="tool tool--claude">Claude Code</li>
+        </ul>
+      </div>
+    </div>
+    <aside class="tips" aria-labelledby="pro-tips">
+      <h3 class="tips__title" id="pro-tips">Pro tips</h3>
+      <ol class="tips__list">
+        <li class="tip">
+          <h4 class="tip__title">Start from a standard</h4>
+          <p>If you want to avoid the usual headaches of code hand-offs, the <a href="https://aeadataeditor.github.io/" target="_blank" rel="noopener noreferrer">AEA Data Editor’s reproducibility guidelines</a> are the perfect baseline to adopt.</p>
+        </li>
+        <li class="tip">
+          <h4 class="tip__title">Rebuild everything with one command</h4>
+          <p>Keep raw data read-only, script every step, and pin package versions with <a href="https://rstudio.github.io/renv/" target="_blank" rel="noopener noreferrer">renv</a> or <a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener noreferrer">uv</a>, so every number in the paper can be regenerated from scratch.</p>
+        </li>
+        <li class="tip">
+          <h4 class="tip__title">Brief a coding agent like a research assistant</h4>
+          <p>Write the project’s conventions into a <a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener noreferrer">CLAUDE.md file</a>, ask for a plan before any code, and keep each task small enough to review in one sitting.</p>
+        </li>
+        <li class="tip">
+          <h4 class="tip__title">Make the agent prove its work</h4>
+          <p>Before an agent refactors anything, have it write tests that pin down known results, such as a replicated table or a key coefficient, and read every diff yourself. The agent writes the code; you own the results.</p>
+        </li>
+      </ol>
     </aside>
   </div>
 </section>
 
 <section class="home-section container" aria-labelledby="outside-work">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="outside-work">Outside work</h2>
+    <h2 class="home-section__title" id="outside-work">Outside Work</h2>
   </div>
   <div class="home-section__body">
     <p>When I’m not working on the usual finance stuff, I like to:</p>
     <ul class="hobbies">
+      <li class="hobby hobby--feature hobby--teal">
+        <span class="hobby__icon" aria-hidden="true">🎓</span>
+        <h3 class="hobby__title">Volunteering</h3>
+        <p class="hobby__text">Volunteer for social causes that help marginalised students get into higher educational institutions</p>
+        <ul class="causes">
+          <li class="cause">
+            <a class="cause__name" href="https://www.projecteduaccess.com/" target="_blank" rel="noopener noreferrer">Project EduAccess{% include site/icon.html name="arrow-up-right" %}</a>
+            <p class="cause__desc">Democratising access to higher education and professional opportunities</p>
+          </li>
+          <li class="cause">
+            <a class="cause__name" href="https://eklavyaindia.org/" target="_blank" rel="noopener noreferrer">Eklavya India Foundation{% include site/icon.html name="arrow-up-right" %}</a>
+            <p class="cause__desc">Helping first-generation students from marginalised communities reach top universities</p>
+          </li>
+          <li class="cause">
+            <a class="cause__name" href="https://bahujanecon.org/" target="_blank" rel="noopener noreferrer">Bahujan Economists{% include site/icon.html name="arrow-up-right" %}</a>
+            <p class="cause__desc">Increasing the representation of marginalised communities in economics research</p>
+          </li>
+        </ul>
+      </li>
       <li class="hobby hobby--sand">
         <span class="hobby__icon" aria-hidden="true">📚</span>
         <h3 class="hobby__title">Reading</h3>
         <p class="hobby__text">Read books — sometimes for leisure, often to deepen my understanding of a particular field</p>
+        <a class="hobby__link" href="/books/"><span>See my bookshelf</span>{% include site/icon.html name="arrow-right" %}</a>
       </li>
       <li class="hobby hobby--terracotta">
         <span class="hobby__icon" aria-hidden="true">🍳</span>
@@ -137,20 +195,25 @@ redirect_from:
         <h3 class="hobby__title">Privacy</h3>
         <p class="hobby__text">Explore privacy, threat modelling, and decentralised technologies</p>
       </li>
-      <li class="hobby hobby--sage">
-        <span class="hobby__icon" aria-hidden="true">⚽</span>
-        <h3 class="hobby__title">Football &amp; tennis</h3>
-        <p class="hobby__text">Watch football and Tennis</p>
-      </li>
       <li class="hobby hobby--lavender">
         <span class="hobby__icon" aria-hidden="true">♟️</span>
         <h3 class="hobby__title">Chess</h3>
         <p class="hobby__text">Spend arguably too much time blundering pieces on <a href="https://www.chess.com/" target="_blank" rel="noopener noreferrer">Chess.com</a> :-D</p>
       </li>
+      <li class="hobby hobby--sage">
+        <span class="hobby__icon" aria-hidden="true">⚽</span>
+        <h3 class="hobby__title">Football &amp; tennis</h3>
+        <p class="hobby__text">Watch football and tennis</p>
+      </li>
       <li class="hobby hobby--straw">
         <span class="hobby__icon" aria-hidden="true">🏃</span>
         <h3 class="hobby__title">Running</h3>
         <p class="hobby__text">Go for a run to clear my mind and reset</p>
+      </li>
+      <li class="hobby hobby--rose">
+        <span class="hobby__icon" aria-hidden="true">🏋️</span>
+        <h3 class="hobby__title">Gym</h3>
+        <p class="hobby__text">Lift weights — strength training is one thing I never take lightly</p>
       </li>
     </ul>
   </div>
@@ -158,7 +221,7 @@ redirect_from:
 
 <section class="home-section home-section--cta container" aria-labelledby="get-in-touch">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="get-in-touch">Get in touch</h2>
+    <h2 class="home-section__title" id="get-in-touch">Get in Touch</h2>
   </div>
   <div class="home-section__body">
     <p class="home-cta__text">If you’re interested in talking research, sharing ideas, or just debating the credibility of classical economics in modern markets, feel free to reach out!</p>

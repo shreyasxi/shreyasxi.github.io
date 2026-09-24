@@ -39,6 +39,16 @@
   --tint-sage: #E4EEE6;
   --tint-lavender: #EBE8F3;
   --tint-straw: #F4F0DC;
+  --tint-teal: #E0EEEB;
+  --tint-rose: #F5E6EA;
+  --forest: #1F6B4F;
+  /* contact buttons on the home page, each in its platform's colour (white text passes 4.5:1) */
+  --brand-email: #003366;
+  --brand-linkedin: #0A66C2;
+  --brand-github: #24292F;
+  --brand-substack: #C94A0A;
+  --brand-edge: transparent;
+  --brand-hover: rgba(0, 0, 0, 0.14);
 }
 
 @mixin dark-theme {
@@ -79,6 +89,15 @@
   --tint-sage: #16211B;
   --tint-lavender: #1D1B27;
   --tint-straw: #211F13;
+  --tint-teal: #13211F;
+  --tint-rose: #241A1F;
+  --forest: #6CC39A;
+  --brand-email: #1E4E84;
+  --brand-linkedin: #0A66C2;
+  --brand-github: #2F363F;
+  --brand-substack: #C94A0A;
+  --brand-edge: rgba(255, 255, 255, 0.14);
+  --brand-hover: rgba(255, 255, 255, 0.1);
 }
 
 :root {

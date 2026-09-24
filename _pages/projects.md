@@ -20,7 +20,7 @@ description: "Research and data projects by Shreyas Urgunde: central bank commun
 </section>
 
 <section class="project-group" aria-labelledby="more-projects">
-  <h2 class="section-label" id="more-projects">More projects</h2>
+  <h2 class="section-label" id="more-projects">More Projects</h2>
   <div class="project-grid">
     {%- for p in others %}
     {%- assign n = forloop.index | plus: featured.size %}

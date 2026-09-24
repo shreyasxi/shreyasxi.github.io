@@ -1,11 +1,11 @@
 <ul class="contact-links">
   <li class="contact-links__email">
-    <a class="contact-link" href="mailto:{{ site.author.email }}">{% include site/icon.html name="mail" %}<span>Email</span></a>
+    <a class="contact-link contact-link--email" href="mailto:{{ site.author.email }}">{% include site/icon.html name="mail" %}<span>Email</span></a>
     <button class="contact-copy" type="button" data-copy="{{ site.author.email }}" aria-label="Copy email address" title="Copy email address">
       {% include site/icon.html name="copy" class="icon-copy" %}{% include site/icon.html name="check" class="icon-done" %}
     </button>
   </li>
-  <li><a class="contact-link" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="linkedin" %}<span>LinkedIn</span></a></li>
-  <li><a class="contact-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="github" %}<span>GitHub</span></a></li>
-  <li><a class="contact-link" href="{{ site.author.substack }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="substack" %}<span>Substack</span></a></li>
+  <li><a class="contact-link contact-link--linkedin" href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="linkedin" %}<span>LinkedIn</span></a></li>
+  <li><a class="contact-link contact-link--github" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="github" %}<span>GitHub</span></a></li>
+  <li><a class="contact-link contact-link--substack" href="{{ site.author.substack }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="substack" %}<span>Substack</span></a></li>
 </ul>
