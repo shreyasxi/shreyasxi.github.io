@@ -40,6 +40,7 @@ exclude:
   - .sass-cache
   - .jekyll-cache
   - node_modules
+  - images/homepage.png   # only used by README.md
   # CV is available on request only
   - files/Shreyas_CV.pdf
 

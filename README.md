@@ -1,3 +1,28 @@
+# Shreyas Urgunde — Personal Website
+
+Source for **[shreyasxi.github.io](https://shreyasxi.github.io)**, the personal website of Shreyas Urgunde, an economics and finance researcher (MSc Finance, Warwick Business School).
+
+The site covers:
+
+- **About**: research interests in empirical finance, econometrics and central bank communication
+- **Projects**: research and data projects, with reports in `files/`
+- **Writing**: articles from [The Economics Hub](https://economicshub.substack.com) on Substack and elsewhere
+- **Economics Hub**: a Macro & RBI dashboard explainer
+- **Books**: a reading list
+
+It is a Jekyll site hosted on GitHub Pages. It started as a fork of the Academic Pages template (credited below) and now uses its own editorial theme: `_layouts/`, `_includes/site/` and `_sass/site/`. Articles, projects, books and navigation live in `_data/`.
+
+To run it locally (Ruby 3.3):
+
+```bash
+bundle install
+bundle exec jekyll serve --livereload   # http://localhost:4000
+```
+
+---
+
+*The rest of this README is the original Academic Pages documentation, kept to credit the template this site is built on.*
+
 # Academic Pages
 **Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
