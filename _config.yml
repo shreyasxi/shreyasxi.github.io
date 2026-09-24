@@ -51,7 +51,7 @@ encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
-# Conversion — keep these as they are: the Macro & RBI Dashboard page depends on them.
+# Conversion — keep these as they are: the Macro & RBI Monitor page depends on them.
 markdown: kramdown
 highlighter: rouge
 lsi: false

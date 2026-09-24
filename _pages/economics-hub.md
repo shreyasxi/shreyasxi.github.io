@@ -1,5 +1,5 @@
 ---
-title: "Global Macro & Cross-Asset Monitor"
+title: "Global Macro & RBI Sentiment Monitor"
 permalink: /economics-hub/
 layout: single
 author_profile: true
@@ -84,19 +84,42 @@ run commits its images. Streamlit Cloud serves them straight from the repository
 the newest dated folder by natural sort rather than a hard-coded file list, so adding a chart needs
 no change to the app.
 
-```mermaid
-flowchart TD
-    A1[Macro fundamentals\nFRED API] --> B
-    A2[Market data\nYahoo Finance] --> B
-
-    B[ETL and charting engine\npandas processing, EconStyle rendering] --> C1
-    B --> C2
-
-    C1[Scheduled runs\nGitHub Actions] --> D
-    C2[Local runs\non demand] --> D
-
-    D[Streamlit dashboard\nfour sections, four links]
-```
+<figure class="pipeline">
+  <ol class="pipeline__steps">
+    <li class="pipeline__step pipeline__step--pair">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="landmark" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Macro fundamentals</span> <span class="pipeline__detail">FRED API</span></span>
+      </div>
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="candlestick" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Market data</span> <span class="pipeline__detail">Yahoo Finance</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node pipeline__node--hub">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="cog" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">ETL and charting engine</span> <span class="pipeline__detail">pandas processing, <code>EconStyle</code> rendering</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step pipeline__step--pair">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="calendar-clock" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Scheduled runs</span> <span class="pipeline__detail">GitHub Actions</span></span>
+      </div>
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="laptop" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Local runs</span> <span class="pipeline__detail">on demand</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="dashboard" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Streamlit dashboard</span> <span class="pipeline__detail">four sections, four links</span></span>
+      </div>
+    </li>
+  </ol>
+</figure>
 
 ---
 
@@ -166,20 +189,56 @@ verified against all 61 cycles. Anything a regex can read reliably should not be
 language model: it costs money, and it introduces a failure mode where the number on the dashboard
 is a plausible invention. Only the tone judgement goes to the model.
 
-```mermaid
-flowchart TD
-    A[Discovery and cache\nrbi.org.in] --> B[Extraction\nHTML parsing, text normalisation]
-
-    B --> C1[Lexicon scorer\nRBI-specific terms, negation window]
-    B --> C2[Model scorer\nClaude Opus 5]
-
-    C1 --> D[Fusion and divergence check\n0.10 lexicon + 0.90 model]
-    C2 --> D
-
-    D --> E[(SQLite\nrbi_sentinel.db)]
-    E --> F[Chart generation]
-    F --> G[Streamlit dashboard]
-```
+<figure class="pipeline pipeline--oxblood">
+  <ol class="pipeline__steps">
+    <li class="pipeline__step">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="globe" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Discovery and cache</span> <span class="pipeline__detail">rbi.org.in</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="scan-text" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Extraction</span> <span class="pipeline__detail">HTML parsing, text normalisation</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step pipeline__step--pair">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="book-open" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Lexicon scorer</span> <span class="pipeline__detail">RBI-specific terms, negation window</span></span>
+      </div>
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="sparkles" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Model scorer</span> <span class="pipeline__detail">Claude Opus 5</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node pipeline__node--hub">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="blend" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Fusion and divergence check</span> <span class="pipeline__detail">0.10 lexicon + 0.90 model</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="database" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">SQLite</span> <span class="pipeline__detail"><code>rbi_sentinel.db</code></span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="chart" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Chart generation</span></span>
+      </div>
+    </li>
+    <li class="pipeline__step">
+      <div class="pipeline__node">
+        <span class="pipeline__icon" aria-hidden="true">{% include site/icon.html name="dashboard" %}</span>
+        <span class="pipeline__text"><span class="pipeline__label">Streamlit dashboard</span></span>
+      </div>
+    </li>
+  </ol>
+</figure>
 
 ### What it found
 

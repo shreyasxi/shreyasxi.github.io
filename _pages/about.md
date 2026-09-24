@@ -45,7 +45,7 @@ redirect_from:
 <section class="home-section container" aria-labelledby="selected-writing">
   <div class="home-section__head">
     <h2 class="home-section__title" id="selected-writing">Selected Writing</h2>
-    <a class="home-section__link" href="/year-archive/"><span>All writing</span>{% include site/icon.html name="arrow-right" %}</a>
+    <a class="home-section__link" href="/year-archive/"><span>Explore more</span>{% include site/icon.html name="arrow-right" %}</a>
   </div>
   <div class="home-section__body">
     {% include site/writing-cards.html items=site.data.writing %}
@@ -130,25 +130,70 @@ redirect_from:
       </div>
     </div>
     <aside class="tips" aria-labelledby="pro-tips">
-      <h3 class="tips__title" id="pro-tips">Pro tips</h3>
+      <h3 class="tips__title" id="pro-tips">Pro Tips</h3>
+      <p class="tips__lede">Habits for working with coding agents without switching off your own judgement.</p>
       <ol class="tips__list">
         <li class="tip">
-          <h4 class="tip__title">Start from a standard</h4>
-          <p>If you want to avoid the usual headaches of code hand-offs, the <a href="https://aeadataeditor.github.io/" target="_blank" rel="noopener noreferrer">AEA Data Editor’s reproducibility guidelines</a> are the perfect baseline to adopt.</p>
+          <h4 class="tip__title">Argue with the plan, not the code</h4>
+          <p>Have the agent propose a plan before it writes any code, then question it the way a referee would: which sample, which estimator, which standard errors? A wrong assumption caught in the plan costs a sentence to fix; buried in working code, it can survive all the way into a published table.</p>
         </li>
         <li class="tip">
-          <h4 class="tip__title">Rebuild everything with one command</h4>
-          <p>Keep raw data read-only, script every step, and pin package versions with <a href="https://rstudio.github.io/renv/" target="_blank" rel="noopener noreferrer">renv</a> or <a href="https://docs.astral.sh/uv/" target="_blank" rel="noopener noreferrer">uv</a>, so every number in the paper can be regenerated from scratch.</p>
-        </li>
-        <li class="tip">
-          <h4 class="tip__title">Brief a coding agent like a research assistant</h4>
-          <p>Write the project’s conventions into a <a href="https://code.claude.com/docs/en/memory" target="_blank" rel="noopener noreferrer">CLAUDE.md file</a>, ask for a plan before any code, and keep each task small enough to review in one sitting.</p>
+          <h4 class="tip__title">Pre-register, even if only for yourself</h4>
+          <p>Agents make it effortless to run fifty specifications before lunch, and just as effortless to keep only the one that worked. Write down your main specification and robustness checks before running anything, and report every one of them.</p>
         </li>
         <li class="tip">
           <h4 class="tip__title">Make the agent prove its work</h4>
           <p>Before an agent refactors anything, have it write tests that pin down known results, such as a replicated table or a key coefficient, and read every diff yourself. The agent writes the code; you own the results.</p>
         </li>
+        <li class="tip">
+          <h4 class="tip__title">Never let it mark its own homework</h4>
+          <p>Review code in a fresh session that didn’t write it, and ask it to find what’s wrong rather than confirm what’s right, because the context that wrote a bug tends to defend it. Then test the reviewer: plant a bug you know about and check that it gets caught.</p>
+        </li>
+        <li class="tip">
+          <h4 class="tip__title">Replicate in a second language</h4>
+          <p>For results that matter, have the agent rebuild the analysis in a second language, such as Stata alongside R, and match the estimates to six decimal places. Coding errors rarely repeat across languages, so a match is strong evidence, and a mismatch means a bug or a package default you didn’t know about.</p>
+        </li>
+        <li class="tip">
+          <h4 class="tip__title">Every number comes from code</h4>
+          <p>Every number in a draft should come straight from a script’s output, never typed in by hand or recalled from a model’s memory. And to avoid the usual headaches of code hand-offs, build the project to the <a href="https://aeadataeditor.github.io/" target="_blank" rel="noopener noreferrer">AEA Data Editor’s reproducibility guidelines</a>, so anyone can rebuild every table from the raw data.</p>
+        </li>
       </ol>
+      <div class="follow">
+        <h4 class="follow__title">Who to Follow</h4>
+        <ul class="follow__list">
+          <li class="follow__item follow__item--start">
+            <p class="follow__badge">Start here</p>
+            <p class="follow__name">Alessandro Spina</p>
+            <p class="follow__work"><a href="https://www.alessandro-spina.com/files/Alessandro_APSA_Part1_2026.pdf" target="_blank" rel="noopener noreferrer">Claude Code for Academics</a> <span class="follow__kind"><span aria-hidden="true">· </span>Slides</span></p>
+            <p class="follow__desc">A clear first tour: setting up, giving the agent a memory between sessions, the habits that prevent most errors and keeping your data safe.</p>
+            {% include site/icon.html name="arrow-up-right" class="follow__arrow" %}
+          </li>
+          <li class="follow__item">
+            <p class="follow__name">Claes Bäckman</p>
+            <p class="follow__work"><a href="https://claesbackman.com/claude-code-guide.html" target="_blank" rel="noopener noreferrer">Claude Code in VS Code for Academic Economists</a> <span class="follow__kind"><span aria-hidden="true">· </span>Guide</span></p>
+            <p class="follow__desc">A step-by-step setup for economists working in Stata, R, Python and LaTeX, with advice on keeping the agent’s context lean.</p>
+            {% include site/icon.html name="arrow-up-right" class="follow__arrow" %}
+          </li>
+          <li class="follow__item">
+            <p class="follow__name">Paul Goldsmith-Pinkham</p>
+            <p class="follow__work"><a href="https://bcf.princeton.edu/events/paul-goldsmith-pinkham-mini-series-on-claude-code-for-applied-economists/" target="_blank" rel="noopener noreferrer">Claude Code for Applied Economists</a> <span class="follow__kind"><span aria-hidden="true">· </span>Video series</span></p>
+            <p class="follow__desc">An eight-part series for Markus’ Academy at Princeton, from data analysis and web scraping to writing and collaboration.</p>
+            {% include site/icon.html name="arrow-up-right" class="follow__arrow" %}
+          </li>
+          <li class="follow__item">
+            <p class="follow__name">Pedro H. C. Sant’Anna</p>
+            <p class="follow__work"><a href="https://psantanna.com/claude-code-my-workflow/workflow-guide.html" target="_blank" rel="noopener noreferrer">My Claude Code Setup</a> <span class="follow__kind"><span aria-hidden="true">· </span>Workflow guide</span></p>
+            <p class="follow__desc">A complete research workflow built on planning first, adversarial reviewer agents and replication-first coding.</p>
+            {% include site/icon.html name="arrow-up-right" class="follow__arrow" %}
+          </li>
+          <li class="follow__item">
+            <p class="follow__name">Aniket Panjwani</p>
+            <p class="follow__work"><a href="https://aieconomist.io/guides/codex-for-economists" target="_blank" rel="noopener noreferrer">Guide to Codex for Economists</a> <span class="follow__kind"><span aria-hidden="true">· </span>Guide</span></p>
+            <p class="follow__desc">Written for OpenAI’s Codex, but the core loop carries over to Claude Code: plan the work, let the agent run, inspect the diff and keep only what improves the project.</p>
+            {% include site/icon.html name="arrow-up-right" class="follow__arrow" %}
+          </li>
+        </ul>
+      </div>
     </aside>
   </div>
 </section>

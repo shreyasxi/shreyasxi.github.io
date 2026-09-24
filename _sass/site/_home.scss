@@ -762,6 +762,154 @@
   line-height: 1.6;
 }
 
+.tips__lede {
+  margin-top: 0.3rem;
+  color: var(--ink-2);
+  font-size: 0.96875rem;
+  line-height: 1.6;
+}
+
+/* Who to follow: a card per person inside the tips panel; each card links to their guide. */
+.follow {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.follow__title {
+  font-size: 1.1875rem;
+  line-height: 1.3;
+}
+
+.follow__list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* "Start here" takes a wide first slot: 2 + 2 + 1 on tablets, 2 + 1 then 3 on desktops */
+@media (min-width: 40rem) {
+  .follow__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .follow__item--start {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .follow__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .follow__item--start {
+    grid-column: span 2;
+  }
+}
+
+.follow__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.5rem 1.1rem 1.1rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.08);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.follow__badge {
+  align-self: flex-start;
+  margin-bottom: 0.65rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--on-accent);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.follow__name {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.follow__work {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.follow__work a {
+  color: var(--ink-2);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.follow__kind {
+  white-space: nowrap;
+}
+
+/* the guide's link covers the whole card */
+.follow__work a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.follow__work a:focus-visible {
+  outline: none;
+}
+
+.follow__work a:focus-visible::after {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: var(--radius);
+}
+
+.follow__desc {
+  margin-top: 0.45rem;
+  color: var(--ink-2);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.follow__arrow {
+  position: absolute;
+  top: 1.1rem;
+  right: 1rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  color: var(--muted);
+  transition: transform 0.15s ease;
+}
+
+@media (hover: hover) {
+  .follow__item:hover {
+    box-shadow: 0 12px 24px -16px rgba(20, 24, 31, 0.5);
+    transform: translateY(-2px);
+  }
+
+  .follow__item:hover .follow__work a {
+    color: var(--link-hover);
+  }
+
+  .follow__item:hover .follow__arrow {
+    transform: translate(2px, -2px);
+  }
+}
+
 
 /* Outside work: softly tinted tiles */
 

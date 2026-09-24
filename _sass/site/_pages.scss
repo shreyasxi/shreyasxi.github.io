@@ -215,7 +215,230 @@
 }
 
 
-/* Macro & RBI Dashboard page. Its content — including the inline colours on its Part I/II cards
+/* Pipeline diagrams on the Macro & RBI Monitor page: boxes joined by lines drawn in CSS, so the
+   diagrams sit directly on the page and follow the theme. Each step holds one box, or two side by
+   side (--pair); the lines between steps split or merge to match. */
+
+.pipeline {
+  --flow: var(--flow-navy);
+  --flow-tint: var(--flow-navy-tint);
+  --flow-line: var(--flow-navy-line);
+  --flow-wire: var(--flow-navy-wire);
+  --flow-icon: var(--accent);
+}
+
+.pipeline--oxblood {
+  --flow: var(--flow-oxblood);
+  --flow-tint: var(--flow-oxblood-tint);
+  --flow-line: var(--flow-oxblood-line);
+  --flow-wire: var(--flow-oxblood-wire);
+  --flow-icon: var(--oxblood);
+}
+
+.prose > .pipeline {
+  margin: 2.25rem 0 2.75rem;
+}
+
+.pipeline__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pipeline__step {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.pipeline__step--pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+/* room for the connecting lines above every step but the first */
+.pipeline__step + .pipeline__step {
+  padding-top: 2.5rem;
+}
+
+.pipeline__step + .pipeline__step::before,
+.pipeline__step + .pipeline__step::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/* one box to one box: a straight line */
+.pipeline__step:not(.pipeline__step--pair) + .pipeline__step:not(.pipeline__step--pair)::before {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 2.5rem;
+  margin-left: -1px;
+  background: var(--flow-wire);
+}
+
+/* one box to two: a short stem, then a bracket down to both boxes (whose centres sit a quarter
+   of the way in from each side, less half the gap) */
+.pipeline__step:not(.pipeline__step--pair) + .pipeline__step--pair::before {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 1.3rem;
+  margin-left: -1px;
+  background: var(--flow-wire);
+}
+
+.pipeline__step:not(.pipeline__step--pair) + .pipeline__step--pair::after {
+  top: 1.25rem;
+  right: calc(25% - 0.25rem - 1px);
+  left: calc(25% - 0.25rem - 1px);
+  height: 1.25rem;
+  border: 2px solid var(--flow-wire);
+  border-bottom: 0;
+  border-radius: 10px 10px 0 0;
+}
+
+/* two boxes to one: a bracket up to both boxes, then a short stem */
+.pipeline__step--pair + .pipeline__step:not(.pipeline__step--pair)::before {
+  top: 0;
+  right: calc(25% - 0.25rem - 1px);
+  left: calc(25% - 0.25rem - 1px);
+  height: 1.25rem;
+  border: 2px solid var(--flow-wire);
+  border-top: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.pipeline__step--pair + .pipeline__step:not(.pipeline__step--pair)::after {
+  top: 1.2rem;
+  left: 50%;
+  width: 2px;
+  height: 1.3rem;
+  margin-left: -1px;
+  background: var(--flow-wire);
+}
+
+.pipeline__node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  min-width: 0;
+  padding: 0.75rem 0.8rem;
+  border: 1px solid var(--flow-line);
+  border-radius: 10px;
+  background: var(--flow-tint);
+  line-height: 1.35;
+  text-align: center;
+}
+
+/* the arrowhead where a line meets a box */
+.pipeline__step + .pipeline__step > .pipeline__node::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  margin-left: -6px;
+  border-top: 8px solid var(--flow-wire);
+  border-right: 6px solid transparent;
+  border-left: 6px solid transparent;
+}
+
+.pipeline__step:not(.pipeline__step--pair) > .pipeline__node {
+  width: 100%;
+  max-width: 17rem;
+}
+
+.pipeline__icon {
+  display: none;
+}
+
+.pipeline__label {
+  display: block;
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.pipeline__detail {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--ink-2);
+  font-size: 0.8125rem;
+}
+
+.prose .pipeline code {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-size: 0.95em;
+}
+
+/* the step the rest of the pipeline turns on, filled with the part's colour */
+.pipeline__node--hub {
+  border-color: var(--flow);
+  background: var(--flow);
+  box-shadow: 0 14px 28px -18px var(--flow);
+}
+
+.pipeline__node--hub .pipeline__label {
+  color: #FFFFFF;
+}
+
+.pipeline__node--hub .pipeline__detail {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+@media (min-width: 36rem) {
+  .pipeline__node {
+    justify-content: flex-start;
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  .pipeline__step:not(.pipeline__step--pair) > .pipeline__node {
+    width: calc(50% - 0.5rem);
+    max-width: none;
+  }
+
+  .pipeline__icon {
+    display: grid;
+    flex: none;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: 0 1px 2px rgba(20, 24, 31, 0.08);
+    color: var(--flow-icon);
+  }
+
+  .pipeline__icon .icon {
+    width: 1.15rem;
+    height: 1.15rem;
+  }
+
+  .pipeline__node--hub .pipeline__icon {
+    background: rgba(255, 255, 255, 0.14);
+    box-shadow: none;
+    color: #FFFFFF;
+  }
+
+  .pipeline__label {
+    font-size: 0.9375rem;
+  }
+
+  .pipeline__detail {
+    font-size: 0.84375rem;
+  }
+}
+
+
+/* Macro & RBI Monitor page. Its content — including the inline colours on its Part I/II cards
    and launch buttons — is kept exactly as written. These rules only adapt those colours to the
    dark theme; the selectors match that page's own links, so nothing else is affected. */
 

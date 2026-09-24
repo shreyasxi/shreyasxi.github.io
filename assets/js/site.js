@@ -1,5 +1,5 @@
-/* Site behaviour: theme toggle, mobile menu, copy-to-clipboard, "On this page" list, tables and
-   diagrams. Plain JavaScript, no dependencies. The saved theme is applied earlier, by the inline
+/* Site behaviour: theme toggle, mobile menu, copy-to-clipboard, "On this page" list and
+   tables. Plain JavaScript, no dependencies. The saved theme is applied earlier, by the inline
    script in <head>, so the page never flashes the wrong colours. */
 (function () {
   "use strict";
@@ -192,60 +192,4 @@
     table.parentNode.insertBefore(wrap, table);
     wrap.appendChild(table);
   });
-
-
-  /* Mermaid diagrams: load the (self-hosted) library only on pages that have one, and redraw
-     them in the site's colours whenever the theme changes. */
-
-  var diagrams = Array.prototype.slice.call(document.querySelectorAll("pre > code.language-mermaid"));
-
-  if (diagrams.length) {
-    diagrams.forEach(function (code) {
-      code.setAttribute("data-source", code.textContent);
-      code.parentElement.classList.add("diagram");
-    });
-
-    var palettes = {
-      light: {
-        background: "#FFFFFF", mainBkg: "#FFFFFF", primaryColor: "#FFFFFF",
-        primaryBorderColor: "#003366", nodeBorder: "#003366",
-        primaryTextColor: "#14181F", textColor: "#14181F", lineColor: "#5E6778",
-        secondaryColor: "#F3F1EC", tertiaryColor: "#F3F1EC", clusterBkg: "#F3F1EC",
-        edgeLabelBackground: "#FFFFFF"
-      },
-      dark: {
-        background: "#151B25", mainBkg: "#1A2230", primaryColor: "#1A2230",
-        primaryBorderColor: "#5B8CC7", nodeBorder: "#5B8CC7",
-        primaryTextColor: "#E8EBF0", textColor: "#E8EBF0", lineColor: "#8F99A8",
-        secondaryColor: "#1A2230", tertiaryColor: "#1A2230", clusterBkg: "#121821",
-        edgeLabelBackground: "#151B25"
-      }
-    };
-
-    var drawDiagrams = function () {
-      var themeVariables = palettes[currentTheme()];
-      themeVariables.fontFamily = "Inter, -apple-system, 'Segoe UI', sans-serif";
-      themeVariables.fontSize = "15px";
-      window.mermaid.initialize({ startOnLoad: false, theme: "base", themeVariables: themeVariables, securityLevel: "strict" });
-      diagrams.forEach(function (code) {
-        code.removeAttribute("data-processed");
-        code.textContent = code.getAttribute("data-source");
-        code.parentElement.classList.remove("is-rendered");
-      });
-      window.mermaid.run({ nodes: diagrams }).then(function () {
-        diagrams.forEach(function (code) { code.parentElement.classList.add("is-rendered"); });
-      }).catch(function (error) {
-        if (window.console) console.warn("Diagram could not be drawn", error);
-      });
-    };
-
-    var script = document.createElement("script");
-    script.src = "/assets/js/lib/mermaid.min.js";
-    script.async = true;
-    script.onload = function () {
-      drawDiagrams();
-      document.addEventListener("themechange", drawDiagrams);
-    };
-    document.head.appendChild(script);
-  }
 })();

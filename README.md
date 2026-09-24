@@ -7,7 +7,7 @@ The site covers:
 - **About**: research interests in empirical finance, econometrics and central bank communication
 - **Projects**: research and data projects, with reports in `files/`
 - **Writing**: articles from [The Economics Hub](https://economicshub.substack.com) on Substack and elsewhere
-- **Economics Hub**: a Macro & RBI dashboard explainer
+- **Macro & RBI Monitor**: an explainer for the macro dashboard and the RBI Sentinel sentiment tracker
 - **Books**: a reading list
 
 It is a Jekyll site hosted on GitHub Pages. It started as a fork of the Academic Pages template (credited below) and now uses its own editorial theme: `_layouts/`, `_includes/site/` and `_sass/site/`. Articles, projects, books and navigation live in `_data/`.

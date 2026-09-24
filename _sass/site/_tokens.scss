@@ -1,4 +1,4 @@
-/* Design tokens. Navy (#003366) and oxblood (#8B1A1A) come from the Macro & RBI Dashboard page,
+/* Design tokens. Navy (#003366) and oxblood (#8B1A1A) come from the Macro & RBI Monitor page,
    so that page's own cards and buttons sit naturally in the site. */
 
 @mixin light-theme {
@@ -49,6 +49,15 @@
   --brand-substack: #C94A0A;
   --brand-edge: transparent;
   --brand-hover: rgba(0, 0, 0, 0.14);
+  /* pipeline diagrams on the Macro & RBI Monitor page: navy for Part I, oxblood for Part II */
+  --flow-navy: #003366;
+  --flow-navy-tint: #E8EEF5;
+  --flow-navy-line: #C9D5E3;
+  --flow-navy-wire: #8499B0;
+  --flow-oxblood: #8B1A1A;
+  --flow-oxblood-tint: #F6E9E6;
+  --flow-oxblood-line: #E6CBC6;
+  --flow-oxblood-wire: #BC8C88;
 }
 
 @mixin dark-theme {
@@ -98,6 +107,14 @@
   --brand-substack: #C94A0A;
   --brand-edge: rgba(255, 255, 255, 0.14);
   --brand-hover: rgba(255, 255, 255, 0.1);
+  --flow-navy: #1D4F86;
+  --flow-navy-tint: #142031;
+  --flow-navy-line: #26374D;
+  --flow-navy-wire: #52698A;
+  --flow-oxblood: #8B1A1A;
+  --flow-oxblood-tint: #22171A;
+  --flow-oxblood-line: #3D2A2C;
+  --flow-oxblood-wire: #85595A;
 }
 
 :root {

@@ -13,6 +13,6 @@ main:
   - title: "Books"
     url: /books/
 
-  - title: "Macro & RBI Dashboard"
+  - title: "Macro & RBI Monitor"
     url: /economics-hub/
     live: true
