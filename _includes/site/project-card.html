@@ -1,0 +1,32 @@
+{%- comment -%}
+  One project from _data/projects.yml: {% include site/project-card.html project=p number=forloop.index featured=true %}
+{%- endcomment -%}
+{%- assign p = include.project -%}
+{%- assign number = include.number | prepend: "0" | slice: -2, 2 -%}
+<article class="project{% if include.featured %} project--featured{% endif %}">
+  <p class="project__number">{{ number }}</p>
+  <h3 class="project__title">{{ p.title | escape }}</h3>
+  {%- if p.description %}
+  <div class="project__description">{{ p.description | markdownify }}</div>
+  {%- endif %}
+  {%- if p.items %}
+  <ul class="project__items">
+    {%- for item in p.items %}
+    <li>
+      {{ item.text | markdownify }}
+      {% include site/link-list.html links=item.links %}
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endif %}
+  {%- if p.tags %}
+  <ul class="tags" aria-label="Topics and tools">
+    {%- for tag in p.tags %}<li class="tag">{{ tag }}</li>{% endfor -%}
+  </ul>
+  {%- endif %}
+  {%- if p.links %}
+  <div class="project__links">
+    {% include site/link-list.html links=p.links primary=include.featured %}
+  </div>
+  {%- endif %}
+</article>

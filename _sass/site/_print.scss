@@ -1,0 +1,49 @@
+/* Print: plain black on white, no navigation. */
+
+@media print {
+  :root,
+  :root[data-theme="dark"] {
+    @include light-theme;
+  }
+
+  .site-header,
+  .site-footer,
+  .toc,
+  .skip-link,
+  .toast,
+  .contact-links,
+  .action-row,
+  .link-list,
+  .hero__portrait {
+    display: none !important;
+  }
+
+  body {
+    background: #FFFFFF;
+    color: #000000;
+    font-size: 11pt;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+
+  .page-layout,
+  .page-layout--toc {
+    display: block;
+  }
+
+  a {
+    color: #000000;
+  }
+
+  .prose pre,
+  .prose table,
+  .project,
+  .book,
+  .feature-card,
+  .platform {
+    break-inside: avoid;
+  }
+}

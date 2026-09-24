@@ -1,151 +1,120 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve -l -H localhost`. If you change this file, please restart the 
-# server process.
+# Site settings. Restart `jekyll serve` after editing this file — it is not reloaded automatically.
 
-# Basic Site Settings
-locale                   : "en-US"
-site_theme               : "default"
-title                    : "Personal Website"
-title_separator          : "-"
-name                     : &name "Shreyas Urgunde"
-description              : &description ""
+locale                   : "en-GB"
+title                    : "Shreyas Urgunde"
+brand                    : "Personal Website"   # shown top-left in the header; browser tabs keep the title
+tagline                  : "Economics & Finance Researcher"
+description              : "Economics and finance researcher with an MSc Finance from Warwick Business School, working on empirical finance, econometrics, central bank communication and applied economic analysis."
 url                      : "https://shreyasxi.github.io"
-baseurl                  : "" # the subpath of your site, e.g. "/blog"
+baseurl                  : ""
 repository               : "shreyasxi/shreyasxi.github.io"
 
-# Site Author - The following control what appear as part of the author content on the side bar.
-#               If a field is blank the icon and link will not appear, otherwise it will be shown.
-#               Additional customization can be done by editing /_includes/author-profile.html
+# Used by the header, footer, home page and search/social metadata.
 author:
-  # Biographic information
-  avatar           : "prof_pic.jpg"
-  avatar_2         : "graphics2.jpg"
-  name             : "Shreyas Urgunde"
-  pronouns         : # example: "she/her"  
-  bio              : "Economics & Finance Researcher | MSc Finance, Warwick Business School"
-  location         : "United Kingdom"
-  employer         : 
-  uri              : # URL
+  name                   : "Shreyas Urgunde"
+  avatar                 : "/images/prof_pic.jpg"
+  bio                    : "Economics & Finance Researcher | MSc Finance, Warwick Business School"
+  location               : "United Kingdom"
+  email                  : "shreyas.urgunde@warwick.ac.uk"
+  linkedin               : "shreyasurgunde"
+  github                 : "shreyasxi"
+  substack               : "https://economicshub.substack.com"
 
-  # Academic websites
-  linkedin         : "shreyasurgunde"
-  github           : "shreyasxi"  
-  substack         : "https://economicshub.substack.com"
-
-# Publication Category - The following the list of publication categories and their headings
-publication_category:
-  books:
-    title: 'Books'
-  manuscripts:
-    title: 'Journal Articles'    
-  conferences:
-    title: 'Conference Papers'
-
-# Site Settings
-teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
-breadcrumbs              : false # true, false (default)
-words_per_minute         : 160
-future                   : true
-read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
-talkmap_link             : false      #change to true to add link to talkmap on talks page
-comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "google-plus", "staticman", "custom"
-  disqus:
-    shortname            :
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-staticman:
-  allowedFields          : ['name', 'email', 'url', 'message']
-  branch                 : "gh-pages" # "master", "gh-pages"
-  commitMessage          : "New comment."
-  filename               : comment-{@timestamp}
-  format                 : "yml"
-  moderation             : true
-  path                   : "_data/comments/{options.slug}"
-  requiredFields         : ['name', 'email', 'message']
-  transforms:
-    email                : "md5"
-  generatedFields:
-    date:
-      type               : "date"
-      options:
-        format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
-  path                   : # blank (default) uses feed.xml
+# Image shown when a page is shared on LinkedIn, WhatsApp, etc.
+og_image                 : "/images/prof_pic.jpg"
 
 
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-alexa_site_verification  :
-yandex_site_verification :
-
-
-# Social Sharing
-twitter:
-  username               : &twitter
-facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
-social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
-
-
-# Analytics
-analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
-  google:
-    tracking_id          :
-
-
-# Reading Files
+# Reading files
 include:
-  - .htaccess
   - _pages
   - files
+
 exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - assets/js/_main.js
-  - assets/js/plugins
-  - assets/js/vendor
-  - CHANGELOG
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
+  # Build and tooling files
+  - README.md
   - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yaml
   - vendor
+  - .bundle
+  - .devcontainer
+  - .github
+  - .sass-cache
+  - .jekyll-cache
+  - node_modules
+  # CV is available on request only
+  - files/Shreyas_CV.pdf
+  # Leftovers from the Academic Pages template. They are kept in the repository but not
+  # published; all of them can be deleted safely.
+  - _posts
+  - _drafts
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/cv-json.md
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/publications.html
+  - _pages/sitemap.md
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - files/bibtex1.bib
+  - markdown_generator
+  - scripts
+  - talkmap
+  - talkmap.py
+  - talkmap.ipynb
+  - talkmap_out.ipynb
+  - CONTRIBUTING.md
+  - package.json
+  - assets/css/main.scss
+  - assets/css/academicons.css
+  - assets/css/academicons.min.css
+  - assets/css/collapse.css
+  - assets/css/cv-layout.css
+  - assets/css/cv-style.css
+  - assets/fonts/academicons.eot
+  - assets/fonts/academicons.svg
+  - assets/fonts/academicons.ttf
+  - assets/fonts/academicons.woff
+  - assets/js/_main.js
+  - assets/js/collapse.js
+  - assets/js/main.min.js
+  - assets/js/theme.js
+  - assets/js/plugins
+  - assets/webfonts
+  - images/3953273590_704e3899d5_m.jpg
+  - images/500x300.png
+  - images/apple-touch-icon-180x180.png
+  - images/bio-photo-2.jpg
+  - images/bio-photo.jpg
+  - images/editing-talk.png
+  - images/favicon-192x192.png
+  - images/favicon-32x32.png
+  - images/favicon-512x512.png
+  - images/favicon.ico
+  - images/favicon.svg
+  - images/foo-bar-identity-th.jpg
+  - images/foo-bar-identity.jpg
+  - images/homepage.png
+  - images/image-alignment-1200x4002.jpg
+  - images/image-alignment-150x150.jpg
+  - images/image-alignment-300x200.jpg
+  - images/image-alignment-580x300.jpg
+  - images/manifest.json
+  - images/paragraph-indent.png
+  - images/paragraph-no-indent.png
+  - images/profile.png
+  - images/site-logo.png
+  - images/themes
+
 keep_files:
   - .git
   - .svn
@@ -153,15 +122,13 @@ encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 
 
-# Conversion
+# Conversion — keep these as they are: the Macro & RBI Dashboard page depends on them.
 markdown: kramdown
 highlighter: rouge
 lsi: false
 excerpt_separator: "\n\n"
 incremental: false
 
-
-# Markdown Processing
 kramdown:
   input: GFM
   hard_wrap: false
@@ -173,143 +140,26 @@ kramdown:
   enable_coderay: false
 
 
-# These settings control the types of collections used by the template
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-
-# These settings control how pages and collections are included in the site
+# Every page uses the single-column reading layout unless it says otherwise.
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
-      author_profile: true
-  # _teaching
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _portfolio
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-      comment: true
-  # _talks
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: talk
-      author_profile: true
-      share: true
 
 
-# Sass/SCSS
 sass:
   sass_dir: _sass
-  style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
-
-# Outputting
 permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
-timezone: Etc/UTC # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/London
 
-
-# Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
 
-# Mimic GitHub Pages with --safe
 whitelist:
-  - jekyll-feed
-  - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jemoji
-
-
-# Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path/my-awesome-category/index.html ~> path: /
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
-
-
-# HTML Compression
-# - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

@@ -1,0 +1,15 @@
+---
+# Front matter tells Jekyll to compile this file to /assets/css/site.css.
+---
+
+// Partials live in _sass/site/. Keep to plain CSS syntax: GitHub Pages compiles with an old Sass
+// (3.7), so avoid min()/max(), write arithmetic inside clamp() as calc(), and use rgba() colours.
+@import
+  "site/fonts",
+  "site/tokens",
+  "site/base",
+  "site/layout",
+  "site/components",
+  "site/home",
+  "site/pages",
+  "site/print";

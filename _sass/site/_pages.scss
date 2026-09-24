@@ -1,0 +1,267 @@
+/* Page-specific styles. */
+
+
+/* Projects */
+
+.project-group + .project-group {
+  margin-top: 3.5rem;
+}
+
+.project-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 48rem) {
+  .project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.5rem 1.4rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.project--featured {
+  padding: 1.75rem;
+  border-left: 3px solid var(--accent-line);
+}
+
+.project-grid--featured .project:nth-child(2) {
+  border-left-color: var(--oxblood);
+}
+
+.project__number {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-variant-numeric: tabular-nums;
+}
+
+.project__title {
+  margin-top: 0.35rem;
+  font-size: 1.3125rem;
+  line-height: 1.3;
+}
+
+.project--featured .project__title {
+  font-size: 1.5rem;
+}
+
+.project__description,
+.project__items {
+  margin-top: 0.85rem;
+  color: var(--ink-2);
+  font-size: 0.96875rem;
+  line-height: 1.65;
+}
+
+.project__items {
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project__items li + li {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--rule-strong);
+}
+
+.project__items .link-list {
+  margin-top: 0.7rem;
+}
+
+.project .tags {
+  margin-top: 1.1rem;
+}
+
+.project__links {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+
+/* Books */
+
+.shelf-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prose > .shelf-nav {
+  margin-top: 2rem;
+}
+
+.shelf-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 550;
+  text-decoration: none;
+}
+
+.shelf-nav a:hover {
+  border-color: var(--ink-2);
+  color: var(--ink);
+}
+
+.shelf-nav__count {
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.prose > .shelf {
+  margin-top: 3.25rem;
+}
+
+.shelf__title {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--rule);
+  font-size: 1.5rem;
+}
+
+/* Two, four, then eight across: on wide screens each shelf of eight books is a single row. */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem 1rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 36rem) {
+  .book-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2.25rem 1.5rem;
+  }
+}
+
+@media (min-width: 68rem) {
+  .book-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 2.25rem 1.25rem;
+  }
+}
+
+.book__cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2 / 3;
+  border-radius: 2px 5px 5px 2px;
+  background: var(--surface-2);
+  box-shadow: 0 1px 1px rgba(20, 24, 31, 0.08), 0 12px 22px -12px rgba(20, 24, 31, 0.45);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* a light "spine" along the left edge */
+.book__cover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.16) 0, rgba(255, 255, 255, 0.16) 2.5%, rgba(255, 255, 255, 0) 7%);
+  pointer-events: none;
+}
+
+.book__cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (hover: hover) {
+  .book:hover .book__cover {
+    transform: translateY(-3px);
+    box-shadow: 0 1px 1px rgba(20, 24, 31, 0.08), 0 18px 28px -14px rgba(20, 24, 31, 0.5);
+  }
+}
+
+.book__title {
+  margin-top: 0.85rem;
+  color: var(--ink);
+  font-size: 0.90625rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.book__author {
+  margin-top: 0.2rem;
+  color: var(--muted);
+  font-size: 0.84375rem;
+  line-height: 1.35;
+}
+
+
+/* Macro & RBI Dashboard page. Its content — including the inline colours on its Part I/II cards
+   and launch buttons — is kept exactly as written. These rules only adapt those colours to the
+   dark theme; the selectors match that page's own links, so nothing else is affected. */
+
+@mixin dashboard-dark {
+  .page-economics-hub .prose a[href="#dashboard"],
+  .page-economics-hub .prose a[href="#sentinel"] {
+    border-top-color: var(--rule-strong) !important;
+    border-right-color: var(--rule-strong) !important;
+    border-bottom-color: var(--rule-strong) !important;
+    background: var(--surface) !important;
+  }
+
+  .page-economics-hub .prose a[href="#dashboard"] {
+    border-left-color: var(--accent-line) !important;
+  }
+
+  .page-economics-hub .prose a[href="#sentinel"] {
+    border-left-color: #B84A44 !important;
+  }
+
+  .page-economics-hub .prose a[href="#dashboard"] > div:nth-child(1),
+  .page-economics-hub .prose a[href="#sentinel"] > div:nth-child(1) {
+    color: var(--muted) !important;
+  }
+
+  .page-economics-hub .prose a[href="#dashboard"] > div:nth-child(2),
+  .page-economics-hub .prose a[href="#sentinel"] > div:nth-child(2) {
+    color: var(--ink) !important;
+  }
+
+  .page-economics-hub .prose a[href="#dashboard"] > div:nth-child(3),
+  .page-economics-hub .prose a[href="#sentinel"] > div:nth-child(3) {
+    color: var(--ink-2) !important;
+  }
+
+  .page-economics-hub .prose a[style*="background-color: #003366"] {
+    background-color: #1D4F86 !important;
+  }
+}
+
+[data-theme="dark"] {
+  @include dashboard-dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dashboard-dark;
+  }
+}

@@ -1,0 +1,27 @@
+<header class="site-header" data-site-header>
+  <div class="container site-header__inner">
+    <a class="site-brand" href="{{ '/' | relative_url }}">{{ site.brand | default: site.title }}</a>
+    <nav class="site-nav" id="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        {%- for link in site.data.navigation.main %}
+        <li>
+          <a class="site-nav__link" href="{{ link.url | relative_url }}"{% if page.url == link.url %} aria-current="page"{% endif %}>
+            {%- if link.live %}<span class="live-dot" aria-hidden="true"></span>{% endif -%}
+            {{ link.title }}
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </nav>
+    <div class="site-header__actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch colour theme" title="Switch colour theme">
+        {% include site/icon.html name="moon" class="icon-moon" %}
+        {% include site/icon.html name="sun" class="icon-sun" %}
+      </button>
+      <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        {% include site/icon.html name="menu" class="icon-menu" %}
+        {% include site/icon.html name="x" class="icon-close" %}
+      </button>
+    </div>
+  </div>
+</header>

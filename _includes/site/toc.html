@@ -1,0 +1,20 @@
+{%- comment -%}
+  "On this page" list, built from the h2/h3 headings (with ids) in the rendered page, so the page
+  itself needs no markup. Usage: {% include site/toc.html html=content label="On this page" %}
+  site.js opens it on wide screens, where it sits in the right-hand margin.
+{%- endcomment -%}
+<details class="toc__box" data-toc>
+  <summary class="toc__title">{{ include.label | default: "On this page" }}</summary>
+  <ol class="toc__list">
+    {%- assign chunks = include.html | split: "<h" -%}
+    {%- for chunk in chunks offset: 1 -%}
+      {%- assign level = chunk | slice: 0 -%}
+      {%- if level != "2" and level != "3" -%}{%- continue -%}{%- endif -%}
+      {%- assign head = chunk | split: "</h" | first -%}
+      {%- unless head contains ' id="' -%}{%- continue -%}{%- endunless -%}
+      {%- assign id = head | split: ' id="' | last | split: '"' | first -%}
+      {%- assign text = head | prepend: "<h" | strip_html | strip %}
+    <li class="toc__item toc__item--h{{ level }}"><a href="#{{ id }}">{{ text }}</a></li>
+    {%- endfor %}
+  </ol>
+</details>

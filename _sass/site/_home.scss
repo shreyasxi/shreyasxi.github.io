@@ -1,0 +1,644 @@
+/* Home page. */
+
+.hero {
+  display: grid;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 56rem) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr) 19rem;
+    align-items: center;
+    column-gap: 4.5rem;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.hero__name {
+  margin-top: 0.9rem;
+  font-size: clamp(2.75rem, calc(1.9rem + 3.4vw), 4.25rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.hero__meta {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.hero__sep {
+  margin: 0 0.55rem;
+  color: var(--rule-strong);
+}
+
+.hero__lede {
+  max-width: 40rem;
+  margin-top: 1.75rem;
+  color: var(--ink-2);
+  font-family: var(--font-serif);
+  font-size: clamp(1.125rem, calc(1rem + 0.45vw), 1.3125rem);
+  line-height: 1.62;
+}
+
+.hero__lede strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.hero .contact-links {
+  margin-top: 2rem;
+}
+
+.hero__portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 30%;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  /* offset frame, like a plate in a printed report */
+  box-shadow: 14px 14px 0 -1px var(--bg), 14px 14px 0 0 var(--rule-strong);
+}
+
+@media (max-width: 55.9375rem) {
+  .hero__portrait {
+    order: -1;
+    width: 7.5rem;
+  }
+
+  .hero__portrait img {
+    box-shadow: 8px 8px 0 -1px var(--bg), 8px 8px 0 0 var(--rule-strong);
+  }
+}
+
+
+/* Sections: a serif heading over a full-width rule, then the content (as on the Substack home page). */
+
+.home-section {
+  padding-top: 4.5rem;
+}
+
+@media (min-width: 56rem) {
+  .home-section {
+    padding-top: 5.5rem;
+  }
+}
+
+.home-section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.home-section__title {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.625rem, calc(1.35rem + 0.9vw), 2.125rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.home-section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--ink);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.home-section__link:hover {
+  color: var(--link-hover);
+}
+
+.home-section__link .icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.home-section__link:hover .icon {
+  transform: translateX(3px);
+}
+
+.home-section__body > * + * {
+  margin-top: 1.5rem;
+}
+
+.home-section__body > p,
+.platforms-intro > p:first-child {
+  max-width: 44rem;
+  font-size: 1.0625rem;
+  line-height: 1.72;
+}
+
+
+/* Featured work — echoes the Part I / Part II cards on the dashboard page. */
+
+.feature-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 40rem) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent-line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.feature-card--2 {
+  border-left-color: var(--oxblood);
+}
+
+.feature-card__title {
+  margin-top: 0.5rem;
+  font-size: 1.3125rem;
+  line-height: 1.3;
+}
+
+.feature-card p:not(.kicker) {
+  margin-top: 0.7rem;
+  color: var(--ink-2);
+  font-size: 0.96875rem;
+  line-height: 1.6;
+}
+
+.feature-card .link-list {
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+
+/* Selected writing: article cards with cover, date · read time, title and summary. */
+
+.writing-cards {
+  display: grid;
+  gap: 2.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 36rem) {
+  .writing-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .writing-cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.writing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.writing-card__cover {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+}
+
+/* where a piece was published, when it isn't the newsletter */
+.writing-card__source {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #14181F;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.3;
+  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.15);
+}
+
+.writing-card__source .icon {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.writing-card__cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.writing-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem 0.5rem;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.writing-card__title {
+  margin-top: 0.4rem;
+  font-size: 1.3125rem;
+  line-height: 1.3;
+}
+
+.writing-card__title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+/* the whole card is the link */
+.writing-card__title a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.writing-card__title a:focus-visible {
+  outline: none;
+}
+
+.writing-card__title a:focus-visible::after {
+  outline: 2px solid var(--focus);
+  outline-offset: 6px;
+  border-radius: var(--radius);
+}
+
+.writing-card__summary {
+  display: -webkit-box;
+  overflow: hidden;
+  margin-top: 0.55rem;
+  color: var(--ink-2);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+@media (hover: hover) {
+  .writing-card:hover .writing-card__cover img {
+    transform: scale(1.03);
+  }
+
+  .writing-card:hover .writing-card__title a {
+    color: var(--accent-text);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: currentColor;
+  }
+}
+
+
+/* Educational platforms */
+
+.platforms-intro {
+  display: grid;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+@media (min-width: 64rem) {
+  .platforms-intro {
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 3rem;
+  }
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat__value {
+  color: var(--accent-text);
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: lining-nums;
+}
+
+.stat__label {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.platforms {
+  display: grid;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-section__body > .platforms {
+  margin-top: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .platforms {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Each card takes one of the site's accent colours; the whole card links to the platform. */
+.platform {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 16rem;
+  padding: 1.5rem 1.5rem 1.4rem;
+  border-radius: var(--radius);
+  color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.08), 0 14px 30px -18px rgba(20, 24, 31, 0.55);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.platform--navy {
+  background: linear-gradient(140deg, #0A2440 0%, #003366 55%, #0E4A87 100%);
+}
+
+.platform--oxblood {
+  background: linear-gradient(140deg, #4F0F0F 0%, #7A1717 55%, #A0302A 100%);
+}
+
+.platform--amber {
+  background: linear-gradient(140deg, #6B2809 0%, #8F3A0B 55%, #B5500F 100%);
+}
+
+@media (hover: hover) {
+  .platform:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 4px rgba(20, 24, 31, 0.1), 0 22px 40px -20px rgba(20, 24, 31, 0.6);
+  }
+}
+
+/* large, faint platform mark in the corner */
+.platform__mark {
+  position: absolute;
+  right: -1.75rem;
+  bottom: -2rem;
+  width: 9.5rem;
+  height: 9.5rem;
+  color: #FFFFFF;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.platform__type {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.platform__badge {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.platform__badge .icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.platform__name {
+  margin-top: 1.15rem;
+  color: #FFFFFF;
+  font-size: 1.3125rem;
+  line-height: 1.25;
+}
+
+.platform__name a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.platform__name a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.platform__name a:focus-visible {
+  outline: none;
+}
+
+.platform__name a:focus-visible::after {
+  outline: 2px solid #FFFFFF;
+  outline-offset: -5px;
+  border-radius: var(--radius);
+}
+
+.platform__handle {
+  margin-top: 0.3rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.875rem;
+  overflow-wrap: anywhere;
+}
+
+.platform__desc {
+  margin-top: 0.8rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.96875rem;
+  line-height: 1.55;
+}
+
+.platform__desc::first-letter {
+  text-transform: uppercase;
+}
+
+.platform__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: auto;
+  padding-top: 1.35rem;
+  color: #FFFFFF;
+  font-size: 0.90625rem;
+  font-weight: 600;
+}
+
+.platform__cta .icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.15s ease;
+}
+
+.platform:hover .platform__cta .icon {
+  transform: translate(2px, -2px);
+}
+
+
+/* Toolkit */
+
+.toolkit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toolkit li {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.home-section__body > .callout {
+  max-width: 44rem;
+}
+
+
+/* Outside work: softly tinted tiles */
+
+.hobbies {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.home-section__body > .hobbies {
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 36rem) {
+  .hobbies {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 56rem) {
+  .hobbies {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.hobby {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 1.4rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--tint-sand);
+}
+
+.hobby--terracotta {
+  background: var(--tint-terracotta);
+}
+
+.hobby--steel {
+  background: var(--tint-steel);
+}
+
+.hobby--sage {
+  background: var(--tint-sage);
+}
+
+.hobby--lavender {
+  background: var(--tint-lavender);
+}
+
+.hobby--straw {
+  background: var(--tint-straw);
+}
+
+/* white in both themes: emoji are drawn for light backgrounds (the chess pawn is black) */
+.hobby__icon {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.1);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.hobby__title {
+  margin-top: 1rem;
+  font-size: 1.1875rem;
+  line-height: 1.3;
+}
+
+.hobby__text {
+  margin-top: 0.4rem;
+  color: var(--ink-2);
+  font-size: 0.96875rem;
+  line-height: 1.6;
+}
+
+
+/* Closing invitation */
+
+.home-section--cta .home-section__body > p.home-cta__text {
+  max-width: 46rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, calc(1.1rem + 1.1vw), 1.875rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}

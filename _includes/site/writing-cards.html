@@ -1,0 +1,25 @@
+{%- comment -%}
+  Article cards in the style of the Substack home page: cover, date · read time, title, summary.
+  Shows the entries marked `featured: true` in _data/writing.yml, newest first.
+  Usage: {% include site/writing-cards.html items=site.data.writing %}
+{%- endcomment -%}
+{%- assign cards = include.items | where: "featured", true | sort: "date" | reverse -%}
+<ul class="writing-cards">
+  {%- for post in cards %}
+  <li class="writing-card">
+    <div class="writing-card__cover">
+      <img src="{{ post.image | relative_url }}" alt="" width="800" height="450" loading="lazy" decoding="async">
+      {%- if post.source != "Substack" %}
+      {%- if post.source == "Instagram" %}{% assign source_icon = "instagram" %}{% else %}{% assign source_icon = "file-text" %}{% endif %}
+      <span class="writing-card__source">{% include site/icon.html name=source_icon %}{{ post.source }}</span>
+      {%- endif %}
+    </div>
+    <p class="writing-card__meta">
+      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %b %Y" }}</time>
+      {%- if post.read_time %}<span aria-hidden="true">•</span><span>{{ post.read_time }} min read</span>{% endif %}
+    </p>
+    <h3 class="writing-card__title"><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }}</a></h3>
+    <p class="writing-card__summary">{{ post.summary | markdownify | remove: "<p>" | remove: "</p>" | strip }}</p>
+  </li>
+  {%- endfor %}
+</ul>

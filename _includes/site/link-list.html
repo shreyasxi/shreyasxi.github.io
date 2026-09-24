@@ -1,0 +1,22 @@
+{%- comment -%}
+  Row of link buttons for a project: {% include site/link-list.html links=project.links primary=true %}
+  With primary=true the first link is filled. Links to site pages (kind: page) open in the same tab.
+{%- endcomment -%}
+<ul class="link-list">
+  {%- for link in include.links %}
+    {%- case link.kind -%}
+      {%- when "code" -%}{%- assign icon = "code" -%}
+      {%- when "paper" -%}{%- assign icon = "file-text" -%}
+      {%- when "slides" -%}{%- assign icon = "presentation" -%}
+      {%- when "sheet" -%}{%- assign icon = "sheet" -%}
+      {%- when "dashboard" -%}{%- assign icon = "chart" -%}
+      {%- when "substack" -%}{%- assign icon = "substack" -%}
+      {%- else -%}{%- assign icon = "arrow-right" -%}
+    {%- endcase %}
+  <li>
+    <a class="btn btn--small{% if include.primary and forloop.first %} btn--primary{% endif %}" href="{{ link.url | replace: ' ', '%20' }}"{% unless link.kind == "page" %} target="_blank" rel="noopener noreferrer"{% endunless %}>
+      {%- include site/icon.html name=icon -%}<span>{{ link.label }}</span>
+    </a>
+  </li>
+  {%- endfor %}
+</ul>

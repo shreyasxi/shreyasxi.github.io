@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{%- if page.url == "/" -%}
+  {%- assign seo_title = site.title | append: " · " | append: site.tagline -%}
+{%- else -%}
+  {%- assign seo_title = page.title | append: " · " | append: site.title -%}
+{%- endif -%}
+{%- assign seo_title = seo_title | strip_html | escape -%}
+{%- comment -%} Pages without a description use the opening of their own text. {%- endcomment -%}
+{%- assign seo_description = page.description -%}
+{%- unless seo_description -%}
+  {%- assign seo_description = page.content | strip_html | normalize_whitespace | truncate: 160 -%}
+{%- endunless -%}
+{%- if seo_description == "" -%}{%- assign seo_description = site.description -%}{%- endif -%}
+{%- assign seo_description = seo_description | strip_html | normalize_whitespace | escape -%}
+{%- assign canonical = page.url | replace: "index.html", "" | absolute_url %}
+<title>{{ seo_title }}</title>
+<meta name="description" content="{{ seo_description }}">
+<meta name="author" content="{{ site.author.name }}">
+<link rel="canonical" href="{{ canonical }}">
+<meta property="og:site_name" content="{{ site.title | escape }}">
+<meta property="og:type" content="{% if page.url == '/' %}profile{% else %}website{% endif %}">
+<meta property="og:title" content="{{ seo_title }}">
+<meta property="og:description" content="{{ seo_description }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ site.og_image | absolute_url }}">
+<meta property="og:image:alt" content="Portrait of {{ site.author.name }}">
+<meta property="og:locale" content="{{ site.locale | replace: '-', '_' }}">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#FAF9F6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0E131B" media="(prefers-color-scheme: dark)">
+
+<script>
+  /* Apply the saved (or system) theme before the first paint, so dark mode never flashes white. */
+  (function () {
+    var root = document.documentElement, theme = null;
+    root.classList.add("js");
+    try { theme = localStorage.getItem("theme"); } catch (e) {}
+    if (theme !== "light" && theme !== "dark") {
+      theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+    root.setAttribute("data-theme", theme);
+  })();
+</script>
+
+<link rel="preload" href="{{ '/assets/fonts/inter-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{{ '/assets/fonts/source-serif-4-latin.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+
+<link rel="icon" href="{{ '/images/icons/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="icon" href="{{ '/images/icons/favicon-32x32.png' | relative_url }}" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{{ '/images/icons/apple-touch-icon-180x180.png' | relative_url }}">
+<link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="The Economics Hub on Substack" href="{{ site.author.substack }}/feed">
+{%- if page.url == "/" %}
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ "/" | absolute_url | jsonify }},
+    "image": {{ site.author.avatar | absolute_url | jsonify }},
+    "jobTitle": {{ site.tagline | jsonify }},
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Warwick Business School" },
+    "sameAs": [
+      {{ "https://www.linkedin.com/in/" | append: site.author.linkedin | jsonify }},
+      {{ "https://github.com/" | append: site.author.github | jsonify }},
+      {{ site.author.substack | jsonify }}
+    ]
+  }
+</script>
+{%- endif %}

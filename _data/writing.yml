@@ -1,0 +1,86 @@
+# Articles shown on /year-archive/ (in this order).
+# `source` is the publication label: Substack, The Boar or Instagram.
+#
+# Entries with `featured: true` also appear as cards under "Selected writing" on the home page,
+# newest first. A card needs:
+#   date       publication date, YYYY-MM-DD
+#   read_time  minutes (Substack's figure: words ÷ 238, rounded); leave out for Instagram posts
+#   image      cover image in /images/writing/, 800×450
+
+- title: "Iran War is More Than Just Oil"
+  url: "https://economicshub.substack.com/p/iran-war-is-more-than-just-oil"
+  source: "Substack"
+  featured: true
+  date: 2026-03-10
+  read_time: 22
+  image: "/images/writing/iran-war-is-more-than-just-oil.jpg"
+  summary: >-
+    This analysis investigates the systemic second and third-order effects of the escalating Iran conflict on the global economy. It breaks down how the conflict is tightening bottlenecks in non-oil sectors people often overlook such as agriculture, shipping, semiconductors, energy and more.
+
+- title: "Will the AI Boom Actually Hollow Out Its Own Customers?"
+  url: "https://economicshub.substack.com/p/will-the-ai-boom-actually-hollow"
+  source: "Substack"
+  featured: true
+  date: 2026-03-01
+  read_time: 15
+  image: "/images/writing/will-the-ai-boom-actually-hollow.jpg"
+  summary: >-
+    In this article, I explore and challenge the usual AI doomsday narratives with necessary counter-arguments to provide a more nuanced view of the AI transition and enterprise technology adoption.
+
+- title: "Beyond LLM-Driven Chatbots: The Case for Privacy-Focused Miniature AI Models"
+  url: "https://www.instagram.com/p/C09ADUXPO-9/?img_index=1"
+  source: "Instagram"
+  featured: true
+  date: 2023-12-17
+  image: "/images/writing/beyond-llm-driven-chatbots.jpg"
+  summary: >-
+    Miniaturised AI may not match the robustness and convenience of large language models (LLMs), but they may address the critical concerns surrounding data privacy, resource efficiency, and architectural complexity.
+
+- title: "Is War Good for the Economy?"
+  url: "https://theboar.org/2025/08/is-war-good-for-the-economy/"
+  source: "The Boar"
+  featured: true
+  date: 2025-08-26
+  read_time: 5
+  image: "/images/writing/is-war-good-for-the-economy.jpg"
+  summary: >-
+    Explains how inflation, deficit finance, and military outlays can inflate GDP during war while hiding declines in living standards and productive capacity.
+  download:
+    label: "Also available as a PDF Report (Download)"
+    url: "/files/PDF%20Report.pdf"
+
+- title: "A Year in Finance: Top Stories, Major Shifts and Evolving Trends"
+  url: "https://www.instagram.com/p/C117XVat_5N/?img_index=1"
+  source: "Instagram"
+  summary: >-
+    A reflection on key themes that shaped the markets — from rate hikes to tech narratives.
+
+- title: "Central Bank Digital Currency and the Dystopian World of a Cashless Economy"
+  url: "https://economicshub.substack.com/p/central-bank-digital-currency-and?s=r"
+  source: "Substack"
+  summary: >-
+    As money grows increasingly programmable and traceable, should we sacrifice our autonomy in exchange for greater financial convenience?
+
+- title: "A Sample Newsletter"
+  url: "https://economicshub.substack.com/p/the-economics-hub-newsletter-week-867"
+  source: "Substack"
+  summary: >-
+    A quick walkthrough of my newsletter format — featuring curated insights, market reflections, and key ideas to keep you ahead.
+
+- title: "Uncovering the 1992 Securities Scam: How an Indian Stockbroker Gamed the Financial System"
+  url: "https://www.instagram.com/p/CJYj5DRnuZa/?next=%2F"
+  source: "Instagram"
+  summary: >-
+    The original Harshad Mehta story — fraud, loopholes, and lessons still relevant.
+
+- title: "The Panic of 1825 and How it Challenged the Credibility of Classical Economics"
+  url: "https://economicshub.substack.com/p/the-panic-of-1825-and-how-it-challenged"
+  source: "Substack"
+  summary: >-
+    How distinctively different schools of thoughts offer an explanation to the financial panics of the 19th century
+
+- title: "The Rise of Decentralized Prediction Markets"
+  url: "https://economicshub.substack.com/p/the-rise-of-decentralized-prediction?s=r"
+  source: "Substack"
+  summary: >-
+    What they are, How they work and Why they could be the future

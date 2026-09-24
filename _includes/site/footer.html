@@ -1,0 +1,18 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div class="site-footer__id">
+        <p class="site-footer__name">{{ site.author.name }}</p>
+        <p class="site-footer__bio">{{ site.author.bio }}</p>
+        <p class="site-footer__location">{% include site/icon.html name="map-pin" %}<span>{{ site.author.location }}</span></p>
+      </div>
+      <div class="site-footer__contact">
+        {% include site/contact-links.html %}
+      </div>
+    </div>
+    <div class="site-footer__meta">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+      <p>No cookies, no trackers, no third-party requests.</p>
+    </div>
+  </div>
+</footer>

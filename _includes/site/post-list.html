@@ -1,0 +1,22 @@
+{%- comment -%}
+  Article list from _data/writing.yml: {% include site/post-list.html items=site.data.writing limit=3 level="h3" %}
+{%- endcomment -%}
+{%- assign limit = include.limit | default: 100 -%}
+{%- assign level = include.level | default: "h2" -%}
+<ol class="post-list">
+  {%- for post in include.items limit: limit %}
+    {%- case post.source -%}
+      {%- when "Substack" -%}{%- assign icon = "substack" -%}
+      {%- when "Instagram" -%}{%- assign icon = "instagram" -%}
+      {%- else -%}{%- assign icon = "file-text" -%}
+    {%- endcase %}
+  <li class="post-list__item">
+    <p class="post-list__source">{% include site/icon.html name=icon %}<span>{{ post.source }}</span></p>
+    <{{ level }} class="post-list__title"><a href="{{ post.url }}" target="_blank" rel="noopener noreferrer">{{ post.title | escape }}</a></{{ level }}>
+    <div class="post-list__summary">{{ post.summary | markdownify }}</div>
+    {%- if post.download %}
+    <a class="post-list__download" href="{{ post.download.url }}" target="_blank" rel="noopener noreferrer">{% include site/icon.html name="download" %}<span>{{ post.download.label }}</span></a>
+    {%- endif %}
+  </li>
+  {%- endfor %}
+</ol>
