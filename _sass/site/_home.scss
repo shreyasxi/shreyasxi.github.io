@@ -577,7 +577,7 @@
 }
 
 
-/* Toolkit: tools grouped by what they are used for, then numbered tips. */
+/* Toolkit: tools grouped by what they are used for, then a banner linking to the Resources page. */
 
 .toolkit {
   display: grid;
@@ -700,358 +700,215 @@
   background: linear-gradient(135deg, #3776AB 50%, #FFD43B 50%);
 }
 
-.tips {
-  padding: 1.5rem 1.5rem 1.6rem;
-  border-left: 3px solid var(--oxblood);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  background: var(--surface-2);
-}
-
-.home-section__body > .tips {
-  margin-top: 2rem;
-}
-
-.tips__title {
-  font-size: 1.3125rem;
-  line-height: 1.3;
-}
-
-.tips__list {
-  display: grid;
-  gap: 1.5rem 2.5rem;
-  margin: 1.25rem 0 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: tip;
-}
-
-@media (min-width: 48rem) {
-  .tips__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.tip {
-  position: relative;
-  padding-left: 2.6rem;
-  counter-increment: tip;
-}
-
-.tip::before {
-  content: counter(tip, decimal-leading-zero);
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: var(--oxblood);
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.2;
-  font-variant-numeric: lining-nums tabular-nums;
-}
-
-.tip__title {
-  font-size: 1.0625rem;
-  line-height: 1.35;
-}
-
-.tip p {
-  margin-top: 0.35rem;
-  color: var(--ink-2);
-  font-size: 0.96875rem;
-  line-height: 1.6;
-}
-
-.tips__lede {
-  margin-top: 0.3rem;
-  color: var(--ink-2);
-  font-size: 0.96875rem;
-  line-height: 1.6;
-}
-
-/* Who to follow: a card per person inside the tips panel; each card links to their guide. */
-.follow {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--rule-strong);
-}
-
-.follow__title {
-  font-size: 1.1875rem;
-  line-height: 1.3;
-}
-
-.follow__list {
-  display: grid;
-  gap: 0.75rem;
-  margin: 1rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* "Start here" takes a wide first slot: 2 + 2 + 1 on tablets, 2 + 1 then 3 on desktops */
-@media (min-width: 40rem) {
-  .follow__list {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .follow__item--start {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 64rem) {
-  .follow__list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .follow__item--start {
-    grid-column: span 2;
-  }
-}
-
-.follow__item {
-  position: relative;
+/* One slim link under the tool cards; the tips themselves live on the Resources page. */
+.agents-banner {
   display: flex;
-  flex-direction: column;
-  padding: 1rem 2.5rem 1.1rem 1.1rem;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.7rem 1.1rem 0.7rem 0.7rem;
+  border: 1px solid var(--rule);
   border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.08);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.follow__badge {
-  align-self: flex-start;
-  margin-bottom: 0.65rem;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  background: var(--accent);
-  color: var(--on-accent);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.follow__name {
-  color: var(--ink);
-  font-family: var(--font-serif);
-  font-size: 1.0625rem;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.follow__work {
-  margin-top: 0.2rem;
-  color: var(--muted);
-  font-size: 0.875rem;
+  background: var(--surface-2);
+  color: var(--ink-2);
+  font-size: 0.96875rem;
   line-height: 1.45;
-}
-
-.follow__work a {
-  color: var(--ink-2);
-  font-weight: 600;
   text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
 }
 
-.follow__kind {
-  white-space: nowrap;
+.home-section__body > .agents-banner {
+  margin-top: 1.25rem;
 }
 
-/* the guide's link covers the whole card */
-.follow__work a::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-.follow__work a:focus-visible {
-  outline: none;
-}
-
-.follow__work a:focus-visible::after {
-  outline: 2px solid var(--focus);
-  outline-offset: 2px;
+/* the icon takes Claude Code's colour, as its dot does in the tool list */
+.agents-banner__icon {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
   border-radius: var(--radius);
+  background: #D97757;
+  color: #FFFFFF;
 }
 
-.follow__desc {
-  margin-top: 0.45rem;
-  color: var(--ink-2);
-  font-size: 0.875rem;
-  line-height: 1.5;
+.agents-banner__icon .icon {
+  width: 1.15rem;
+  height: 1.15rem;
 }
 
-.follow__arrow {
-  position: absolute;
-  top: 1.1rem;
-  right: 1rem;
-  width: 0.95rem;
-  height: 0.95rem;
-  color: var(--muted);
+.agents-banner__text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.agents-banner__text strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.agents-banner__arrow {
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--ink);
   transition: transform 0.15s ease;
 }
 
-@media (hover: hover) {
-  .follow__item:hover {
-    box-shadow: 0 12px 24px -16px rgba(20, 24, 31, 0.5);
-    transform: translateY(-2px);
+.agents-banner:hover {
+  border-color: var(--rule-strong);
+  background: var(--surface);
+  color: var(--ink-2);
+}
+
+.agents-banner:hover .agents-banner__arrow {
+  transform: translateX(3px);
+}
+
+/* Outside work: the opening line, then a list that completes it. On wide screens the line sits
+   on the left and stays in view while the list scrolls past. */
+
+.pastimes > .pastimes__lead {
+  max-width: 30rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: clamp(1.375rem, calc(1.1rem + 1.1vw), 1.875rem);
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+}
+
+.pastimes__lead em {
+  color: var(--oxblood);
+}
+
+@media (min-width: 56rem) {
+  .pastimes {
+    display: grid;
+    grid-template-columns: minmax(0, 16rem) minmax(0, 1fr);
+    column-gap: 4.5rem;
+    align-items: start;
   }
 
-  .follow__item:hover .follow__work a {
-    color: var(--link-hover);
+  .pastimes > .pastimes__lead {
+    position: sticky;
+    top: calc(var(--header-h) + 2rem);
   }
 
-  .follow__item:hover .follow__arrow {
-    transform: translate(2px, -2px);
+  .home-section__body > .pastimes__list {
+    margin-top: 0;
   }
 }
 
-
-/* Outside work: softly tinted tiles */
-
-.hobbies {
-  display: grid;
-  gap: 1rem;
-  margin: 0;
+.pastimes__list {
+  margin: 1.75rem 0 0;
   padding: 0;
   list-style: none;
 }
 
-.home-section__body > .hobbies {
-  margin-top: 1.5rem;
-}
-
-/* The featured tile (volunteering) is wide; the rest fill the rows after it. */
-@media (min-width: 36rem) {
-  .hobbies {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .hobby--feature {
-    grid-column: 1 / -1;
-  }
-}
-
-/* with two columns, a last tile left on its own takes the full row */
-@media (min-width: 36rem) and (max-width: 55.9375rem) {
-  .hobby--feature ~ .hobby:last-child:nth-child(even) {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 56rem) {
-  .hobbies {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-
-  .hobby--feature {
-    grid-column: span 2;
-  }
-}
-
-.hobby {
+.pastime {
   display: flex;
-  flex-direction: column;
-  padding: 1.4rem 1.4rem 1.5rem;
-  border-radius: var(--radius);
-  background: var(--tint-sand);
+  align-items: flex-start;
+  gap: 1.15rem;
+  padding: 1.15rem 0;
 }
 
-.hobby--terracotta {
-  background: var(--tint-terracotta);
+.pastime:first-child {
+  padding-top: 0;
 }
 
-.hobby--steel {
-  background: var(--tint-steel);
+.pastime:last-child {
+  padding-bottom: 0;
 }
 
-.hobby--sage {
-  background: var(--tint-sage);
+.pastime + .pastime {
+  border-top: 1px solid var(--rule);
 }
 
-.hobby--lavender {
-  background: var(--tint-lavender);
-}
-
-.hobby--straw {
-  background: var(--tint-straw);
-}
-
-.hobby--teal {
-  background: var(--tint-teal);
-}
-
-.hobby--rose {
-  background: var(--tint-rose);
-}
-
-/* white in both themes: emoji are drawn for light backgrounds (the chess pawn is black) */
-.hobby__icon {
+/* Each emoji sits on a pastel disc. The discs stay light in the dark theme too: the emoji are drawn
+   for light backgrounds (the chess pawn is black). */
+.pastime__emoji {
+  --disc: #EFE3CF;
   display: grid;
+  flex: none;
   place-items: center;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: #FFFFFF;
-  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.1);
-  font-size: 1.45rem;
+  background: var(--disc);
+  font-size: 1.5rem;
   line-height: 1;
+  transition: transform 0.25s ease;
 }
 
-.hobby__title {
-  margin-top: 1rem;
-  font-size: 1.1875rem;
-  line-height: 1.3;
+.pastime--teal .pastime__emoji { --disc: #D3E9E4; }
+.pastime--terracotta .pastime__emoji { --disc: #F3DCD2; }
+.pastime--steel .pastime__emoji { --disc: #D9E4F1; }
+.pastime--lavender .pastime__emoji { --disc: #E3DFF2; }
+.pastime--sage .pastime__emoji { --disc: #D9E8DC; }
+.pastime--straw .pastime__emoji { --disc: #EEE6C4; }
+.pastime--rose .pastime__emoji { --disc: #F2DAE2; }
+
+@media (hover: hover) {
+  .pastime:hover .pastime__emoji {
+    transform: rotate(-8deg) scale(1.08);
+  }
 }
 
-.hobby__text {
-  margin-top: 0.4rem;
-  color: var(--ink-2);
-  font-size: 0.96875rem;
-  line-height: 1.6;
+@media (prefers-reduced-motion: reduce) {
+  .pastime__emoji {
+    transition: none;
+  }
 }
 
-.hobby__link {
+/* the first line of text lines up with the middle of the disc */
+.pastime__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 0.65rem;
+}
+
+.pastime__text {
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.pastime__link {
   display: inline-flex;
-  align-self: flex-start;
   align-items: center;
   gap: 0.35rem;
-  margin-top: auto;
-  padding-top: 1rem;
+  margin-top: 0.45rem;
   color: var(--ink);
   font-size: 0.9375rem;
   font-weight: 600;
   text-decoration: none;
 }
 
-.hobby__link:hover {
+.pastime__link:hover {
   color: var(--link-hover);
 }
 
-.hobby__link .icon {
+.pastime__link .icon {
   width: 1rem;
   height: 1rem;
   transition: transform 0.15s ease;
 }
 
-.hobby__link:hover .icon {
+.pastime__link:hover .icon {
   transform: translateX(3px);
 }
 
-/* Organisations inside the volunteering tile; each card links to the organisation. */
+/* The organisations under volunteering, each marked by a thin rule; each links to the organisation. */
 .causes {
   display: grid;
-  gap: 0.75rem;
-  margin: 1.25rem 0 0;
+  gap: 1rem 1.5rem;
+  margin: 1rem 0 0;
   padding: 0;
   list-style: none;
 }
 
-@media (min-width: 36rem) {
+@media (min-width: 40rem) {
   .causes {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1059,32 +916,26 @@
 
 .cause {
   position: relative;
-  padding: 0.95rem 1rem 1rem;
-  border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 1px 2px rgba(20, 24, 31, 0.08);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  padding-left: 0.85rem;
+  border-left: 2px solid var(--rule-strong);
+  transition: border-color 0.15s ease;
 }
 
+/* the arrow follows the last word, however the name wraps */
 .cause__name {
-  display: block;
-  padding-right: 1.25rem;
   color: var(--ink);
-  font-family: var(--font-serif);
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.35;
   text-decoration: none;
 }
 
-/* the arrow sits in the card's corner, however the name wraps */
 .cause__name .icon {
-  position: absolute;
-  top: 1.1rem;
-  right: 0.9rem;
-  width: 0.95rem;
-  height: 0.95rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  margin-left: 0.3rem;
   color: var(--muted);
+  vertical-align: -0.1em;
   transition: transform 0.15s ease;
 }
 
@@ -1104,11 +955,11 @@
 .cause__name:focus-visible::after {
   outline: 2px solid var(--focus);
   outline-offset: 2px;
-  border-radius: var(--radius);
+  border-radius: 2px;
 }
 
 .cause__desc {
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
   color: var(--ink-2);
   font-size: 0.875rem;
   line-height: 1.5;
@@ -1116,8 +967,7 @@
 
 @media (hover: hover) {
   .cause:hover {
-    box-shadow: 0 12px 24px -16px rgba(20, 24, 31, 0.5);
-    transform: translateY(-2px);
+    border-left-color: var(--forest);
   }
 
   .cause:hover .cause__name {

@@ -17,6 +17,10 @@
   --accent-text: #003366;
   --on-accent: #FFFFFF;
   --oxblood: #8B1A1A;
+  /* oxblood buttons, as on the Monitor page's "Open RBI Sentinel" button */
+  --oxblood-fill: #8B1A1A;
+  --oxblood-fill-hover: #5F1111;
+  --on-oxblood: #FFFFFF;
   --link: #003366;
   --link-hover: #8B1A1A;
   --link-underline: rgba(0, 51, 102, 0.3);
@@ -76,6 +80,10 @@
   --accent-text: #9EC2EC;
   --on-accent: #0B1220;
   --oxblood: #E0948C;
+  /* lighter in the dark theme, as the navy primary button is */
+  --oxblood-fill: #E0948C;
+  --oxblood-fill-hover: #F0ABA3;
+  --on-oxblood: #0B1220;
   --link: #9EC2EC;
   --link-hover: #F0ABA3;
   --link-underline: rgba(158, 194, 236, 0.35);

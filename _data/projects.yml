@@ -3,7 +3,10 @@
 #   kicker / short_title   how the project is labelled on the home page card
 #   summary                the short text on the home page card
 #   tags                   topic and tool labels shown on the card
-#   links.kind             picks the icon: code, paper, slides, sheet, dashboard, substack, page
+#   links                  the first three also appear on the home page card
+#   links.kind             picks the icon: code, paper, slides, sheet, dashboard, sentiment, substack, page
+#   links.fill             fills a button with a site colour (oxblood); otherwise only the first
+#                          link on a featured card is filled (navy)
 
 - title: "Master’s Thesis: ECB Narrative Tone and Market Impact"
   featured: true
@@ -32,9 +35,13 @@
     This project is a fully automated data platform that tracks key global macroeconomic indicators and measures the sentiment of the Reserve Bank of India’s monetary policy communication using a large language model (Anthropic’s Claude Opus). I engineered an automated ETL pipeline that autonomously ingests live data from FRED and Yahoo Finance APIs to generate institutional-grade visualizations. Additionally, I architected the "RBI Sentinel," a specialized NLP engine that scrapes and scores Reserve Bank of India policy documents using a two-tier hybrid architecture (Financial Lexicons + Anthropic Claude) to quantify tone and generate composite sentiment scores.
   tags: ["Macro data", "NLP", "Python"]
   links:
-    - label: "Live Dashboard"
+    - label: "Macro Dashboard"
       url: "https://weekly-macro-dashboard.streamlit.app/"
       kind: dashboard
+    - label: "Sentiment Tracker"
+      url: "https://weekly-macro-dashboard.streamlit.app/rbi-sentinel"
+      kind: sentiment
+      fill: oxblood
     - label: "Full write-up"
       url: "/economics-hub/"
       kind: page

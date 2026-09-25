@@ -94,6 +94,11 @@ a:hover {
   background: var(--selection);
 }
 
+/* keeps a short phrase, such as an emoticon, from breaking across lines */
+.nowrap {
+  white-space: nowrap;
+}
+
 button {
   font: inherit;
   color: inherit;
