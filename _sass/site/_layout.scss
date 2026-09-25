@@ -181,8 +181,8 @@ html:not(.js) .theme-toggle {
   display: none;
 }
 
-/* Below 56rem the links move into a drop-down menu. */
-@media (max-width: 55.9375rem) {
+/* Below 64rem the links move into a drop-down menu. */
+@media (max-width: 63.9375rem) {
   .js .nav-toggle {
     display: inline-grid;
   }

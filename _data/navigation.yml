@@ -13,6 +13,9 @@ main:
   - title: "Books"
     url: /books/
 
+  - title: "Resources"
+    url: /resources/
+
   - title: "Macro & RBI Monitor"
     url: /economics-hub/
     live: true

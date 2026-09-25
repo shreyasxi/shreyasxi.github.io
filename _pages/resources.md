@@ -3,10 +3,10 @@ layout: single
 title: "Resources"
 permalink: /resources/
 width: wide
-description: "How Shreyas Urgunde works with coding agents such as Claude Code in economics and finance research: six habits, the people worth following, common mistakes to look for, and further reading."
+description: "Resources for economics and finance research: practical habits for coding agents, people to follow, and curated datasets for monetary policy, asset pricing and macroeconomics."
 ---
 
-Coding agents such as Claude Code can now write much of the code behind an empirical project. These are the habits I follow to keep the results trustworthy, the mistakes I look out for, the people I learn from, and a few references worth keeping close.
+Coding agents such as Claude Code can now write much of the code behind an empirical project. These are the habits I follow to keep the results trustworthy, the people I learn from, and the datasets I keep close for economics and finance research.
 
 <section class="resource-section" aria-labelledby="pro-tips">
   <h2 class="section-label" id="pro-tips">Pro Tips</h2>
@@ -76,77 +76,74 @@ Coding agents such as Claude Code can now write much of the code behind an empir
   </ul>
 </section>
 
-<section class="resource-section" aria-labelledby="where-agents-go-wrong">
-  <h2 class="section-label" id="where-agents-go-wrong">Where Agents Go Wrong</h2>
-  <p class="resource-section__lede">Agents rarely fail loudly. These quiet mistakes are the ones to look for whenever you review their work.</p>
-  <ul class="pitfalls">
-    <li class="pitfall">
-      <h3 class="pitfall__title">The sample shrinks quietly</h3>
-      <p>A merge that fails to match, a filter or a missing value can drop observations without raising an error. Check the number of rows before and after every step.</p>
-    </li>
-    <li class="pitfall">
-      <h3 class="pitfall__title">The specification drifts</h3>
-      <p>Standard errors switch from clustered to robust, or a fixed effect goes missing, and the code still runs. Compare the final specification with your plan, line by line.</p>
-    </li>
-    <li class="pitfall">
-      <h3 class="pitfall__title">Units don’t match</h3>
-      <p>Percentages get mixed with decimals, nominal values with real ones, and annualised growth rates with quarterly ones. Check the units of every series before combining them.</p>
-    </li>
-    <li class="pitfall">
-      <h3 class="pitfall__title">Look-ahead bias creeps in</h3>
-      <p>In a backtest or a forecast, an agent may use information that wasn’t available at the time, such as a full-sample average or data revised years later. For each step, ask what you could have known on the day.</p>
-    </li>
-    <li class="pitfall">
-      <h3 class="pitfall__title">Tests get bent to pass</h3>
-      <p>When a test fails, an agent may change the test instead of fixing the code. Treat any edit to a test as a red flag, and ask why it was needed.</p>
-    </li>
-    <li class="pitfall">
-      <h3 class="pitfall__title">Citations only look right</h3>
-      <p>References, data sources and summaries of papers can sound convincing and still be wrong. Open every source before it goes into a draft.</p>
-    </li>
-  </ul>
-</section>
-
-<section class="resource-section" aria-labelledby="further-reading">
-  <h2 class="section-label" id="further-reading">Further Reading</h2>
-  <div class="reading">
-    <div class="reading__group">
-      <h3 class="reading__title">Coding Agents</h3>
-      <ul class="reading__list">
-        <li class="reading__item">
-          <p class="reading__source">Anthropic<span aria-hidden="true"> · </span>Documentation</p>
-          <p class="reading__name"><a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener noreferrer">Best Practices for Claude Code{% include site/icon.html name="arrow-up-right" %}</a></p>
-          <p class="reading__desc">The official guide from the team that builds Claude Code: give the agent a way to check its own work, plan before it codes and add an independent review.</p>
+<section class="resource-section" aria-labelledby="datasets">
+  <h2 class="section-label" id="datasets">Datasets</h2>
+  <p class="resource-section__lede">A curated collection of data sources for empirical research in economics and finance.</p>
+  <div class="datasets">
+    <div class="datasets__group">
+      <h3 class="datasets__title">Monetary Policy</h3>
+      <ul class="datasets__list">
+        <li class="datasets__item">
+          <p class="datasets__source">United States</p>
+          <p class="datasets__name"><a href="https://www.frbsf.org/research-and-insights/data-and-indicators/us-monetary-policy-event-study-database/" target="_blank" rel="noopener noreferrer">U.S. Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
         </li>
-        <li class="reading__item">
-          <p class="reading__source">Simon Willison<span aria-hidden="true"> · </span>Essay</p>
-          <p class="reading__name"><a href="https://simonwillison.net/2025/Mar/19/vibe-coding/" target="_blank" rel="noopener noreferrer">Not All AI-Assisted Programming Is Vibe Coding{% include site/icon.html name="arrow-up-right" %}</a></p>
-          <p class="reading__desc">Where vibe coding ends and careful work begins. His rule: never commit code you couldn’t explain to somebody else.</p>
+        <li class="datasets__item">
+          <p class="datasets__source">Advanced economies &amp; emerging markets</p>
+          <p class="datasets__name"><a href="https://sites.google.com/site/mabolhuis/data" target="_blank" rel="noopener noreferrer">High-Frequency Monetary Policy Shocks{% include site/icon.html name="arrow-up-right" %}</a></p>
         </li>
-        <li class="reading__item">
-          <p class="reading__source">Scott Cunningham<span aria-hidden="true"> · </span>Newsletter series</p>
-          <p class="reading__name"><a href="https://causalinf.substack.com/s/claude-code" target="_blank" rel="noopener noreferrer">Claude Code on Scott’s Mixtape{% include site/icon.html name="arrow-up-right" %}</a></p>
-          <p class="reading__desc">The author of <cite>Causal Inference: The Mixtape</cite> keeps a running record of using Claude Code for empirical research, with walkthroughs of real projects.</p>
+        <li class="datasets__item">
+          <p class="datasets__source">Euro area</p>
+          <p class="datasets__name"><a href="https://cepr.org/voxeu/columns/euro-area-monetary-policy-event-study-database" target="_blank" rel="noopener noreferrer">EA-MPD: Euro Area Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">United Kingdom</p>
+          <p class="datasets__name"><a href="https://www.bankofengland.co.uk/working-paper/2023/measuring-monetary-policy-in-the-uk-ukmpd" target="_blank" rel="noopener noreferrer">UK-MPD: UK Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
         </li>
       </ul>
     </div>
-    <div class="reading__group">
-      <h3 class="reading__title">Research Code</h3>
-      <ul class="reading__list">
-        <li class="reading__item">
-          <p class="reading__source">Matthew Gentzkow and Jesse M. Shapiro<span aria-hidden="true"> · </span>Guide</p>
-          <p class="reading__name"><a href="https://web.stanford.edu/~gentzkow/research/CodeAndData.pdf" target="_blank" rel="noopener noreferrer">Code and Data for the Social Sciences{% include site/icon.html name="arrow-up-right" %}</a></p>
-          <p class="reading__desc">The classic rules for research code: automate everything, keep code and data under version control, and have one script run the whole project. They matter even more when an agent writes the code.</p>
+    <div class="datasets__group">
+      <h3 class="datasets__title">Asset Pricing</h3>
+      <ul class="datasets__list">
+        <li class="datasets__item">
+          <p class="datasets__source">Equities</p>
+          <p class="datasets__name"><a href="https://www.openassetpricing.com/" target="_blank" rel="noopener noreferrer">Open Source Asset Pricing{% include site/icon.html name="arrow-up-right" %}</a></p>
         </li>
-        <li class="reading__item">
-          <p class="reading__source">Social Science Data Editors<span aria-hidden="true"> · </span>Template</p>
-          <p class="reading__name"><a href="https://social-science-data-editors.github.io/template_README/" target="_blank" rel="noopener noreferrer">Template README for Replication Packages{% include site/icon.html name="arrow-up-right" %}</a></p>
-          <p class="reading__desc">The README that data editors at social science journals recommend, listing everything a replication package should document.</p>
+        <li class="datasets__item">
+          <p class="datasets__source">Factors</p>
+          <p class="datasets__name"><a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html" target="_blank" rel="noopener noreferrer">Fama–French Factor Returns{% include site/icon.html name="arrow-up-right" %}</a></p>
         </li>
-        <li class="reading__item">
-          <p class="reading__source">MIT<span aria-hidden="true"> · </span>Course</p>
-          <p class="reading__name"><a href="https://missing.csail.mit.edu/" target="_blank" rel="noopener noreferrer">The Missing Semester of Your CS Education{% include site/icon.html name="arrow-up-right" %}</a></p>
-          <p class="reading__desc">Free lectures on the tools few courses teach: the command line, Git and debugging, and now a lecture on agentic coding.</p>
+        <li class="datasets__item">
+          <p class="datasets__source">Bonds</p>
+          <p class="datasets__name"><a href="https://openbondassetpricing.com/" target="_blank" rel="noopener noreferrer">Open Source Bond Asset Pricing{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Factors</p>
+          <p class="datasets__name"><a href="https://jkpfactors.com/" target="_blank" rel="noopener noreferrer">Global Factor Data{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+      </ul>
+    </div>
+    <div class="datasets__group">
+      <h3 class="datasets__title">Macroeconomic &amp; Market Data</h3>
+      <ul class="datasets__list">
+        <li class="datasets__item">
+          <p class="datasets__source">India</p>
+          <p class="datasets__name"><a href="https://data.rbi.org.in/DBIE/#/dbie/home" target="_blank" rel="noopener noreferrer">Database on Indian Economy{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Economic history</p>
+          <p class="datasets__name"><a href="https://www.macrohistory.net/database/" target="_blank" rel="noopener noreferrer">Macrohistory Database{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">India · High-frequency data</p>
+          <p class="datasets__name"><a href="https://github.com/sandeep-jaiswar/financeindia/tree/main" target="_blank" rel="noopener noreferrer">Indian Stock Market Data{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">International</p>
+          <p class="datasets__name"><a href="https://data.bis.org/" target="_blank" rel="noopener noreferrer">BIS Data Portal{% include site/icon.html name="arrow-up-right" %}</a></p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">India · Daily market data</p>
+          <p class="datasets__name"><a href="https://www.nseindia.com/all-reports" target="_blank" rel="noopener noreferrer">NSE Historical Reports and Bhavcopies{% include site/icon.html name="arrow-up-right" %}</a></p>
         </li>
       </ul>
     </div>
