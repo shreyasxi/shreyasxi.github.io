@@ -81,7 +81,6 @@ redirect_from:
         </ul>
       </div>
       <div class="toolkit__group toolkit__group--forest">
-        <span class="toolkit__icon" aria-hidden="true">{% include site/icon.html name="code" %}</span>
         <h3 class="toolkit__title">Code &amp; reproducibility</h3>
         <p class="toolkit__desc">Version control, containers and agentic coding</p>
         <ul class="tools">
