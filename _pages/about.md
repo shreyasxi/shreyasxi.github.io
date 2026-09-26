@@ -60,7 +60,6 @@ redirect_from:
     <p>I’m proficient in R, Python, LaTeX, and Excel, with working knowledge of Stata for tasks like panel regressions and applied econometrics. I enjoy building financial models and making complex data easier to interpret and explain. Beyond just writing code or frantically “vibe coding”, I take careful measure to build robust, fully reproducible data pipelines that hold up to the most rigorous peer-reviewed academic standards.</p>
     <div class="toolkit">
       <div class="toolkit__group toolkit__group--navy">
-        <span class="toolkit__icon" aria-hidden="true">{% include site/icon.html name="chart" %}</span>
         <h3 class="toolkit__title">Analysis &amp; modelling</h3>
         <p class="toolkit__desc">Econometrics, financial models and data analysis</p>
         <ul class="tools">
@@ -71,7 +70,6 @@ redirect_from:
         </ul>
       </div>
       <div class="toolkit__group toolkit__group--oxblood">
-        <span class="toolkit__icon" aria-hidden="true">{% include site/icon.html name="file-text" %}</span>
         <h3 class="toolkit__title">Writing &amp; editing</h3>
         <p class="toolkit__desc">Papers, research notes and everyday editing</p>
         <ul class="tools">
