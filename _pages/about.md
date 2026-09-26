@@ -165,7 +165,7 @@ redirect_from:
         <span class="pastime__emoji" aria-hidden="true">📚</span>
         <div class="pastime__body">
           <p class="pastime__text">Read books — sometimes for leisure, often to deepen my understanding of a particular field</p>
-          <a class="pastime__link" href="/books/"><span>See my bookshelf</span>{% include site/icon.html name="arrow-right" %}</a>
+          <a class="pastime__link" href="/books/"><span>Want some book recommendations?</span>{% include site/icon.html name="arrow-right" %}</a>
         </div>
       </li>
       <li class="pastime pastime--terracotta">
