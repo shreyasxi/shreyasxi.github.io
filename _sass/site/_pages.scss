@@ -217,6 +217,22 @@
 
 /* Resources: tips, people to follow and research datasets. */
 
+.page-header--reviewed {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+}
+
+.page-reviewed {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+
 .prose > .resource-section {
   margin-top: 3.75rem;
 }
@@ -436,6 +452,7 @@
 }
 
 .datasets__title {
+  color: var(--link-hover);
   padding-bottom: 0.65rem;
   border-bottom: 1px solid var(--rule-strong);
   font-size: 1.1875rem;
@@ -467,6 +484,13 @@
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.35;
+}
+
+.datasets__desc {
+  margin-top: 0.45rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+  line-height: 1.55;
 }
 
 .datasets__name a {
@@ -507,7 +531,7 @@
 
 @media (hover: hover) {
   .datasets__item:hover .datasets__name a {
-    color: var(--link-hover);
+    color: var(--ink);
   }
 
   .datasets__item:hover .datasets__name .icon {

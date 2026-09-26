@@ -10,8 +10,11 @@ layout: base
 {%- assign width = page.width | default: "reading" -%}
 <article class="container">
   <div class="page-layout page-layout--{{ width }}{% if page.toc %} page-layout--toc{% endif %}">
-    <header class="page-header">
+    <header class="page-header{% if page.last_reviewed %} page-header--reviewed{% endif %}">
       <h1 class="page-title">{{ page.title | escape }}</h1>
+      {% if page.last_reviewed %}
+      <p class="page-reviewed">Last reviewed: <time datetime="{{ page.last_reviewed | escape }}">{{ page.last_reviewed_label | escape }}</time></p>
+      {% endif %}
     </header>
     {%- if page.toc %}
     <aside class="toc{% if page.toc_sticky %} toc--sticky{% endif %}">

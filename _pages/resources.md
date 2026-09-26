@@ -3,10 +3,99 @@ layout: single
 title: "Resources"
 permalink: /resources/
 width: wide
+last_reviewed: "2026-09"
+last_reviewed_label: "Sep 2026"
 description: "Resources for economics and finance research: practical habits for coding agents, people to follow, and curated datasets for monetary policy, asset pricing and macroeconomics."
 ---
 
 Coding agents such as Claude Code can now write much of the code behind an empirical project. These are the habits I follow to keep the results trustworthy, the people I learn from, and the datasets I keep close for economics and finance research.
+
+<section class="resource-section" aria-labelledby="datasets">
+  <h2 class="section-label" id="datasets">Datasets</h2>
+  <p class="resource-section__lede">A curated collection of data sources for empirical research in economics and finance.</p>
+  <div class="datasets">
+    <div class="datasets__group">
+      <h3 class="datasets__title">Monetary Policy</h3>
+      <ul class="datasets__list">
+        <li class="datasets__item">
+          <p class="datasets__source">United States</p>
+          <p class="datasets__name"><a href="https://www.frbsf.org/research-and-insights/data-and-indicators/us-monetary-policy-event-study-database/" target="_blank" rel="noopener noreferrer">U.S. Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Measure interest-rate and asset-price responses around FOMC announcements, press conferences and minutes.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Advanced economies &amp; emerging markets</p>
+          <p class="datasets__name"><a href="https://sites.google.com/site/mabolhuis/data" target="_blank" rel="noopener noreferrer">High-Frequency Monetary Policy Shocks{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Compare monetary-policy surprises across advanced economies and emerging markets using a common methodology.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Euro area</p>
+          <p class="datasets__name"><a href="https://cepr.org/voxeu/columns/euro-area-monetary-policy-event-study-database" target="_blank" rel="noopener noreferrer">EA-MPD: Euro Area Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Study how financial markets respond to ECB policy announcements and press conferences.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">United Kingdom</p>
+          <p class="datasets__name"><a href="https://www.bankofengland.co.uk/working-paper/2023/measuring-monetary-policy-in-the-uk-ukmpd" target="_blank" rel="noopener noreferrer">UK-MPD: UK Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Analyse UK monetary-policy surprises and market responses to Bank of England communication.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="datasets__group">
+      <h3 class="datasets__title">Asset Pricing</h3>
+      <ul class="datasets__list">
+        <li class="datasets__item">
+          <p class="datasets__source">Equities</p>
+          <p class="datasets__name"><a href="https://www.openassetpricing.com/" target="_blank" rel="noopener noreferrer">Open Source Asset Pricing{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Explore equity return predictors with supporting data and code for replication.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Factors</p>
+          <p class="datasets__name"><a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html" target="_blank" rel="noopener noreferrer">Fama–French Factor Returns{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Use factor returns and research portfolios as benchmarks in empirical asset-pricing models.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Bonds</p>
+          <p class="datasets__name"><a href="https://openbondassetpricing.com/" target="_blank" rel="noopener noreferrer">Open Source Bond Asset Pricing{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Replicate corporate-bond asset-pricing research with shared data and code.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Factors</p>
+          <p class="datasets__name"><a href="https://jkpfactors.com/" target="_blank" rel="noopener noreferrer">Global Factor Data{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Compare equity factors across international markets to assess how well return patterns generalise.</p>
+        </li>
+      </ul>
+    </div>
+    <div class="datasets__group">
+      <h3 class="datasets__title">Macroeconomic &amp; Market Data</h3>
+      <ul class="datasets__list">
+        <li class="datasets__item">
+          <p class="datasets__source">India</p>
+          <p class="datasets__name"><a href="https://data.rbi.org.in/DBIE/#/dbie/home" target="_blank" rel="noopener noreferrer">Database on Indian Economy{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Access RBI statistics for research on Indian monetary conditions, banking and the wider economy.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">Economic history</p>
+          <p class="datasets__name"><a href="https://www.macrohistory.net/database/" target="_blank" rel="noopener noreferrer">Macrohistory Database{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Study long-run relationships between credit, financial crises and macroeconomic outcomes.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">India · High-frequency data</p>
+          <p class="datasets__name"><a href="https://github.com/sandeep-jaiswar/financeindia/tree/main" target="_blank" rel="noopener noreferrer">Indian Stock Market Data{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">An unofficial Python client for retrieving NSE market data; useful for exploratory downloads that require validation.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">International</p>
+          <p class="datasets__name"><a href="https://data.bis.org/" target="_blank" rel="noopener noreferrer">BIS Data Portal{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Compare credit, banking, exchange rates and property prices across economies.</p>
+        </li>
+        <li class="datasets__item">
+          <p class="datasets__source">India · Daily market data</p>
+          <p class="datasets__name"><a href="https://www.nseindia.com/all-reports" target="_blank" rel="noopener noreferrer">NSE Historical Reports and Bhavcopies{% include site/icon.html name="arrow-up-right" %}</a></p>
+          <p class="datasets__desc">Use official daily market reports and bhavcopies to examine Indian trading activity and check downloaded observations.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
 <section class="resource-section" aria-labelledby="pro-tips">
   <h2 class="section-label" id="pro-tips">Pro Tips</h2>
@@ -74,78 +163,4 @@ Coding agents such as Claude Code can now write much of the code behind an empir
       {% include site/icon.html name="arrow-up-right" class="follow__arrow" %}
     </li>
   </ul>
-</section>
-
-<section class="resource-section" aria-labelledby="datasets">
-  <h2 class="section-label" id="datasets">Datasets</h2>
-  <p class="resource-section__lede">A curated collection of data sources for empirical research in economics and finance.</p>
-  <div class="datasets">
-    <div class="datasets__group">
-      <h3 class="datasets__title">Monetary Policy</h3>
-      <ul class="datasets__list">
-        <li class="datasets__item">
-          <p class="datasets__source">United States</p>
-          <p class="datasets__name"><a href="https://www.frbsf.org/research-and-insights/data-and-indicators/us-monetary-policy-event-study-database/" target="_blank" rel="noopener noreferrer">U.S. Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">Advanced economies &amp; emerging markets</p>
-          <p class="datasets__name"><a href="https://sites.google.com/site/mabolhuis/data" target="_blank" rel="noopener noreferrer">High-Frequency Monetary Policy Shocks{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">Euro area</p>
-          <p class="datasets__name"><a href="https://cepr.org/voxeu/columns/euro-area-monetary-policy-event-study-database" target="_blank" rel="noopener noreferrer">EA-MPD: Euro Area Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">United Kingdom</p>
-          <p class="datasets__name"><a href="https://www.bankofengland.co.uk/working-paper/2023/measuring-monetary-policy-in-the-uk-ukmpd" target="_blank" rel="noopener noreferrer">UK-MPD: UK Monetary Policy Event-Study Database{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-      </ul>
-    </div>
-    <div class="datasets__group">
-      <h3 class="datasets__title">Asset Pricing</h3>
-      <ul class="datasets__list">
-        <li class="datasets__item">
-          <p class="datasets__source">Equities</p>
-          <p class="datasets__name"><a href="https://www.openassetpricing.com/" target="_blank" rel="noopener noreferrer">Open Source Asset Pricing{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">Factors</p>
-          <p class="datasets__name"><a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html" target="_blank" rel="noopener noreferrer">Fama–French Factor Returns{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">Bonds</p>
-          <p class="datasets__name"><a href="https://openbondassetpricing.com/" target="_blank" rel="noopener noreferrer">Open Source Bond Asset Pricing{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">Factors</p>
-          <p class="datasets__name"><a href="https://jkpfactors.com/" target="_blank" rel="noopener noreferrer">Global Factor Data{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-      </ul>
-    </div>
-    <div class="datasets__group">
-      <h3 class="datasets__title">Macroeconomic &amp; Market Data</h3>
-      <ul class="datasets__list">
-        <li class="datasets__item">
-          <p class="datasets__source">India</p>
-          <p class="datasets__name"><a href="https://data.rbi.org.in/DBIE/#/dbie/home" target="_blank" rel="noopener noreferrer">Database on Indian Economy{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">Economic history</p>
-          <p class="datasets__name"><a href="https://www.macrohistory.net/database/" target="_blank" rel="noopener noreferrer">Macrohistory Database{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">India · High-frequency data</p>
-          <p class="datasets__name"><a href="https://github.com/sandeep-jaiswar/financeindia/tree/main" target="_blank" rel="noopener noreferrer">Indian Stock Market Data{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">International</p>
-          <p class="datasets__name"><a href="https://data.bis.org/" target="_blank" rel="noopener noreferrer">BIS Data Portal{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-        <li class="datasets__item">
-          <p class="datasets__source">India · Daily market data</p>
-          <p class="datasets__name"><a href="https://www.nseindia.com/all-reports" target="_blank" rel="noopener noreferrer">NSE Historical Reports and Bhavcopies{% include site/icon.html name="arrow-up-right" %}</a></p>
-        </li>
-      </ul>
-    </div>
-  </div>
 </section>
