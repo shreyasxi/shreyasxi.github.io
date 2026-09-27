@@ -8,9 +8,7 @@ toc_label: "On this page"
 toc_sticky: true
 ---
 
-Two projects that share one codebase. The first rebuilds a markets dashboard every week without
-anyone touching it. The second scores the tone of Reserve Bank of India policy documents and tests,
-in public, whether that tone predicts anything.
+These two projects share a codebase. One automatically updates a dashboard of global economic and market indicators each week. The other analyses the tone of Reserve Bank of India's monetary policy documents and tests whether those sentiment scores have predictive value.
 
 <div style="display: flex; gap: 1.25rem; flex-wrap: wrap; margin: 2.5rem 0 3rem 0;">
   <a href="#dashboard" style="flex: 1 1 280px; display: block; padding: 1.6rem 1.5rem; border: 1px solid #D6DCE5; border-left: 4px solid #003366; border-radius: 3px; text-decoration: none; background: #FFFFFF; transition: all 0.2s ease-in-out;"
@@ -183,7 +181,7 @@ A meeting's composite weights **Minutes 50%, Resolution 35%, Governor's Statemen
 Minutes most heavily because they record individual members' reasoning, which is where disagreement
 shows.
 
-**Facts are extracted without the model.** The rate decision, the stated stance, the RBI's CPI and
+**Facts are extracted without the model:** The rate decision, the stated stance, the RBI's CPI and
 GDP projections and the next meeting date are read from the Resolution by regular expression, and
 verified against all 61 cycles. Anything a regex can read reliably should not be handed to a
 language model: it costs money, and it introduces a failure mode where the number on the dashboard
@@ -242,17 +240,17 @@ is a plausible invention. Only the tone judgement goes to the model.
 
 ### What it found
 
-**Tone does not predict the rate decision.** The composite tracks the policy cycle closely, but once
+**Tone does not predict the rate decision:** The composite tracks the policy cycle closely, but once
 the RBI's own stated stance is in the model, tone adds nothing. This is a negative result and it is
 reported as one. It is also unsurprising in hindsight: the stance *is* the committee's compressed
 summary of its own tone, published deliberately.
 
-**No reliable relationship with equities, the rupee or volatility.** Tested against Nifty, Bank
+**No reliable relationship with equities, the rupee or volatility:** Tested against Nifty, Bank
 Nifty, USD/INR, gold and India VIX, nothing survived. Given how many pairs were tested, a couple of
 suggestive correlations would have been the expected result of chance alone; there were none worth
 reporting.
 
-**Tone does line up with the bond market's reaction on decision day.** The change in Resolution tone
+**Tone does line up with the bond market's reaction on decision day:** The change in Resolution tone
 from one cycle to the next corresponds to the move in the 10-year government security yield that day
 — roughly 5 basis points for a typical shift in tone. This is the one relationship that held, and
 also the one most plausible in advance: the bond market prices the path of policy, and the
@@ -260,7 +258,7 @@ Resolution's language is the clearest public statement about that path.
 
 ### The problem with that result
 
-**Every meeting in this sample happened before the scoring model was trained.** A model that has read
+**Every meeting in this sample happened before the scoring model was trained:** A model that has read
 financial journalism up to its training cutoff has, in principle, encountered commentary about these
 very meetings, including what the bond market did afterwards. Nothing in a backtest can rule out the
 possibility that the model is recalling the outcome rather than reading the document.
@@ -269,9 +267,7 @@ This is the central methodological risk in applying language models to historica
 out a test set does not solve it, because the contamination is in the model's weights, not the
 analyst's data split.
 
-#### The live test
-
-From October 2026, for every new Resolution:
+### From October 2026, for every new Resolution:
 
 1. The tone score is computed and committed to the repository **before the 17:00 IST government
    securities close**, with a timestamp.
@@ -289,14 +285,14 @@ hypothesis with supporting historical evidence, not an established finding.**
 
 ### Engineering constraints
 
-- **Model spend is capped structurally.** A document reaches the model only if it is new, belongs to
+- **Model spend is capped structurally:** A document reaches the model only if it is new, belongs to
   an MPC cycle and clears a minimum length. A scheduled run scores at most four documents; a larger
   backlog scores nothing and fails the run, so a discovery bug cannot quietly spend money. Normal
   cost is about $0.15 per meeting.
-- **Scheduling follows the calendar, not the clock.** The pipeline reads the next meeting date out
+- **Scheduling follows the calendar, not the clock:** The pipeline reads the next meeting date out
   of the latest Resolution and only runs intraday checks on decision day. Every other day the gate
   exits in seconds.
-- **Every score carries the version of the method that produced it.** Changing the method means
+- **Every score carries the version of the method that produced it:** Changing the method means
   bumping that version; old scores are kept rather than overwritten, so a published number can always
   be traced to how it was calculated.
 - **Charts are fingerprinted against the data that drew them,** and a test fails if the database has
