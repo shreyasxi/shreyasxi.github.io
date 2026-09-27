@@ -79,7 +79,7 @@ redirect_from:
     <h2 class="home-section__title" id="technical-toolkit">My Technical Toolkit</h2>
   </div>
   <div class="home-section__body">
-    <p>I’m proficient in R, Python, LaTeX, and Excel, with working knowledge of Stata for tasks like panel regressions and applied econometrics. I enjoy building financial models and making complex data easier to interpret and explain. Beyond just writing code or frantically “vibe coding”, I take careful measure to build robust, fully reproducible data pipelines that hold up to the most rigorous peer-reviewed academic standards.</p>
+    <p>I enjoy working through messy data and finding a clear way to explain what it shows. R, Python, and Excel are my main tools for econometric analysis and financial modelling, alongside LaTeX for writing and a working knowledge of Stata. I also use coding agents (primarily Claude Code), and am cautiously optimistic about their usefulness. It’s tempting to “vibe code”, but understanding and being able to explain the underlying work is still essential. For me, that means taking time to understand the research question and plan the analysis, keeping assumptions clear, documenting key decisions, and making the work easy to check and reproduce. </p>
     <div class="toolkit">
       <div class="toolkit__group toolkit__group--navy">
         <h3 class="toolkit__title">Analysis &amp; modelling</h3>
