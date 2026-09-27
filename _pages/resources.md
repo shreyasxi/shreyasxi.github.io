@@ -8,7 +8,7 @@ last_reviewed_label: "Sep 2026"
 description: "Resources for economics and finance research: practical habits for coding agents, people to follow, and curated datasets for monetary policy, asset pricing and macroeconomics."
 ---
 
-Coding agents such as Claude Code can now write much of the code behind an empirical project. These are the habits I follow to keep the results trustworthy, the people I learn from, and the datasets I keep close for economics and finance research.
+Coding agents can now write much of the code behind an empirical project. It’s tempting to “vibe code”, but I firmly believe human judgement will remain instrumental to framing research questions, choosing appropriate methods, and interpreting the results. Here, you’ll find practical tips for working with coding agents, useful datasets, and people worth following to learn more about using these tools in economics research.
 
 <section class="resource-section" aria-labelledby="datasets">
   <h2 class="section-label" id="datasets">Datasets</h2>
@@ -99,31 +99,31 @@ Coding agents such as Claude Code can now write much of the code behind an empir
 
 <section class="resource-section" aria-labelledby="pro-tips">
   <h2 class="section-label" id="pro-tips">Pro Tips</h2>
-  <p class="resource-section__lede">Habits for working with coding agents without switching off your own judgement.</p>
+  <p class="resource-section__lede">A few habits that you should follow when using coding agents for empirical research.</p>
   <ol class="tips">
     <li class="tip">
-      <h3 class="tip__title">Argue with the plan, not the code</h3>
-      <p>Have the agent propose a plan before it writes any code, then question it the way a referee would: which sample, which estimator, which standard errors? A wrong assumption caught in the plan costs a sentence to fix; buried in working code, it can survive all the way into a published table.</p>
+      <h3 class="tip__title">Take time over the plan</h3>
+      <p>Have the agent propose a plan before it writes any code, then question it the way a referee would. Which data will we use? What assumptions are we making? What are the constraints? Make sure these choices to be clear enough to question before they become part of the code.</p>
     </li>
     <li class="tip">
-      <h3 class="tip__title">Pre-register, even if only for yourself</h3>
-      <p>Agents make it effortless to run fifty specifications before lunch, and just as effortless to keep only the one that worked. Write down your main specification and robustness checks before running anything, and report every one of them.</p>
+      <h3 class="tip__title">Write down what you intend to test</h3>
+      <p>Write down the main specification and robustness checks before looking at the results. There’s still room to explore, but keep track of what changed and why. When writing up, distinguish the analysis you planned from ideas that emerged along the way.</p>
     </li>
     <li class="tip">
       <h3 class="tip__title">Make the agent prove its work</h3>
       <p>Before an agent refactors anything, have it write tests that pin down known results, such as a replicated table or a key coefficient, and read every diff yourself. The agent writes the code; you own the results.</p>
     </li>
     <li class="tip">
-      <h3 class="tip__title">Never let it mark its own homework</h3>
-      <p>Review code in a fresh session that didn’t write it, and ask it to find what’s wrong rather than confirm what’s right, because the context that wrote a bug tends to defend it. Then test the reviewer: plant a bug you know about and check that it gets caught.</p>
+      <h3 class="tip__title">Get a separate review</h3>
+      <p>Ask a fresh session to review the code, providing the research question and relevant assumptions. Have it look for mistakes and explain its concerns. Then work through those concerns yourself; the reviewer can get things wrong too.</p>
     </li>
     <li class="tip">
       <h3 class="tip__title">Replicate in a second language</h3>
-      <p>For results that matter, have the agent rebuild the analysis in a second language, such as Stata alongside R, and match the estimates to six decimal places. Coding errors rarely repeat across languages, so a match is strong evidence, and a mismatch means a bug or a package default you didn’t know about.</p>
+      <p>For results that matter, have the agent rebuild the analysis in a second language, such as Stata alongside R, and match the estimates to six decimal places. If the answers differ, investigate. Matching answers are reassuring, though two implementations can still share the same mistaken assumption.</p>
     </li>
     <li class="tip">
-      <h3 class="tip__title">Every number comes from code</h3>
-      <p>Every number in a draft should come straight from a script’s output, never typed in by hand or recalled from a model’s memory. And to avoid the usual headaches of code hand-offs, build the project to the <a href="https://aeadataeditor.github.io/" target="_blank" rel="noopener noreferrer">AEA Data Editor’s reproducibility guidelines</a>, so anyone can rebuild every table from the raw data.</p>
+      <h3 class="tip__title">Maintain high reproducibility standards</h3>
+      <p>Generate tables and figures from the analysis and keep track of where the reported numbers come from. Document the data, software, and steps needed to rerun the project. The <a href="https://aeadataeditor.github.io/" target="_blank" rel="noopener noreferrer">AEA Data Editor’s reproducibility guidance</a> is a useful reference when preparing the work for someone else to reproduce.</p>
     </li>
   </ol>
 </section>
