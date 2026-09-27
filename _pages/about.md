@@ -13,7 +13,20 @@ redirect_from:
     <p class="kicker">Economics &amp; Finance Researcher</p>
     <h1 class="hero__name">Shreyas Urgunde</h1>
     <p class="hero__meta">MSc Finance, Warwick Business School<span class="hero__sep" aria-hidden="true">·</span>United Kingdom</p>
-    <p class="hero__lede">Hello, I’m <strong>Shreyas Urgunde</strong>, an economics and finance researcher with an MSc Finance from Warwick Business School. My work focuses on empirical finance, econometrics, coding, and applied economic analysis, including research experience with a research lab based at the University of Oxford. I spend my days making sense of markets, financial structures, and the stories we tell to convince the world (and often ourselves) that risk is manageable, value is objective, and efficiency is real (spoiler: it rarely is).</p>
+    <p class="hero__lede">
+  Hello, I’m <strong>Shreyas Urgunde</strong>, an economics and finance
+  researcher with an MSc in Finance from Warwick Business School.
+  My work focuses on empirical finance, econometrics, and applied
+  economic analysis, including predoctoral research experience with
+  the HAI Lab at the University of Oxford.
+</p>
+
+<p class="hero__lede">
+  I spend my days making sense of markets, financial structures,
+  and the stories we tell to convince the world (and often ourselves)
+  that risk is manageable, value is objective, and markets are
+  efficient (spoiler: not always).
+</p>
     {% include site/contact-links.html %}
   </div>
   <figure class="hero__portrait">
