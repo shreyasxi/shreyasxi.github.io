@@ -22,10 +22,7 @@ redirect_from:
 </p>
 
 <p class="hero__lede">
-  I spend my days making sense of markets, financial structures,
-  and the stories we tell to convince the world (and often ourselves)
-  that risk is manageable, value is objective, and markets are
-  efficient (spoiler: not always).
+  I enjoy financial storytelling. I use data, code, fancy charts and human intuition to make sense of markets, financial structures, and the stories we tell to convince the world (and often ourselves) that risk is manageable, value is objective, and markets are efficient (spoiler: not always).
 </p>
     {% include site/contact-links.html %}
   </div>
@@ -36,21 +33,35 @@ redirect_from:
 
 <section class="home-section container" aria-labelledby="research-interests">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="research-interests">Research Interests</h2>
+    <h2 class="home-section__title" id="research-interests">
+      Research Interests
+    </h2>
   </div>
+
   <div class="home-section__body">
-    <p>My <strong>research interests</strong> sit at the intersection of financial markets, macroeconomics, and digital currencies. I’m particularly fascinated by how central bank communication, market narratives, and emerging technologies influence asset pricing and systemic risks. My master’s dissertation, supervised by Professor Philippe Muller, examines how the tone of ECB communications differentially impacts various financial markets. You can read the full thesis <a href="https://shreyasxi.github.io/ecb-narrative-tone-market-impact-thesis/" target="_blank" rel="noopener noreferrer">here</a>.</p>
+    <p>
+      My research interests centre on financial markets and macroeconomics,
+      particularly monetary policy, central bank communication, and asset
+      pricing. I’m interested in how policy signals shape market expectations,
+      why financial assets respond differently to the same information.
+    </p>
+    <p>
+      These interests shape both my academic research and the tools I build.
+      The projects below include my master’s dissertation on ECB communication
+      and financial markets, alongside a platform for tracking global
+      macroeconomic indicators and analysing RBI policy sentiment.
+    </p>
     <div class="feature-grid">
-      {%- assign featured = site.data.projects | where: "featured", true -%}
-      {%- for p in featured %}
-      <article class="feature-card feature-card--{{ forloop.index }}">
-        <p class="kicker">{{ p.kicker }}</p>
-        <h3 class="feature-card__title">{{ p.short_title | escape }}</h3>
-        {{ p.summary | markdownify }}
-        {%- assign card_links = p.links | slice: 0, 3 %}
-        {% include site/link-list.html links=card_links primary=true %}
-      </article>
-      {%- endfor %}
+      {% assign featured = site.data.projects | where: "featured", true %}
+      {% for p in featured %}
+        <article class="feature-card feature-card--{{ forloop.index }}">
+          <p class="kicker">{{ p.kicker }}</p>
+          <h3 class="feature-card__title">{{ p.short_title | escape }}</h3>
+          {{ p.summary | markdownify }}
+          {% assign card_links = p.links | slice: 0, 3 %}
+          {% include site/link-list.html links=card_links primary=true %}
+        </article>
+      {% endfor %}
     </div>
   </div>
 </section>
