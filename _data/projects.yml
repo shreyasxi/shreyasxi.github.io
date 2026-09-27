@@ -33,6 +33,7 @@
     This project is a fully automated data platform that tracks key global macroeconomic indicators and measures the sentiment of the Reserve Bank of India’s monetary policy communication using a large language model (Anthropic’s Claude Opus).
   description: >-
     This project is a fully automated data platform that tracks key global macroeconomic indicators and measures the sentiment of the Reserve Bank of India’s monetary policy communication using a large language model (Anthropic’s Claude Opus).
+  tags: ["Macro-finance", "Natural Language Processing", "Python", "GitHub Actions", "SQL"]
   links:
     - label: "Macro Dashboard"
       url: "https://weekly-macro-dashboard.streamlit.app/"
@@ -41,9 +42,6 @@
       url: "https://weekly-macro-dashboard.streamlit.app/rbi-sentinel"
       kind: sentiment
       fill: oxblood
-    - label: "Full write-up"
-      url: "/economics-hub/"
-      kind: page
     - label: "Source Code"
       url: "https://github.com/shreyasxi/the-economics-hub"
       kind: code
