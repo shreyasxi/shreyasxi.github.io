@@ -79,7 +79,7 @@ redirect_from:
     <h2 class="home-section__title" id="technical-toolkit">My Technical Toolkit</h2>
   </div>
   <div class="home-section__body">
-    <p>I enjoy working through messy data and finding a clear way to explain what it shows. R, Python, and Excel are my main tools for econometric analysis and financial modelling, alongside LaTeX for writing and a working knowledge of Stata. I also use coding agents (primarily Claude Code), and am cautiously optimistic about their usefulness. It’s tempting to “vibe code”, but understanding and being able to explain the underlying work is still essential. For me, that means taking time to understand the research question and plan the analysis, keeping assumptions clear, documenting key decisions, and making the work easy to check and reproduce. </p>
+    <p>I enjoy working through messy data and finding a clear way to explain what it shows. R, Python, and Excel are my main tools for econometric analysis and financial modelling, alongside LaTeX for writing and a working knowledge of Stata. I also use coding agents (primarily Claude Code), and am cautiously optimistic about their usefulness. It’s tempting to “vibe code”, but understanding and being able to explain the underlying work is still essential. For me, that means taking time to understand the research question, define the scope and constraints, and plan the analysis before coding begins. I keep assumptions clear, document key decisions, and make the work easy to check and reproduce. </p>
     <div class="toolkit">
       <div class="toolkit__group toolkit__group--navy">
         <h3 class="toolkit__title">Analysis &amp; modelling</h3>
@@ -112,7 +112,7 @@ redirect_from:
     </div>
     <a class="agents-banner" href="/resources/">
       <span class="agents-banner__icon" aria-hidden="true">{% include site/icon.html name="terminal" %}</span>
-      <span class="agents-banner__text"><strong>Working with coding agents:</strong> six habits I follow, and some cool people to follow in this space</span>
+      <span class="agents-banner__text"><strong>Working with coding agents:</strong> some good habits and cool people to follow in this space</span>
       {% include site/icon.html name="arrow-right" class="agents-banner__arrow" %}
     </a>
   </div>
