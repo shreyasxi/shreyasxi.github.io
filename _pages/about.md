@@ -10,7 +10,6 @@ redirect_from:
 
 <section class="hero container">
   <div class="hero__text">
-    <p class="kicker">Economics &amp; Finance Researcher</p>
     <h1 class="hero__name">Shreyas Urgunde</h1>
     <p class="hero__meta">MSc Finance, Warwick Business School<span class="hero__sep" aria-hidden="true">·</span>United Kingdom</p>
     <p class="hero__lede">
@@ -42,14 +41,13 @@ redirect_from:
     <p>
       My research interests centre on financial markets and macroeconomics,
       particularly monetary policy, central bank communication, and asset
-      pricing. I’m interested in how policy signals shape market expectations,
-      why financial assets respond differently to the same information.
+      pricing. I am interested in how monetary policy signals shape market expectations, and why financial assets respond differently to the same information or implied policy sentiment.
     </p>
     <p>
-      These interests shape both my academic research and the tools I build.
+      These interests shape both my academic research and the projects I build.
       The projects below include my master’s dissertation on ECB communication
       and financial markets, alongside a platform for tracking global
-      macroeconomic indicators and analysing RBI policy sentiment.
+      macroeconomic indicators and analysing RBI's monetary policy sentiment.
     </p>
     <div class="feature-grid">
       {% assign featured = site.data.projects | where: "featured", true %}
