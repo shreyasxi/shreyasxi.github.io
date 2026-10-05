@@ -32,6 +32,8 @@ include:
 exclude:
   # Build and tooling files
   - README.md
+  - AGENT.md
+  - AGENTS.md
   - LICENSE
   - Gemfile
   - Gemfile.lock

@@ -1,0 +1,22 @@
+<section class="chart-reel" aria-labelledby="selected-charts">
+  <div class="chart-reel__header">
+    <h2 id="selected-charts" class="chart-reel__title">Selected Charts</h2>
+    <button class="chart-reel__toggle" type="button" data-reel-toggle aria-pressed="false" hidden>Pause motion</button>
+  </div>
+  <div class="chart-reel__viewport" tabindex="0" role="region" aria-label="Selected dashboard charts">
+    <div class="chart-reel__track">
+      {% for copy in (1..2) %}
+      <div class="chart-reel__sequence"{% if copy == 2 %} aria-hidden="true"{% endif %}>
+        {% for chart in site.data.chart_reel %}
+        <button type="button" class="chart-reel__card" aria-label="Preview {{ chart.title | escape }}" data-chart-src="{{ '/assets/charts/' | append: chart.filename | relative_url }}"{% if copy == 2 %} tabindex="-1"{% endif %}>
+          <img src="{{ '/assets/charts/' | append: chart.filename | relative_url }}" alt="{{ chart.alt | escape }}" width="{{ chart.width }}" height="{{ chart.height }}" decoding="async">
+        </button>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <dialog class="chart-preview" aria-label="Chart preview" tabindex="-1">
+    <img alt="">
+  </dialog>
+</section>

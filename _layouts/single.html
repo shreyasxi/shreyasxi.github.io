@@ -6,23 +6,34 @@ layout: base
     width: wide        use the full container (grids) instead of the reading column
     toc: true          add an "On this page" list built from the page's h2/h3 headings
     toc_label, toc_sticky
+    chart_reel: true   split the Monitor at <!-- chart-reel --> for a full-width showcase
 {%- endcomment -%}
+{%- assign toc_content = content %}
+{%- if page.chart_reel %}
+  {%- assign reel_parts = content | split: "<!-- chart-reel -->" %}
+  {%- capture reel_html %}{% include site/chart-reel.html %}{% endcapture %}
+  {%- assign toc_content = content | replace: "<!-- chart-reel -->", reel_html %}
+{%- endif %}
 {%- assign width = page.width | default: "reading" -%}
 <article class="container">
-  <div class="page-layout page-layout--{{ width }}{% if page.toc %} page-layout--toc{% endif %}">
+  <div class="page-layout page-layout--{{ width }}{% if page.toc %} page-layout--toc{% endif %}{% if page.chart_reel %} page-layout--chart-reel{% endif %}">
     <header class="page-header{% if page.last_reviewed %} page-header--reviewed{% endif %}">
       <h1 class="page-title">{{ page.title | escape }}</h1>
       {% if page.last_reviewed %}
       <p class="page-reviewed">Last reviewed: <time datetime="{{ page.last_reviewed | escape }}">{{ page.last_reviewed_label | escape }}</time></p>
       {% endif %}
     </header>
+    {% if page.chart_reel %}
+    <div class="prose chart-reel-intro">{{ reel_parts[0] }}</div>
+    {{ reel_html }}
+    {% endif %}
     {%- if page.toc %}
     <aside class="toc{% if page.toc_sticky %} toc--sticky{% endif %}">
-      {% include site/toc.html html=content label=page.toc_label %}
+      {% include site/toc.html html=toc_content label=page.toc_label %}
     </aside>
     {%- endif %}
     <div class="prose" id="page-content">
-{{ content }}
+{% if page.chart_reel %}{{ reel_parts[1] }}{% else %}{{ content }}{% endif %}
     </div>
   </div>
 </article>

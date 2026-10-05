@@ -182,6 +182,78 @@
   }
 
 
+  /* Chart reel: CSS owns the motion; this control also works on touch screens.
+     Without JS the original sequence remains a native scrolling gallery. */
+  document.querySelectorAll(".chart-reel").forEach(function (reel) {
+    var button = reel.querySelector("[data-reel-toggle]");
+    var motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var preview = reel.querySelector(".chart-preview");
+    var opener = null;
+    var restoringFocus = false;
+    reel.addEventListener("click", function (event) {
+      var card = event.target.closest(".chart-reel__card");
+      if (!card) return;
+      opener = card;
+      var image = preview.querySelector("img");
+      image.src = card.getAttribute("data-chart-src");
+      image.alt = card.querySelector("img").alt;
+      reel.classList.remove("is-preview-returned");
+      reel.classList.add("is-previewing");
+      document.body.classList.add("has-chart-preview");
+      preview.showModal();
+      preview.focus();
+    });
+    preview.addEventListener("click", function (event) {
+      if (event.target !== preview) return;
+      var bounds = preview.getBoundingClientRect();
+      if (event.clientX < bounds.left || event.clientX > bounds.right ||
+          event.clientY < bounds.top || event.clientY > bounds.bottom) preview.close();
+    });
+    preview.addEventListener("close", function () {
+      document.body.classList.remove("has-chart-preview");
+      restoringFocus = true;
+      if (opener) opener.focus({ preventScroll: true });
+      restoringFocus = false;
+      reel.classList.remove("is-previewing");
+      // Restore focus without keeping autoplay stopped by that programmatic focus alone.
+      // The next keyboard interaction restores the normal focus pause.
+      reel.classList.add("is-preview-returned");
+    });
+    reel.addEventListener("keydown", function () {
+      reel.classList.remove("is-preview-returned");
+    });
+    reel.classList.add("is-moving");
+    button.hidden = false;
+    button.addEventListener("click", function () {
+      var paused = reel.classList.toggle("is-paused");
+      button.setAttribute("aria-pressed", String(paused));
+      button.textContent = paused ? "Resume motion" : "Pause motion";
+    });
+    // A paused, translated first card can lie left of the scroll origin. Align keyboard
+    // destinations on the CSS timeline so every original chart remains visible on Tab.
+    reel.addEventListener("focusin", function (event) {
+      if (restoringFocus || reel.classList.contains("is-previewing")) return;
+      reel.classList.remove("is-preview-returned");
+      var card = event.target.closest(".chart-reel__card");
+      if (!card || !card.matches(":focus-visible") || motion.matches) return;
+      var cards = Array.prototype.slice.call(reel.querySelector(".chart-reel__sequence").children);
+      var index = cards.indexOf(card);
+      var animation = reel.querySelector(".chart-reel__track").getAnimations()[0];
+      if (index >= 0 && animation) {
+        animation.currentTime = animation.effect.getTiming().duration *
+          (card.offsetLeft - cards[0].offsetLeft) / card.parentElement.offsetWidth;
+        reel.querySelector(".chart-reel__viewport").scrollLeft = 0;
+      }
+    });
+    var resetScroll = function () {
+      reel.querySelector(".chart-reel__viewport").scrollLeft = 0;
+    };
+    onMediaChange(motion, resetScroll);
+    reel.addEventListener("focusout", function (event) {
+      if (!reel.contains(event.relatedTarget) && !reel.classList.contains("is-paused")) resetScroll();
+    });
+  });
+
   /* Tables: let wide tables scroll sideways on phones, and hide header rows left blank in Markdown. */
 
   document.querySelectorAll(".prose table").forEach(function (table) {

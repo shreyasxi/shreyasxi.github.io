@@ -813,3 +813,178 @@
     @include dashboard-dark;
   }
 }
+
+/* Two equal sequences include their own trailing gap: half the track is exactly one loop. */
+.chart-reel {
+  --reel-image-height: 70vw;
+  --reel-gap: 1rem;
+  width: calc(100vw - 2.5rem);
+  max-width: var(--wide);
+  justify-self: center;
+  min-width: 0;
+  margin: 2.5rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+.chart-reel__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+
+.chart-reel__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.chart-reel__toggle {
+  flex: none;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--rule-strong);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--ink-2);
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.chart-reel__viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 8px;
+  overscroll-behavior-x: contain;
+}
+
+.chart-reel__track {
+  display: flex;
+  width: max-content;
+}
+
+.chart-reel__sequence {
+  display: flex;
+  flex: none;
+  gap: var(--reel-gap);
+  padding-right: var(--reel-gap);
+}
+
+.chart-reel__sequence[aria-hidden] { display: none; }
+.chart-reel.is-moving .chart-reel__sequence[aria-hidden] { display: flex; }
+
+/* The button hugs the PNG; only native image whitespace remains. */
+.chart-reel__card {
+  display: block;
+  flex: none;
+  padding: 0;
+  border: 1px solid #24292F;
+  border-radius: var(--radius);
+  background: transparent;
+  cursor: pointer;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.chart-reel__card img {
+  display: block;
+  width: auto;
+  max-width: none;
+  height: var(--reel-image-height);
+  object-fit: contain;
+  border-radius: inherit;
+}
+
+@media (hover: hover) {
+  .chart-reel__card:hover {
+    transform: scale(1.025);
+    border-color: #14181F;
+  }
+}
+
+.chart-preview {
+  max-width: 88vw;
+  max-height: 82vh;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #24292F;
+  border-radius: var(--radius);
+  background: transparent;
+  overflow: hidden;
+}
+
+.page-economics-hub.has-chart-preview { overflow: hidden; }
+.chart-preview:focus { outline: none; }
+
+.chart-preview::backdrop { background: rgba(0, 0, 0, 0.55); }
+
+.chart-preview img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: calc(88vw - 2px);
+  max-height: calc(82vh - 2px);
+  object-fit: contain;
+}
+
+.chart-reel.is-moving .chart-reel__viewport {
+  overflow-x: hidden;
+}
+
+.chart-reel.is-moving .chart-reel__track {
+  animation: chart-reel-drift 240s linear infinite;
+}
+
+.chart-reel:hover .chart-reel__track,
+.chart-reel:focus-within:not(.is-preview-returned) .chart-reel__track,
+.chart-reel.is-paused .chart-reel__track,
+.chart-reel.is-previewing .chart-reel__track {
+  animation-play-state: paused;
+}
+
+/* Focus/manual pause exposes native scrolling and brings every original link into reach. */
+.chart-reel.is-paused .chart-reel__viewport,
+.chart-reel:focus-within .chart-reel__viewport {
+  overflow-x: auto;
+}
+
+@keyframes chart-reel-drift {
+  to { transform: translateX(-50%); }
+}
+
+@media (min-width: 36rem) {
+  .chart-reel { --reel-image-height: 260px; }
+}
+
+@media (min-width: 48rem) {
+  .chart-reel { width: calc(100vw - 4rem); }
+}
+
+@media (min-width: 64rem) {
+  .chart-reel { --reel-image-height: 310px; }
+}
+
+@media (min-width: 75rem) {
+  .page-layout--chart-reel {
+    grid-template-areas: "header ." "intro ." "reel reel" "body toc";
+  }
+  .page-layout--chart-reel .chart-reel-intro { grid-area: intro; }
+  .chart-reel { grid-area: reel; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chart-reel.is-moving .chart-reel__track { animation: none; }
+  .chart-reel.is-moving .chart-reel__viewport { overflow-x: auto; }
+  .chart-reel.is-moving .chart-reel__sequence[aria-hidden] { display: none; }
+  .chart-reel__toggle { display: none; }
+  .chart-reel__card { transition: none; }
+  .chart-reel__card:hover { transform: none; }
+}
+
+@media print {
+  .chart-reel__track { animation: none !important; }
+  .chart-reel__sequence[aria-hidden], .chart-reel__toggle { display: none; }
+}

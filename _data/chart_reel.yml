@@ -1,0 +1,89 @@
+- filename: 01_rbi_stance_meter.png
+  title: "RBI policy stance meter"
+  alt: "RBI policy stance meter chart"
+  width: 1660
+  height: 1266
+
+- filename: 06_yield_curve.png
+  title: "Treasury yield curve"
+  alt: "Treasury yield curve chart"
+  width: 2014
+  height: 1069
+
+- filename: 14_copper_gold_ratio.png
+  title: "Copper-to-gold ratio"
+  alt: "Copper-to-gold ratio chart"
+  width: 2255
+  height: 1140
+
+- filename: 15_india_iip.png
+  title: "India industrial production"
+  alt: "India industrial production chart"
+  width: 2254
+  height: 1164
+
+- filename: 15_stock_bond_correlation.png
+  title: "Stock–bond correlation"
+  alt: "Stock–bond correlation chart"
+  width: 2254
+  height: 1140
+
+- filename: 16_macro_cape.png
+  title: "Shiller CAPE valuation"
+  alt: "Shiller CAPE valuation chart"
+  width: 2245
+  height: 1140
+
+- filename: 18_macro_country_erp.png
+  title: "Country equity risk premiums"
+  alt: "Country equity risk premiums chart"
+  width: 2255
+  height: 1422
+
+- filename: 22_india_gva_contributions.png
+  title: "India gross value added contributions"
+  alt: "India gross value added contributions chart"
+  width: 2255
+  height: 1140
+
+- filename: 22b_em_stress_monitor.png
+  title: "Emerging markets stress monitor"
+  alt: "Emerging markets stress monitor chart"
+  width: 2254
+  height: 1140
+
+- filename: 22c_em_vix.png
+  title: "Emerging markets volatility"
+  alt: "Emerging markets volatility chart"
+  width: 2255
+  height: 1140
+
+- filename: 23_crude_oil_curve.png
+  title: "Crude oil futures curve"
+  alt: "Crude oil futures curve chart"
+  width: 2255
+  height: 1140
+
+- filename: 23c_commodities_breadth.png
+  title: "Commodity market breadth"
+  alt: "Commodity market breadth chart"
+  width: 2253
+  height: 1140
+
+- filename: 23d_commodity_cycle.png
+  title: "Commodity cycle"
+  alt: "Commodity cycle chart"
+  width: 2253
+  height: 1140
+
+- filename: 24_india_cpi_contributions.png
+  title: "India CPI inflation contributions"
+  alt: "India CPI inflation contributions chart"
+  width: 2235
+  height: 1141
+
+- filename: 30_btc_zscore_global_m2.png
+  title: "Bitcoin z-score and global M2"
+  alt: "Bitcoin z-score and global M2 chart"
+  width: 2235
+  height: 1499

@@ -6,6 +6,7 @@ author_profile: true
 toc: true
 toc_label: "On this page"
 toc_sticky: true
+chart_reel: true
 ---
 
 These two projects share a codebase. One automatically updates a dashboard of global economic and market indicators each week. The other analyses the tone of Reserve Bank of India's monetary policy documents and tests whether those sentiment scores have predictive value.
@@ -26,6 +27,8 @@ These two projects share a codebase. One automatically updates a dashboard of gl
     <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 0.88rem; line-height: 1.5; color: #4A5568;">Sentiment analysis of the RBI's Monetary Policy Committee documents, with a live out-of-sample test running from October 2026.</div>
   </a>
 </div>
+
+<!-- chart-reel -->
 
 ---
 
