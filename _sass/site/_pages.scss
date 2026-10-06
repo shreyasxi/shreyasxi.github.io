@@ -856,10 +856,14 @@
 }
 
 .chart-reel__viewport {
+  --reel-edge-fade: clamp(24px, 4vw, 56px);
   overflow-x: auto;
   overflow-y: hidden;
   padding: 8px;
   overscroll-behavior-x: contain;
+  /* Transparency reveals the current page background without an interaction-blocking overlay. */
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 var(--reel-edge-fade), #000 calc(100% - var(--reel-edge-fade)), transparent);
+  mask-image: linear-gradient(to right, transparent, #000 var(--reel-edge-fade), #000 calc(100% - var(--reel-edge-fade)), transparent);
 }
 
 .chart-reel__track {
