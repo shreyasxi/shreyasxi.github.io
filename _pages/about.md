@@ -64,51 +64,65 @@ redirect_from:
   </div>
 </section>
 
-<section class="home-section container" aria-labelledby="selected-writing">
+<section class="home-section home-section--workflow container" id="technical-toolkit" aria-labelledby="how-i-work">
   <div class="home-section__head">
-    <h2 class="home-section__title" id="selected-writing">Selected Writing</h2>
-    <a class="home-section__link" href="/year-archive/"><span>Explore more</span>{% include site/icon.html name="arrow-right" %}</a>
+    <h2 class="home-section__title" id="how-i-work">How I Work</h2>
   </div>
   <div class="home-section__body">
-    {% include site/writing-cards.html items=site.data.writing %}
-  </div>
-</section>
-
-<section class="home-section container" aria-labelledby="technical-toolkit">
-  <div class="home-section__head">
-    <h2 class="home-section__title" id="technical-toolkit">My Technical Toolkit</h2>
-  </div>
-  <div class="home-section__body">
-    <p>I enjoy working through messy data and finding a clear way to explain what it shows. R, Python, and Excel are my main tools for econometric analysis and financial modelling, alongside LaTeX for writing and a working knowledge of Stata. I also use coding agents (primarily Claude Code), and am cautiously optimistic about their usefulness. It’s tempting to “vibe code”, but understanding and being able to explain the underlying work is still essential. For me, that means taking time to understand the research question, define the scope and constraints, and plan the analysis before coding begins. I keep assumptions clear, document key decisions, and make the work easy to check and reproduce. </p>
-    <div class="toolkit">
-      <div class="toolkit__group toolkit__group--navy">
-        <h3 class="toolkit__title">Analysis &amp; modelling</h3>
-        <p class="toolkit__desc">Econometrics, financial models and data analysis</p>
-        <ul class="tools">
-          <li class="tool tool--r">R</li>
-          <li class="tool tool--python">Python</li>
-          <li class="tool tool--stata">Stata</li>
-          <li class="tool tool--excel">Excel</li>
-        </ul>
-      </div>
-      <div class="toolkit__group toolkit__group--oxblood">
-        <h3 class="toolkit__title">Writing &amp; editing</h3>
-        <p class="toolkit__desc">Papers, research notes and everyday editing</p>
-        <ul class="tools">
-          <li class="tool tool--latex">LaTeX</li>
-          <li class="tool tool--obsidian">Obsidian</li>
-          <li class="tool tool--vscode">VS Code</li>
-        </ul>
-      </div>
-      <div class="toolkit__group toolkit__group--forest">
-        <h3 class="toolkit__title">Code &amp; reproducibility</h3>
-        <p class="toolkit__desc">Version control, containers and agentic coding</p>
-        <ul class="tools">
-          <li class="tool tool--github">GitHub</li>
-          <li class="tool tool--docker">Docker</li>
-          <li class="tool tool--claude">Claude Code</li>
-        </ul>
-      </div>
+    <p>I tend to work from the problem backwards — understand what matters, find the right evidence, test the story carefully, automate what is repeatable, and communicate the result clearly.</p>
+    <ol class="research-workflow" role="list">
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">01</span>
+        <h3 class="research-workflow__title">Frame the problem</h3>
+        <p class="research-workflow__description">Start with the economic, financial or business question: what am I trying to understand, what would change the decision, and what evidence would help?</p>
+        <p class="research-workflow__example">From monetary-policy signals to market behaviour and corporate finance questions.</p>
+        <p class="research-workflow__tools">Economics · structured thinking · market intuition</p>
+      </li>
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">02</span>
+        <h3 class="research-workflow__title">Build the evidence</h3>
+        <p class="research-workflow__description">Collect and validate data from official releases, market sources, APIs, company information and documents; clean it carefully and keep track of where it came from.</p>
+        <p class="research-workflow__example">MoSPI releases, NSE archives, market APIs, company data and research documents.</p>
+        <p class="research-workflow__tools">Python · pandas · APIs · SQL · Excel</p>
+      </li>
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">03</span>
+        <h3 class="research-workflow__title">Analyse what matters</h3>
+        <p class="research-workflow__description">Use econometrics, financial analysis, time-series methods and economic reasoning to separate a plausible story from one the evidence supports.</p>
+        <p class="research-workflow__example">Econometric tests, valuation work, market relationships and robustness checks.</p>
+        <p class="research-workflow__tools">Econometrics · financial analysis · time series</p>
+      </li>
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">04</span>
+        <h3 class="research-workflow__title">Automate what repeats</h3>
+        <p class="research-workflow__description">Turn recurring analysis into reproducible workflows, databases, scripts and dashboards so the same work does not need to be rebuilt manually.</p>
+        <p class="research-workflow__example">Weekly macro dashboards, scheduled source pipelines and reproducible analysis.</p>
+        <p class="research-workflow__tools">Python · Git · GitHub Actions · databases · validation</p>
+      </li>
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">05</span>
+        <h3 class="research-workflow__title">Communicate the result</h3>
+        <p class="research-workflow__description">Translate the analysis into a clear chart, memo, dashboard, presentation or piece of writing that helps someone understand the conclusion quickly.</p>
+        <p class="research-workflow__example">Research papers, finance projects, dashboards, charts and public writing.</p>
+        <p class="research-workflow__tools">Data visualisation · presentations · clear writing</p>
+      </li>
+    </ol>
+    <div class="workflow-tools" aria-labelledby="tools-i-use">
+      <h3 class="workflow-tools__title" id="tools-i-use">Tools I use</h3>
+      <ul class="workflow-tools__list" role="list">
+        <li class="workflow-tools__item">{% include site/icon.html name="code" %}<span>Python</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="chart" %}<span>R</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="chart" %}<span>Stata</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="database" %}<span>SQL</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="sheet" %}<span>Excel</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="laptop" %}<span>VS Code</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="github" %}<span>Git / GitHub</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="file-text" %}<span>LaTeX</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="book-open" %}<span>Obsidian</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="cog" %}<span>Docker</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Claude Code</span></li>
+        <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Codex</span></li>
+      </ul>
     </div>
     <a class="agents-banner" href="/resources/">
       <span class="agents-banner__icon" aria-hidden="true">{% include site/icon.html name="terminal" %}</span>
@@ -153,6 +167,16 @@ redirect_from:
         <p class="platform__cta" aria-hidden="true">Subscribe on Substack{% include site/icon.html name="arrow-up-right" %}</p>
       </li>
     </ol>
+  </div>
+</section>
+
+<section class="home-section container" aria-labelledby="selected-writing">
+  <div class="home-section__head">
+    <h2 class="home-section__title" id="selected-writing">Selected Writing</h2>
+    <a class="home-section__link" href="/year-archive/"><span>Explore more</span>{% include site/icon.html name="arrow-right" %}</a>
+  </div>
+  <div class="home-section__body">
+    {% include site/writing-cards.html items=site.data.writing %}
   </div>
 </section>
 

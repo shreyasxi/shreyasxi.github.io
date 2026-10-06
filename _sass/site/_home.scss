@@ -577,130 +577,196 @@
 }
 
 
-/* Toolkit: tools grouped by what they are used for, then a banner linking to the Resources page. */
-
-.toolkit {
+/* Research workflow: an editorial sequence, with tools inside each stage. */
+.research-workflow {
   display: grid;
-  gap: 1.25rem;
-}
-
-.home-section__body > .toolkit {
-  margin-top: 2rem;
-}
-
-@media (min-width: 56rem) {
-  .toolkit {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.toolkit__group {
-  --group: var(--accent-line);
-  display: flex;
-  flex-direction: column;
-  padding: 1.5rem;
-  border: 1px solid var(--rule);
-  border-top: 3px solid var(--group);
-  border-radius: var(--radius);
-  background: var(--surface);
-}
-
-.toolkit__group--oxblood {
-  --group: var(--oxblood);
-}
-
-.toolkit__group--forest {
-  --group: var(--forest);
-}
-
-.toolkit__icon {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 2.5rem;
-  height: 2.5rem;
-  color: var(--group);
-}
-
-/* a faint wash of the group colour, which reads in both themes */
-.toolkit__icon::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-radius: 50%;
-  background: currentColor;
-  opacity: 0.14;
-}
-
-.toolkit__icon .icon {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-.toolkit__title {
-  margin-top: 1rem;
-  font-size: 1.1875rem;
-  line-height: 1.3;
-}
-
-.toolkit__desc {
-  margin-top: 0.35rem;
-  color: var(--muted);
-  font-size: 0.9375rem;
-  line-height: 1.55;
-}
-
-.tools {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: auto 0 0;
-  padding: 1.25rem 0 0;
+  margin: 2rem 0 0;
+  padding: 0;
   list-style: none;
 }
 
-/* each tool gets a dot in its own colour */
-.tool {
-  --tool: var(--ink);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.35rem 0.7rem;
-  border: 1px solid var(--rule-strong);
-  border-radius: var(--radius);
-  background: var(--bg);
+.home-section__body > .research-workflow { margin-top: 2rem; }
+
+.research-workflow__stage {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.research-workflow__stage:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.research-workflow__number {
+  margin-bottom: 0.8rem;
+  color: var(--accent-text);
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-variant-numeric: lining-nums tabular-nums;
+  line-height: 1;
+}
+
+.research-workflow__title {
   color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-wrap: initial;
+}
+
+.research-workflow__description {
+  margin-top: 0.85rem;
+  color: var(--ink-2);
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.research-workflow__example {
+  margin-top: 1.15rem;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.research-workflow__tools {
+  margin-top: 0.8rem;
+  color: var(--muted);
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 48rem) {
+  .research-workflow {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    row-gap: 2rem;
+  }
+
+  .research-workflow__stage {
+    grid-column: span 2;
+    padding: 0 1.25rem;
+    border-top: 0;
+    border-left: 1px solid var(--rule-strong);
+  }
+
+  .research-workflow__stage:first-child,
+  .research-workflow__stage:nth-child(4) {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .research-workflow__stage:nth-child(3),
+  .research-workflow__stage:last-child { padding-right: 0; }
+
+  .research-workflow__stage:nth-child(n + 4) {
+    grid-column: span 3;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule-strong);
+  }
+
+  .research-workflow__title { min-height: 2.4375rem; }
+  .research-workflow__description { flex: 1 0 auto; }
+}
+
+@media (min-width: 75rem) {
+  .research-workflow {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    row-gap: 0;
+  }
+
+  .research-workflow__stage:nth-child(n) {
+    grid-column: auto;
+    padding: 0 1.25rem;
+    border-top: 0;
+    border-left: 1px solid var(--rule-strong);
+  }
+
+  .research-workflow__stage:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .research-workflow__stage:last-child { padding-right: 0; }
+  .research-workflow__example { min-height: 6rem; }
+  .research-workflow__tools { min-height: 3.7125rem; }
+}
+
+/* A secondary tools strip; reuse the site's local, monochrome interface icons. */
+.workflow-tools {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.workflow-tools__title {
+  color: var(--ink-2);
+  font-family: var(--font-sans);
   font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.workflow-tools__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.workflow-tools__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 0;
+  min-height: 4.75rem;
+  padding: 0.6rem 0.4rem;
+  border: 1px solid var(--muted);
+  border-radius: 5px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.75rem;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.4;
+  text-align: center;
 }
 
-.tool::before {
-  content: "";
+.workflow-tools__item .icon {
   flex: none;
-  width: 0.55rem;
-  height: 0.55rem;
-  border-radius: 50%;
-  background: var(--tool);
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--ink-2);
 }
 
-.tool--r { --tool: #276DC3; }
-.tool--stata { --tool: #1A5F91; }
-.tool--excel { --tool: #217346; }
-.tool--latex { --tool: #008080; }
-.tool--obsidian { --tool: #7C3AED; }
-.tool--docker { --tool: #1D63ED; }
-.tool--vscode { --tool: #007ACC; }
-.tool--claude { --tool: #D97757; }
-
-.tool--python::before {
-  background: linear-gradient(135deg, #3776AB 50%, #FFD43B 50%);
+@media (min-width: 36rem) {
+  .workflow-tools__list { gap: 0.65rem; }
+  .workflow-tools__item {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.6rem;
+    min-height: 3.25rem;
+    padding: 0.75rem;
+    font-size: 0.875rem;
+    text-align: left;
+  }
 }
 
-/* One slim link under the tool cards; the tips themselves live on the Resources page. */
+@media (min-width: 48rem) {
+  .workflow-tools__list { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+/* The existing Resources link stays beneath the workflow. */
 .agents-banner {
   display: flex;
   align-items: center;
@@ -720,7 +786,7 @@
   margin-top: 1.25rem;
 }
 
-/* the icon takes Claude Code's colour, as its dot does in the tool list */
+/* the Resources banner retains the existing Claude Code accent */
 .agents-banner__icon {
   display: grid;
   flex: none;
