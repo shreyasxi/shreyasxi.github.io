@@ -9,24 +9,297 @@ toc_sticky: true
 chart_reel: true
 ---
 
-These two projects share a codebase. One automatically updates a dashboard of global economic and market indicators each week. The other analyses the tone of Reserve Bank of India's monetary policy documents and tests whether those sentiment scores have predictive value.
+On and off, I continue to develop two interconnected projects built on a shared codebase. The first is a weekly automated dashboard tracking economic and financial market indicators across India and the world. The second, RBI Sentinel, analyses the tone of the Reserve Bank of India's monetary policy communications and explores whether it can help explain or predict financial market movements.
 
-<div style="display: flex; gap: 1.25rem; flex-wrap: wrap; margin: 2.5rem 0 3rem 0;">
-  <a href="#dashboard" style="flex: 1 1 280px; display: block; padding: 1.6rem 1.5rem; border: 1px solid #D6DCE5; border-left: 4px solid #003366; border-radius: 3px; text-decoration: none; background: #FFFFFF; transition: all 0.2s ease-in-out;"
-     onmouseover="this.style.boxShadow='0 6px 18px rgba(0,51,102,0.12)'; this.style.transform='translateY(-2px)';"
-     onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">
-    <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8A94A6; margin-bottom: 0.5rem;">Part I</div>
-    <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 1.12rem; font-weight: 700; color: #0A1128; margin-bottom: 0.55rem;">Automated Macro Dashboard</div>
-    <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 0.88rem; line-height: 1.5; color: #4A5568;">Around seventy charts across global markets, the world economy and India — regenerated from live data every Saturday.</div>
+Trust me when I say this, I personally use these platforms quite regularly, whether I'm researching a topic or simply trying to make sense of what's happening in the economy. They're as much tools for my own work as they are projects I enjoy building and improving. Feel free to explore!
+
+
+<style>
+/* ============================================
+   ECONHUB — EDITORIAL PROJECT NAVIGATION
+   Scoped to the Macro & RBI Monitor page
+   ============================================ */
+
+.page-economics-hub .eh-projects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin: 2.5rem 0 3rem;
+}
+
+/* Main project cards */
+
+.page-economics-hub .eh-projects a.eh-project-card {
+  --project-accent: #003366;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 1.8rem 1.65rem 1.35rem;
+
+  background: #ffffff !important;
+  color: #192333 !important;
+  border: 1px solid #e0e4e9 !important;
+  border-radius: 4px;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  overflow: hidden;
+
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* Individual project accents */
+
+.page-economics-hub .eh-project-card--macro {
+  --project-accent: #003366;
+}
+
+.page-economics-hub .eh-project-card--rbi {
+  --project-accent: #8b1a1a !important;
+}
+
+/* Thin editorial top accent */
+
+.page-economics-hub .eh-project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--project-accent);
+}
+
+/* Part number / category */
+
+.page-economics-hub .eh-project-card__label {
+  display: block;
+  margin-bottom: 0.95rem;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: #788394;
+}
+
+/* Project title */
+
+.page-economics-hub .eh-project-card__title {
+  display: block;
+  margin-bottom: 0.7rem;
+
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  color: #172234;
+}
+
+/* Project description */
+
+.page-economics-hub .eh-project-card__description {
+  display: block;
+  margin-bottom: 1.65rem;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #596474;
+}
+
+/* Bottom navigation */
+
+.page-economics-hub .eh-project-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  margin-top: auto;
+  padding-top: 0.95rem;
+
+  border-top: 1px solid #e9ecf0;
+
+  font-family: "Inter", sans-serif;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: var(--project-accent);
+}
+
+/* Navigation arrow */
+
+.page-economics-hub .eh-project-card__arrow {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1;
+
+  transition: transform 180ms ease;
+}
+
+/* Hover behaviour */
+
+@media (hover: hover) {
+  .page-economics-hub .eh-projects a.eh-project-card:hover {
+    transform: translateY(-3px);
+    border-color: #bcc6d2 !important;
+    box-shadow: 0 9px 24px rgba(20, 35, 55, 0.07) !important;
+  }
+
+  .page-economics-hub .eh-project-card:hover
+  .eh-project-card__arrow {
+    transform: translateY(4px);
+  }
+}
+
+/* Keyboard accessibility */
+
+.page-economics-hub .eh-project-card:focus-visible {
+  outline: 2px solid var(--project-accent);
+  outline-offset: 4px;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 700px) {
+  .page-economics-hub .eh-projects {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .page-economics-hub .eh-projects a.eh-project-card {
+    padding: 1.5rem 1.4rem 1.2rem;
+  }
+
+  .page-economics-hub .eh-project-card__title {
+    font-size: 1.4rem;
+  }
+}
+
+/* Dark mode */
+
+html[data-theme="dark"] .page-economics-hub
+.eh-projects a.eh-project-card {
+  background: #171e29 !important;
+  color: #edf1f6 !important;
+  border-color: #354050 !important;
+}
+
+html[data-theme="dark"] .page-economics-hub
+.eh-project-card--macro {
+  --project-accent: #8fbbe6;
+}
+
+html[data-theme="dark"] .page-economics-hub
+.eh-project-card--rbi {
+  --project-accent: #dc9292 !important;
+}
+
+html[data-theme="dark"] .page-economics-hub
+.eh-project-card__title {
+  color: #edf1f6 !important;
+}
+
+html[data-theme="dark"] .page-economics-hub
+.eh-project-card__label,
+html[data-theme="dark"] .page-economics-hub
+.eh-project-card__description {
+  color: #aeb9c8 !important;
+}
+
+html[data-theme="dark"] .page-economics-hub
+.eh-project-card__footer {
+  border-color: #354050;
+}
+
+@media (hover: hover) {
+  html[data-theme="dark"] .page-economics-hub
+  .eh-projects a.eh-project-card:hover {
+    border-color: #64748b !important;
+    box-shadow: 0 9px 24px rgba(0, 0, 0, 0.18) !important;
+  }
+}
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .page-economics-hub .eh-project-card,
+  .page-economics-hub .eh-project-card__arrow {
+    transition: none !important;
+  }
+}
+</style>
+
+<!-- PROJECT NAVIGATION -->
+
+<nav class="eh-projects" aria-label="Explore EconHub projects">
+
+  <!-- PART I: MACRO DASHBOARD -->
+
+  <a href="#dashboard"
+     class="eh-project-card eh-project-card--macro">
+
+    <span class="eh-project-card__label">
+      PART I / MARKET INTELLIGENCE
+    </span>
+
+    <span class="eh-project-card__title">
+      Automated Macro Dashboard
+    </span>
+
+    <span class="eh-project-card__description">
+      Around seventy charts across global markets,
+      the world economy and India — regenerated
+      from live data every Saturday.
+    </span>
+
+    <span class="eh-project-card__footer">
+      <span>Explore project</span>
+      <span class="eh-project-card__arrow"
+            aria-hidden="true">↓</span>
+    </span>
+
   </a>
-  <a href="#sentinel" style="flex: 1 1 280px; display: block; padding: 1.6rem 1.5rem; border: 1px solid #D6DCE5; border-left: 4px solid #8B1A1A; border-radius: 3px; text-decoration: none; background: #FFFFFF; transition: all 0.2s ease-in-out;"
-     onmouseover="this.style.boxShadow='0 6px 18px rgba(139,26,26,0.12)'; this.style.transform='translateY(-2px)';"
-     onmouseout="this.style.boxShadow='none'; this.style.transform='translateY(0)';">
-    <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #8A94A6; margin-bottom: 0.5rem;">Part II</div>
-    <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 1.12rem; font-weight: 700; color: #0A1128; margin-bottom: 0.55rem;">RBI Sentinel</div>
-    <div style="font-family: 'Inter', -apple-system, sans-serif; font-size: 0.88rem; line-height: 1.5; color: #4A5568;">Sentiment analysis of the RBI's Monetary Policy Committee documents, with a live out-of-sample test running from October 2026.</div>
+
+  <!-- PART II: RBI SENTINEL -->
+
+  <a href="#sentinel"
+     class="eh-project-card eh-project-card--rbi">
+
+    <span class="eh-project-card__label">
+      PART II / MONETARY POLICY
+    </span>
+
+    <span class="eh-project-card__title">
+      RBI Sentinel
+    </span>
+
+    <span class="eh-project-card__description">
+      Sentiment analysis of the RBI's Monetary Policy
+      Committee documents, with a live out-of-sample
+      test running from October 2026.
+    </span>
+
+    <span class="eh-project-card__footer">
+      <span>Explore project</span>
+      <span class="eh-project-card__arrow"
+            aria-hidden="true">↓</span>
+    </span>
+
   </a>
-</div>
+
+</nav>
+
 
 <!-- chart-reel -->
 
