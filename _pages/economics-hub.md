@@ -10,11 +10,7 @@ chart_reel: true
 ---
 
 
-On and off, I continue to develop two interconnected projects built on a shared codebase. The first is a weekly automated dashboard tracking economic and financial market indicators across India and the world. The second, RBI Sentinel, analyses the tone of the Reserve Bank of India's monetary policy communications and explores whether it can help explain or predict financial market movements.
-
-<p class="eh-personal-note">
-Trust me when I say this, I personally use these platforms quite regularly, whether I'm researching a topic or simply trying to make sense of what's happening in the economy. They're as much tools for my own work as they are projects I enjoy building and improving. Feel free to explore!
-</p>
+On and off, I continue to develop two interconnected projects built on a shared codebase. The first is a weekly automated dashboard tracking economic and financial market indicators across India and the world. The second, RBI Sentinel, tracks (& analyses) the tone of the Reserve Bank of India's monetary policy communications. Trust me when I say this, I personally use these platforms quite regularly, whether I'm researching a topic or simply trying to make sense of what's happening in the economy. They're as much tools for my own work as they are projects I enjoy building and improving. 
 
 <style>
 /* =========================================
