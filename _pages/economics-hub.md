@@ -9,10 +9,6 @@ toc_sticky: true
 chart_reel: true
 ---
 
-
-On and off, I continue to develop two interconnected projects built on a shared codebase. The first is a weekly automated dashboard tracking economic and financial market indicators across India and the world. The second, RBI Sentinel, tracks (& analyses) the tone of the Reserve Bank of India's monetary policy communications. Trust me when I say this, I personally use these platforms quite regularly, whether I'm researching a topic or simply trying to make sense of what's happening in the economy. They're as much tools for my own work as they are projects I enjoy building and improving. 
-
-
 <style>
 /* ========================================
    ECONHUB — SPLIT INTRODUCTION
