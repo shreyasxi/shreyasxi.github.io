@@ -109,26 +109,53 @@ redirect_from:
     </ol>
     <div class="workflow-tools" aria-labelledby="tools-i-use">
       <h3 class="workflow-tools__title" id="tools-i-use">Tools I use</h3>
-      <ul class="workflow-tools__list" role="list">
-        <li class="workflow-tools__item">{% include site/icon.html name="code" %}<span>Python</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="chart" %}<span>R</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="chart" %}<span>Stata</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="database" %}<span>SQL</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="sheet" %}<span>Excel</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="laptop" %}<span>VS Code</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="github" %}<span>Git / GitHub</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="file-text" %}<span>LaTeX</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="book-open" %}<span>Obsidian</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="cog" %}<span>Docker</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Claude Code</span></li>
-        <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Codex</span></li>
-      </ul>
+      <div class="workflow-tools__groups">
+        <div class="workflow-tools__group">
+          <h4 class="workflow-tools__category" id="tool-group-1">Analysis & data</h4>
+          <div class="workflow-tools__content">
+            <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-1">
+              <li class="workflow-tools__item">{% include site/icon.html name="code" %}<span>Python</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="chart" %}<span>R</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="chart" %}<span>Stata</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="database" %}<span>SQL</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="sheet" %}<span>Excel</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="workflow-tools__group">
+          <h4 class="workflow-tools__category" id="tool-group-2">Build & automate</h4>
+          <div class="workflow-tools__content">
+            <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-2">
+              <li class="workflow-tools__item">{% include site/icon.html name="laptop" %}<span>VS Code</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="github" %}<span>Git / GitHub</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="cog" %}<span>Docker</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="workflow-tools__group">
+          <h4 class="workflow-tools__category" id="tool-group-3">Write & organise</h4>
+          <div class="workflow-tools__content">
+            <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-3">
+              <li class="workflow-tools__item">{% include site/icon.html name="file-text" %}<span>LaTeX</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="book-open" %}<span>Obsidian</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="workflow-tools__group">
+          <h4 class="workflow-tools__category" id="tool-group-4">Coding agents</h4>
+          <div class="workflow-tools__content">
+            <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-4">
+              <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Claude Code</span></li>
+              <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Codex</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="workflow-tools__resource" href="/resources/">
+        <span><strong>Working with coding agents:</strong> some good habits and cool people to follow in this space</span>
+        {% include site/icon.html name="arrow-right" %}
+      </a>
     </div>
-    <a class="agents-banner" href="/resources/">
-      <span class="agents-banner__icon" aria-hidden="true">{% include site/icon.html name="terminal" %}</span>
-      <span class="agents-banner__text"><strong>Working with coding agents:</strong> some good habits and cool people to follow in this space</span>
-      {% include site/icon.html name="arrow-right" class="agents-banner__arrow" %}
-    </a>
   </div>
 </section>
 
