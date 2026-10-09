@@ -281,12 +281,8 @@ chart_reel: true
       financial market indicators across India and the
       world. The second, RBI Sentinel, tracks (&amp;
       analyses) the tone of the Reserve Bank of India's
-      monetary policy communications.
-    </p>
-
-    <p class="eh-intro-note">
-      Trust me when I say this, I personally use these
-      platforms quite regularly, whether I'm researching
+      monetary policy communications. Trust me when I say this, I 
+      personally use these platforms quite regularly, whether I'm researching
       a topic or simply trying to make sense of what's
       happening in the economy. They're as much tools
       for my own work as they are projects I enjoy
