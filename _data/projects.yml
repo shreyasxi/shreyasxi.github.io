@@ -36,10 +36,10 @@
   tags: ["Macro-finance", "Natural Language Processing", "Python", "GitHub Actions", "SQL"]
   links:
     - label: "Macro Dashboard"
-      url: "https://weekly-macro-dashboard.streamlit.app/"
+      url: "https://monetaria.streamlit.app/"
       kind: dashboard
     - label: "Sentiment Tracker"
-      url: "https://weekly-macro-dashboard.streamlit.app/rbi-sentinel"
+      url: "https://monetaria.streamlit.app/rbi-sentinel"
       kind: sentiment
       fill: oxblood
     - label: "Source Code"

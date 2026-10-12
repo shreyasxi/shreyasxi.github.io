@@ -357,7 +357,7 @@ style, and publishes the result. No step is manual, and nothing is ever a placeh
 API key or an unreachable source fails the run rather than filling a gap.
 
 <div style="text-align: center; margin: 2rem 0 2.5rem 0;">
-  <a href="https://weekly-macro-dashboard.streamlit.app/" target="_blank"
+  <a href="https://monetaria.streamlit.app/" target="_blank"
      style="display: inline-block; background-color: #003366; color: #ffffff; padding: 1.1rem 2.5rem; font-family: 'Inter', -apple-system, sans-serif; font-size: 0.90rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 3px; box-shadow: 0 4px 12px rgba(0, 51, 102, 0.2); transition: all 0.2s ease-in-out;"
      onmouseover="this.style.backgroundColor='#0A1128'; this.style.transform='translateY(-2px)';"
      onmouseout="this.style.backgroundColor='#003366'; this.style.transform='translateY(0)';">
@@ -371,10 +371,10 @@ Four sections, each with its own link and its own generator.
 
 | Section | What it covers | Charts |
 |---|---|---|
-| [Weekly Markets](https://weekly-macro-dashboard.streamlit.app/) | Equities, rates, credit, FX, commodities, emerging markets and crypto — the week's moves set against twelve-month trends | 36 |
-| [World](https://weekly-macro-dashboard.streamlit.app/world) | Central bank rates and calendars, a six-economy scoreboard, US valuations (Shiller CAPE, implied equity risk premium), country risk | 12 |
-| [India](https://weekly-macro-dashboard.streamlit.app/india) | Growth, inflation, monetary conditions, external balances, portfolio flows, central government fiscal accounts | 15 |
-| [RBI Sentinel](https://weekly-macro-dashboard.streamlit.app/rbi-sentinel) | Policy tone — [Part II](#sentinel) below | 6 |
+| [Weekly Markets](https://monetaria.streamlit.app/) | Equities, rates, credit, FX, commodities, emerging markets and crypto — the week's moves set against twelve-month trends | 36 |
+| [World](https://monetaria.streamlit.app/world) | Central bank rates and calendars, a six-economy scoreboard, US valuations (Shiller CAPE, implied equity risk premium), country risk | 12 |
+| [India](https://monetaria.streamlit.app/india) | Growth, inflation, monetary conditions, external balances, portfolio flows, central government fiscal accounts | 15 |
+| [RBI Sentinel](https://monetaria.streamlit.app/rbi-sentinel) | Policy tone — [Part II](#sentinel) below | 6 |
 
 The Weekly page also carries **The Week in Headlines**: the week's most-covered stories in world and
 Indian economics, collected every four hours from fifteen feeds across nine outlets and ranked by
@@ -454,7 +454,7 @@ result: **does the tone tell you anything the rate decision and the RBI's own st
 not?**
 
 <div style="text-align: center; margin: 2rem 0 2.5rem 0;">
-  <a href="https://weekly-macro-dashboard.streamlit.app/rbi-sentinel" target="_blank"
+  <a href="https://monetaria.streamlit.app/rbi-sentinel" target="_blank"
      style="display: inline-block; background-color: #8B1A1A; color: #ffffff; padding: 1.1rem 2.5rem; font-family: 'Inter', -apple-system, sans-serif; font-size: 0.90rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; border-radius: 3px; box-shadow: 0 4px 12px rgba(139, 26, 26, 0.2); transition: all 0.2s ease-in-out;"
      onmouseover="this.style.backgroundColor='#5F1111'; this.style.transform='translateY(-2px)';"
      onmouseout="this.style.backgroundColor='#8B1A1A'; this.style.transform='translateY(0)';">
