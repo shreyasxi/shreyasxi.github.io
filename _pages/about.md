@@ -75,31 +75,26 @@ redirect_from:
         <span class="research-workflow__number" aria-hidden="true">01</span>
         <h3 class="research-workflow__title">Frame the problem</h3>
         <p class="research-workflow__description"> Identify the underlying economic, financial or business question, the mechanisms involved and the evidence needed to investigate it.</p>
-        <p class="research-workflow__example">From monetary-policy signals to market behaviour and corporate finance questions.</p>
       </li>
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">02</span>
         <h3 class="research-workflow__title">Build the evidence</h3>
         <p class="research-workflow__description">Collect, validate and organise information from official statistics, market data, company disclosures and academic research. Keep sources and assumptions traceable.</p>
-        <p class="research-workflow__example">MoSPI releases, NSE archives, market APIs, company data and research documents.</p>
       </li>
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">03</span>
         <h3 class="research-workflow__title">Analyse and test</h3>
         <p class="research-workflow__description">Use econometrics, financial analysis, time-series methods and economic reasoning to separate a plausible story from one the evidence supports.</p>
-        <p class="research-workflow__example">Econometric tests, valuation work, market relationships and robustness checks.</p>
-      </li>
-      <li class="research-workflow__stage">
-        <span class="research-workflow__number" aria-hidden="true">04</span>
-        <h3 class="research-workflow__title">Automate what repeats</h3>
-        <p class="research-workflow__description">Turn recurring analysis into reproducible workflows, databases, scripts and dashboards so the same work does not need to be rebuilt manually.</p>
-        <p class="research-workflow__example">Weekly macro dashboards, scheduled source pipelines and reproducible analysis.</p>
       </li>
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">05</span>
         <h3 class="research-workflow__title">Communicate the result</h3>
         <p class="research-workflow__description">Translate the analysis into a clear chart, memo, dashboard, presentation or piece of writing that helps someone understand the conclusion quickly.</p>
-        <p class="research-workflow__example">Research papers, finance projects, dashboards, charts and public writing.</p>
+      </li>
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">04</span>
+        <h3 class="research-workflow__title">Automate what repeats</h3>
+        <p class="research-workflow__description">Turn recurring analysis into reproducible workflows, databases, scripts and dashboards so the same work does not need to be rebuilt manually.</p>
       </li>
     </ol>
     <div class="workflow-tools" aria-labelledby="tools-i-use">
