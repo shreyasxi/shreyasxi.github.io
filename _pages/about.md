@@ -68,76 +68,45 @@ redirect_from:
   <div class="home-section__head">
     <h2 class="home-section__title" id="how-i-work">How I Work</h2>
   </div>
-
   <div class="home-section__body">
-    <p>
-      I approach economic and financial questions by combining structured research,
-      quantitative analysis and clear communication. I start by understanding the
-      problem, build and test the evidence, and translate the findings into research
-      or tools that others can use.
-    </p>
-    <ol class="research-workflow research-workflow--four" role="list">
+    <p>I approach financial questions through structured research, economic intuition and quantitative analysis. I prefer to understand a problem in its context and develop an initial understanding independently before turning to analytical tools. Of course, AI can be useful, but introducing it too early can encourage premature framing before assumptions and competing explanations have been properly examined. I then use data and appropriate methods to test these ideas, assess what the evidence supports and communicate the findings clearly.</p>
+    <ol class="research-workflow" role="list">
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">01</span>
-        <h3 class="research-workflow__title">Frame the question</h3>
-        <p class="research-workflow__description">
-          Identify the underlying economic, financial or business question,
-          the mechanisms involved and the evidence needed to investigate it.
-        </p>
-        <p class="research-workflow__example">
-          Monetary policy, financial markets, valuation and corporate finance.
-        </p>
+        <h3 class="research-workflow__title">Frame the problem</h3>
+        <p class="research-workflow__description"> Identify the underlying economic, financial or business question, the mechanisms involved and the evidence needed to investigate it.</p>
+        <p class="research-workflow__example">From monetary-policy signals to market behaviour and corporate finance questions.</p>
       </li>
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">02</span>
         <h3 class="research-workflow__title">Build the evidence</h3>
-        <p class="research-workflow__description">
-          Collect, validate and organise information from official statistics,
-          market data, company disclosures and academic research. Keep sources
-          and assumptions traceable.
-        </p>
-        <p class="research-workflow__example">
-          Central-bank releases, MoSPI data, NSE archives, market APIs and company filings.
-        </p>
+        <p class="research-workflow__description">Collect, validate and organise information from official statistics, market data, company disclosures and academic research. Keep sources and assumptions traceable.</p>
+        <p class="research-workflow__example">MoSPI releases, NSE archives, market APIs, company data and research documents.</p>
       </li>
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">03</span>
         <h3 class="research-workflow__title">Analyse and test</h3>
-        <p class="research-workflow__description">
-          Apply econometrics, time-series methods and financial analysis to
-          investigate relationships, test explanations and assess what the
-          evidence actually supports.
-        </p>
-        <p class="research-workflow__example">
-          Empirical tests, valuation analysis, market relationships and robustness checks.
-        </p>
+        <p class="research-workflow__description">Use econometrics, financial analysis, time-series methods and economic reasoning to separate a plausible story from one the evidence supports.</p>
+        <p class="research-workflow__example">Econometric tests, valuation work, market relationships and robustness checks.</p>
       </li>
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">04</span>
-        <h3 class="research-workflow__title">Communicate the findings</h3>
-        <p class="research-workflow__description">
-          Translate the analysis into research papers, market notes, charts,
-          dashboards and presentations that make the findings and their
-          implications clear.
-        </p>
-        <p class="research-workflow__example">
-          Academic research, macroeconomic monitoring, financial analysis and public writing.
-        </p>
+        <h3 class="research-workflow__title">Automate what repeats</h3>
+        <p class="research-workflow__description">Turn recurring analysis into reproducible workflows, databases, scripts and dashboards so the same work does not need to be rebuilt manually.</p>
+        <p class="research-workflow__example">Weekly macro dashboards, scheduled source pipelines and reproducible analysis.</p>
+      </li>
+      <li class="research-workflow__stage">
+        <span class="research-workflow__number" aria-hidden="true">05</span>
+        <h3 class="research-workflow__title">Communicate the result</h3>
+        <p class="research-workflow__description">Translate the analysis into a clear chart, memo, dashboard, presentation or piece of writing that helps someone understand the conclusion quickly.</p>
+        <p class="research-workflow__example">Research papers, finance projects, dashboards, charts and public writing.</p>
       </li>
     </ol>
-    <p class="workflow-reproducibility">
-      <strong>Reproducibility runs throughout the process.</strong>
-      Where useful, I build scripts, data pipelines and automated workflows
-      to make recurring analysis more consistent, transparent and efficient.
-    </p>
     <div class="workflow-tools" aria-labelledby="tools-i-use">
-      <h3 class="workflow-tools__title" id="tools-i-use">Methods &amp; Tools</h3>
-      <p class="workflow-tools__intro">
-        Econometrics · Time-series analysis · Financial analysis · Valuation · Data visualisation
-      </p>
+      <h3 class="workflow-tools__title" id="tools-i-use">Tools I use</h3>
       <div class="workflow-tools__groups">
         <div class="workflow-tools__group">
-          <h4 class="workflow-tools__category" id="tool-group-1">Analysis &amp; data</h4>
+          <h4 class="workflow-tools__category" id="tool-group-1">Analysis & data</h4>
           <div class="workflow-tools__content">
             <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-1">
               <li class="workflow-tools__item">{% include site/icon.html name="code" %}<span>Python</span></li>
@@ -149,7 +118,7 @@ redirect_from:
           </div>
         </div>
         <div class="workflow-tools__group">
-          <h4 class="workflow-tools__category" id="tool-group-2">Build &amp; automate</h4>
+          <h4 class="workflow-tools__category" id="tool-group-2">Build & automate</h4>
           <div class="workflow-tools__content">
             <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-2">
               <li class="workflow-tools__item">{% include site/icon.html name="laptop" %}<span>VS Code</span></li>
@@ -159,7 +128,7 @@ redirect_from:
           </div>
         </div>
         <div class="workflow-tools__group">
-          <h4 class="workflow-tools__category" id="tool-group-3">Write &amp; organise</h4>
+          <h4 class="workflow-tools__category" id="tool-group-3">Write & organise</h4>
           <div class="workflow-tools__content">
             <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-3">
               <li class="workflow-tools__item">{% include site/icon.html name="file-text" %}<span>LaTeX</span></li>
@@ -168,7 +137,7 @@ redirect_from:
           </div>
         </div>
         <div class="workflow-tools__group">
-          <h4 class="workflow-tools__category" id="tool-group-4">AI-assisted development</h4>
+          <h4 class="workflow-tools__category" id="tool-group-4">Coding agents</h4>
           <div class="workflow-tools__content">
             <ul class="workflow-tools__list" role="list" aria-labelledby="tool-group-4">
               <li class="workflow-tools__item">{% include site/icon.html name="terminal" %}<span>Claude Code</span></li>
@@ -182,7 +151,6 @@ redirect_from:
         {% include site/icon.html name="arrow-right" %}
       </a>
     </div>
-
   </div>
 </section>
 
