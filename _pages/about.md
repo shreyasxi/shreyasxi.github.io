@@ -70,6 +70,9 @@ redirect_from:
   </div>
   <div class="home-section__body">
     <p>I approach financial questions through structured research, economic intuition and quantitative analysis. I prefer to understand a problem in its context and develop an initial understanding independently before turning to analytical tools. Of course, AI can be useful, but introducing it too early can encourage premature framing before assumptions and competing explanations have been properly examined. I then use data and appropriate methods to test these ideas, assess what the evidence supports and communicate the findings clearly.</p>
+    <p class="research-workflow__label">
+  What this looks like in practice
+      </p>
     <ol class="research-workflow" role="list">
       <li class="research-workflow__stage">
         <span class="research-workflow__number" aria-hidden="true">01</span>
