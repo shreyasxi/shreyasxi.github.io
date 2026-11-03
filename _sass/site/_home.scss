@@ -576,6 +576,18 @@
   transform: translate(2px, -2px);
 }
 
+/* Label introducing the practical examples beneath each workflow stage. */
+.research-workflow__label {
+  margin: 2rem 0 1.15rem;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
 
 /* Research workflow: an editorial sequence, with tools inside each stage. */
 .research-workflow {
